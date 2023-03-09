@@ -16,10 +16,4 @@ public class PostScheduledEventsUuidCancellationMultipartRequest {
         return this;
     }
     
-    public PostScheduledEventsUuidCancellationSecurity security;
-    public PostScheduledEventsUuidCancellationMultipartRequest withSecurity(PostScheduledEventsUuidCancellationSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
 }

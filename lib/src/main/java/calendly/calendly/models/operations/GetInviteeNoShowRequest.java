@@ -9,10 +9,4 @@ public class GetInviteeNoShowRequest {
         return this;
     }
     
-    public GetInviteeNoShowSecurity security;
-    public GetInviteeNoShowRequest withSecurity(GetInviteeNoShowSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
 }

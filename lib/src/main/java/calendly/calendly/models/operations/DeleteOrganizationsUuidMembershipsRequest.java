@@ -9,10 +9,4 @@ public class DeleteOrganizationsUuidMembershipsRequest {
         return this;
     }
     
-    public DeleteOrganizationsUuidMembershipsSecurity security;
-    public DeleteOrganizationsUuidMembershipsRequest withSecurity(DeleteOrganizationsUuidMembershipsSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
 }

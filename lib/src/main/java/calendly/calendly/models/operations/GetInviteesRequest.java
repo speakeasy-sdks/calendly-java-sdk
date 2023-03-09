@@ -15,10 +15,4 @@ public class GetInviteesRequest {
         return this;
     }
     
-    public GetInviteesSecurity security;
-    public GetInviteesRequest withSecurity(GetInviteesSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
 }

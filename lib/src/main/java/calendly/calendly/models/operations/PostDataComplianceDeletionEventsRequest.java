@@ -10,10 +10,4 @@ public class PostDataComplianceDeletionEventsRequest {
         return this;
     }
     
-    public PostDataComplianceDeletionEventsSecurity security;
-    public PostDataComplianceDeletionEventsRequest withSecurity(PostDataComplianceDeletionEventsSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
 }

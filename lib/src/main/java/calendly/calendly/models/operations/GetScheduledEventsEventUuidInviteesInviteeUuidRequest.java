@@ -9,10 +9,4 @@ public class GetScheduledEventsEventUuidInviteesInviteeUuidRequest {
         return this;
     }
     
-    public GetScheduledEventsEventUuidInviteesInviteeUuidSecurity security;
-    public GetScheduledEventsEventUuidInviteesInviteeUuidRequest withSecurity(GetScheduledEventsEventUuidInviteesInviteeUuidSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
 }

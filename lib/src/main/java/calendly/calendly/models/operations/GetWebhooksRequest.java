@@ -9,10 +9,4 @@ public class GetWebhooksRequest {
         return this;
     }
     
-    public GetWebhooksSecurity security;
-    public GetWebhooksRequest withSecurity(GetWebhooksSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
 }

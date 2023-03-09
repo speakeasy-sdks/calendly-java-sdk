@@ -50,7 +50,7 @@ public class RoutingForms {
             }
         }
         
-        HTTPClient client = calendly.calendly.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = this._securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -129,7 +129,7 @@ public class RoutingForms {
         req.setURL(url);
         
         
-        HTTPClient client = calendly.calendly.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = this._securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -214,7 +214,7 @@ public class RoutingForms {
             }
         }
         
-        HTTPClient client = calendly.calendly.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = this._securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -293,7 +293,7 @@ public class RoutingForms {
         req.setURL(url);
         
         
-        HTTPClient client = calendly.calendly.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = this._securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

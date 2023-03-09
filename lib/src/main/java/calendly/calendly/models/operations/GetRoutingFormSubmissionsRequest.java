@@ -9,10 +9,4 @@ public class GetRoutingFormSubmissionsRequest {
         return this;
     }
     
-    public GetRoutingFormSubmissionsSecurity security;
-    public GetRoutingFormSubmissionsRequest withSecurity(GetRoutingFormSubmissionsSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
 }

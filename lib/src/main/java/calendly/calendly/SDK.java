@@ -27,15 +27,15 @@ public class SDK {
 
 	private HTTPClient _defaultClient;
 	private HTTPClient _securityClient;
-	
+	private calendly.calendly.models.shared.Security _security;
 	private String _serverUrl;
 	private String _language = "java";
-	private String _sdkVersion = "0.1.0";
+	private String _sdkVersion = "0.0.1";
 	private String _genVersion = "1.9.1";
 
 	public static class Builder {
 		private HTTPClient client;
-		
+		private calendly.calendly.models.shared.Security security;
 		private String serverUrl;
 		private java.util.Map<String, String> params = new java.util.HashMap<String, String>();
 
@@ -44,6 +44,11 @@ public class SDK {
 
 		public Builder setClient(HTTPClient client) {
 			this.client = client;
+			return this;
+		}
+		
+		public Builder setSecurity(calendly.calendly.models.shared.Security security) {
+			this.security = security;
 			return this;
 		}
 		
@@ -59,7 +64,7 @@ public class SDK {
 		}
 		
 		public SDK build() throws Exception {
-			return new SDK(this.client, this.serverUrl, this.params);
+			return new SDK(this.client, this.security, this.serverUrl, this.params);
 		}
 	}
 
@@ -67,11 +72,16 @@ public class SDK {
 		return new Builder();
 	}
 
-	private SDK(HTTPClient client, String serverUrl, java.util.Map<String, String> params) throws Exception {
+	private SDK(HTTPClient client, calendly.calendly.models.shared.Security security, String serverUrl, java.util.Map<String, String> params) throws Exception {
 		this._defaultClient = client;
 		
 		if (this._defaultClient == null) {
 			this._defaultClient = new SpeakeasyHTTPClient();
+		}
+		
+		if (security != null) {
+			this._security = security;
+			this._securityClient = calendly.calendly.utils.Utils.configureSecurityClient(this._defaultClient, this._security);
 		}
 		
 		if (this._securityClient == null) {

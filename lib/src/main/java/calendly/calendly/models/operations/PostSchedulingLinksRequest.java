@@ -10,10 +10,4 @@ public class PostSchedulingLinksRequest {
         return this;
     }
     
-    public PostSchedulingLinksSecurity security;
-    public PostSchedulingLinksRequest withSecurity(PostSchedulingLinksSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
 }

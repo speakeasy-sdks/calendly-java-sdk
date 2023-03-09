@@ -16,10 +16,4 @@ public class PostScheduledEventsUuidCancellationJsonRequest {
         return this;
     }
     
-    public PostScheduledEventsUuidCancellationSecurity security;
-    public PostScheduledEventsUuidCancellationJsonRequest withSecurity(PostScheduledEventsUuidCancellationSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
 }

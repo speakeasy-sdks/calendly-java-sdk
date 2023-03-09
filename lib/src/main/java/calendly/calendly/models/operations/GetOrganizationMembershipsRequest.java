@@ -9,10 +9,4 @@ public class GetOrganizationMembershipsRequest {
         return this;
     }
     
-    public GetOrganizationMembershipsSecurity security;
-    public GetOrganizationMembershipsRequest withSecurity(GetOrganizationMembershipsSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
 }

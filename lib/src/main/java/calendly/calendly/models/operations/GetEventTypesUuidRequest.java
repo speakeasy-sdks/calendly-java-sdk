@@ -9,10 +9,4 @@ public class GetEventTypesUuidRequest {
         return this;
     }
     
-    public GetEventTypesUuidSecurity security;
-    public GetEventTypesUuidRequest withSecurity(GetEventTypesUuidSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
 }

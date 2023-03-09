@@ -32,7 +32,7 @@ public class Users {
      *
      * Returns basic information about your user account.
     **/
-    public calendly.calendly.models.operations.GetMyUserAccountResponse getMyUserAccount(calendly.calendly.models.operations.GetMyUserAccountRequest request) throws Exception {
+    public calendly.calendly.models.operations.GetMyUserAccountResponse getMyUserAccount() throws Exception {
         String baseUrl = this._serverUrl;
         String url = calendly.calendly.utils.Utils.generateURL(baseUrl, "/users/me");
         
@@ -41,7 +41,7 @@ public class Users {
         req.setURL(url);
         
         
-        HTTPClient client = calendly.calendly.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = this._securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 
@@ -112,7 +112,7 @@ public class Users {
         req.setURL(url);
         
         
-        HTTPClient client = calendly.calendly.utils.Utils.configureSecurityClient(this._defaultClient, request.security);
+        HTTPClient client = this._securityClient;
         
         HttpResponse<byte[]> httpRes = client.send(req);
 

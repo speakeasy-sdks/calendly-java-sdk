@@ -9,10 +9,4 @@ public class GetEventTypesRequest {
         return this;
     }
     
-    public GetEventTypesSecurity security;
-    public GetEventTypesRequest withSecurity(GetEventTypesSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
 }

@@ -9,10 +9,4 @@ public class DeleteInviteeNoShowRequest {
         return this;
     }
     
-    public DeleteInviteeNoShowSecurity security;
-    public DeleteInviteeNoShowRequest withSecurity(DeleteInviteeNoShowSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
 }

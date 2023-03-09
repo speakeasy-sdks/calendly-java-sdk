@@ -9,10 +9,4 @@ public class GetScheduledEventsRequest {
         return this;
     }
     
-    public GetScheduledEventsSecurity security;
-    public GetScheduledEventsRequest withSecurity(GetScheduledEventsSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
 }

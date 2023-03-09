@@ -9,10 +9,4 @@ public class GetEventTypeAvailableTimesRequest {
         return this;
     }
     
-    public GetEventTypeAvailableTimesSecurity security;
-    public GetEventTypeAvailableTimesRequest withSecurity(GetEventTypeAvailableTimesSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
 }

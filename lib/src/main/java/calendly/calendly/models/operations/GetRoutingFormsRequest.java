@@ -9,10 +9,4 @@ public class GetRoutingFormsRequest {
         return this;
     }
     
-    public GetRoutingFormsSecurity security;
-    public GetRoutingFormsRequest withSecurity(GetRoutingFormsSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
 }

@@ -15,10 +15,4 @@ public class GetOrganizationsUuidInvitationsRequest {
         return this;
     }
     
-    public GetOrganizationsUuidInvitationsSecurity security;
-    public GetOrganizationsUuidInvitationsRequest withSecurity(GetOrganizationsUuidInvitationsSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
 }

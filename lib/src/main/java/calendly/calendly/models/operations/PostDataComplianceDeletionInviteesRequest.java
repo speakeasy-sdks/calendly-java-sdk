@@ -10,10 +10,4 @@ public class PostDataComplianceDeletionInviteesRequest {
         return this;
     }
     
-    public PostDataComplianceDeletionInviteesSecurity security;
-    public PostDataComplianceDeletionInviteesRequest withSecurity(PostDataComplianceDeletionInviteesSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
 }

@@ -10,10 +10,4 @@ public class PostUsersUuidWebhooksRequest {
         return this;
     }
     
-    public PostUsersUuidWebhooksSecurity security;
-    public PostUsersUuidWebhooksRequest withSecurity(PostUsersUuidWebhooksSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
 }

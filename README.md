@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'calendly.calendly:calendly:0.1.0'
+implementation 'calendly.calendly:calendly:0.0.1'
 ```
 <!-- End SDK Installation -->
 
@@ -16,7 +16,7 @@ implementation 'calendly.calendly:calendly:0.1.0'
 package hello.world;
 
 import calendly.calendly.SDK;
-
+import calendly.calendly.models.shared.Security;
 import calendly.calendly.models.operations.ActivityLogSortEnum;
 import calendly.calendly.models.operations.ActivityLogQueryParams;
 import calendly.calendly.models.operations.ActivityLogRequest;
@@ -26,6 +26,14 @@ public class Application {
     public static void main(String[] args) {
         try {
             SDK.Builder builder = SDK.builder();
+
+            builder.setSecurity(
+                new Security() {{
+                    oauth2 = new SchemeOauth2() {{
+                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
+                    }};
+                }}
+            );
 
             SDK sdk = builder.build();
 
@@ -42,8 +50,8 @@ public class Application {
                         add("nulla"),
                     }};
                     count = 423655;
-                    maxOccurredAt = "2022-07-24T22:01:42.406Z";
-                    minOccurredAt = "2022-07-16T18:24:50.344Z";
+                    maxOccurredAt = "2022-07-24T22:46:29.801Z";
+                    minOccurredAt = "2022-07-16T19:09:37.739Z";
                     namespace = new String[]{{
                         add("iusto"),
                         add("ullam"),

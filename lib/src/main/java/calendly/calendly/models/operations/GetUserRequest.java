@@ -9,10 +9,4 @@ public class GetUserRequest {
         return this;
     }
     
-    public GetUserSecurity security;
-    public GetUserRequest withSecurity(GetUserSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
 }

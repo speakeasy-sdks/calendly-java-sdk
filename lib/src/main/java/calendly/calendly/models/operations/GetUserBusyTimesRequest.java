@@ -9,10 +9,4 @@ public class GetUserBusyTimesRequest {
         return this;
     }
     
-    public GetUserBusyTimesSecurity security;
-    public GetUserBusyTimesRequest withSecurity(GetUserBusyTimesSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
 }

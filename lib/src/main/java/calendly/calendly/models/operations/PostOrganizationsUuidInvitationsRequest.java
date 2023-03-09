@@ -16,10 +16,4 @@ public class PostOrganizationsUuidInvitationsRequest {
         return this;
     }
     
-    public PostOrganizationsUuidInvitationsSecurity security;
-    public PostOrganizationsUuidInvitationsRequest withSecurity(PostOrganizationsUuidInvitationsSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
 }

@@ -10,10 +10,4 @@ public class PostSharesRequest {
         return this;
     }
     
-    public PostSharesSecurity security;
-    public PostSharesRequest withSecurity(PostSharesSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
 }

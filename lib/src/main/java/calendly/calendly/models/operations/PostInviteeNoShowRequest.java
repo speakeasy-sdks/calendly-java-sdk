@@ -10,10 +10,4 @@ public class PostInviteeNoShowRequest {
         return this;
     }
     
-    public PostInviteeNoShowSecurity security;
-    public PostInviteeNoShowRequest withSecurity(PostInviteeNoShowSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
 }

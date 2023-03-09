@@ -16,10 +16,4 @@ public class PostScheduledEventsUuidCancellationRawRequest {
         return this;
     }
     
-    public PostScheduledEventsUuidCancellationSecurity security;
-    public PostScheduledEventsUuidCancellationRawRequest withSecurity(PostScheduledEventsUuidCancellationSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
 }

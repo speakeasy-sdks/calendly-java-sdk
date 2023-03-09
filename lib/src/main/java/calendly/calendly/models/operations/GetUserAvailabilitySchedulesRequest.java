@@ -9,10 +9,4 @@ public class GetUserAvailabilitySchedulesRequest {
         return this;
     }
     
-    public GetUserAvailabilitySchedulesSecurity security;
-    public GetUserAvailabilitySchedulesRequest withSecurity(GetUserAvailabilitySchedulesSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
 }

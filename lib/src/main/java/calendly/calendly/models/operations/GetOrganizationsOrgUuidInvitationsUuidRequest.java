@@ -9,10 +9,4 @@ public class GetOrganizationsOrgUuidInvitationsUuidRequest {
         return this;
     }
     
-    public GetOrganizationsOrgUuidInvitationsUuidSecurity security;
-    public GetOrganizationsOrgUuidInvitationsUuidRequest withSecurity(GetOrganizationsOrgUuidInvitationsUuidSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
 }

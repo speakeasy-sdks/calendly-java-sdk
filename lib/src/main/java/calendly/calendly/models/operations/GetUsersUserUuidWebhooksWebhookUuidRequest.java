@@ -9,10 +9,4 @@ public class GetUsersUserUuidWebhooksWebhookUuidRequest {
         return this;
     }
     
-    public GetUsersUserUuidWebhooksWebhookUuidSecurity security;
-    public GetUsersUserUuidWebhooksWebhookUuidRequest withSecurity(GetUsersUserUuidWebhooksWebhookUuidSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
 }

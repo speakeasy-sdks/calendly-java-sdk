@@ -9,10 +9,4 @@ public class RevokeUsersOrganizationInvitationRequest {
         return this;
     }
     
-    public RevokeUsersOrganizationInvitationSecurity security;
-    public RevokeUsersOrganizationInvitationRequest withSecurity(RevokeUsersOrganizationInvitationSecurity security) {
-        this.security = security;
-        return this;
-    }
-    
 }
