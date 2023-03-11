@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'calendly.calendly:calendly:0.0.1'
+implementation 'calendly.calendly:calendly:0.0.2'
 ```
 <!-- End SDK Installation -->
 
@@ -50,8 +50,8 @@ public class Application {
                         add("nulla"),
                     }};
                     count = 423655;
-                    maxOccurredAt = "2022-07-24T22:46:29.801Z";
-                    minOccurredAt = "2022-07-16T19:09:37.739Z";
+                    maxOccurredAt = "2022-07-26T10:33:08.337Z";
+                    minOccurredAt = "2022-07-18T06:56:16.275Z";
                     namespace = new String[]{{
                         add("iusto"),
                         add("ullam"),
@@ -60,8 +60,8 @@ public class Application {
                     pageToken = "inventore";
                     searchTerm = "sapiente";
                     sort = new calendly.calendly.models.operations.ActivityLogSortEnum[]{{
+                        add("actor.display_name:desc"),
                         add("actor.uri:asc"),
-                        add("actor.uri:desc"),
                     }};
                 }};
             }};
