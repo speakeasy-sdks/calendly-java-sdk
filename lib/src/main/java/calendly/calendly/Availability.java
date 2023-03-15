@@ -10,8 +10,6 @@ import org.apache.http.NameValuePair;
 
 public class Availability {
 	
-	
-	
 	private HTTPClient _defaultClient;
 	private HTTPClient _securityClient;
 	private String _serverUrl;
@@ -42,7 +40,7 @@ public class Availability {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(request.queryParams);
+        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.GetUserAvailabilitySchedulesQueryParams.class, request.queryParams, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -58,10 +56,7 @@ public class Availability {
         calendly.calendly.models.operations.GetUserAvailabilitySchedulesResponse res = new calendly.calendly.models.operations.GetUserAvailabilitySchedulesResponse() {{
             getUserAvailabilitySchedules200ApplicationJSONObject = null;
             errorResponse = null;
-            errorResponse = null;
             getUserAvailabilitySchedules403ApplicationJSONObject = null;
-            errorResponse = null;
-            errorResponse = null;
         }};
         res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
@@ -74,14 +69,7 @@ public class Availability {
                 res.getUserAvailabilitySchedules200ApplicationJSONObject = out;
             }
         }
-        else if (httpRes.statusCode() == 400) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetUserAvailabilitySchedulesErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetUserAvailabilitySchedulesErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 401) {
+        else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
             if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 calendly.calendly.models.operations.GetUserAvailabilitySchedulesErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetUserAvailabilitySchedulesErrorResponse.class);
@@ -93,20 +81,6 @@ public class Availability {
                 ObjectMapper mapper = JSON.getMapper();
                 calendly.calendly.models.operations.GetUserAvailabilitySchedules403ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetUserAvailabilitySchedules403ApplicationJSON.class);
                 res.getUserAvailabilitySchedules403ApplicationJSONObject = out;
-            }
-        }
-        else if (httpRes.statusCode() == 404) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetUserAvailabilitySchedulesErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetUserAvailabilitySchedulesErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 500) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetUserAvailabilitySchedulesErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetUserAvailabilitySchedulesErrorResponse.class);
-                res.errorResponse = out;
             }
         }
 
@@ -121,7 +95,7 @@ public class Availability {
     **/
     public calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuidResponse getUserAvailabilitySchedulesUuid(calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuidRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = calendly.calendly.utils.Utils.generateURL(baseUrl, "/user_availability_schedules/{uuid}", request.pathParams);
+        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuidPathParams.class, baseUrl, "/user_availability_schedules/{uuid}", request.pathParams, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -137,9 +111,7 @@ public class Availability {
         calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuidResponse res = new calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuidResponse() {{
             getUserAvailabilitySchedulesUuid200ApplicationJSONObject = null;
             errorResponse = null;
-            errorResponse = null;
             getUserAvailabilitySchedulesUuid403ApplicationJSONObject = null;
-            errorResponse = null;
         }};
         res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
@@ -152,14 +124,7 @@ public class Availability {
                 res.getUserAvailabilitySchedulesUuid200ApplicationJSONObject = out;
             }
         }
-        else if (httpRes.statusCode() == 400) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuidErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuidErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 401) {
+        else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404) {
             if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuidErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuidErrorResponse.class);
@@ -171,13 +136,6 @@ public class Availability {
                 ObjectMapper mapper = JSON.getMapper();
                 calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuid403ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuid403ApplicationJSON.class);
                 res.getUserAvailabilitySchedulesUuid403ApplicationJSONObject = out;
-            }
-        }
-        else if (httpRes.statusCode() == 404) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuidErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuidErrorResponse.class);
-                res.errorResponse = out;
             }
         }
         else if (httpRes.statusCode() == 500) {
@@ -206,7 +164,7 @@ public class Availability {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(request.queryParams);
+        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.GetUserBusyTimesQueryParams.class, request.queryParams, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -222,11 +180,8 @@ public class Availability {
         calendly.calendly.models.operations.GetUserBusyTimesResponse res = new calendly.calendly.models.operations.GetUserBusyTimesResponse() {{
             getUserBusyTimes200ApplicationJSONObject = null;
             errorResponse = null;
-            errorResponse = null;
             getUserBusyTimes403ApplicationJSONObject = null;
-            errorResponse = null;
             errorResponse1 = null;
-            errorResponse = null;
         }};
         res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
@@ -239,14 +194,7 @@ public class Availability {
                 res.getUserBusyTimes200ApplicationJSONObject = out;
             }
         }
-        else if (httpRes.statusCode() == 400) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetUserBusyTimesErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetUserBusyTimesErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 401) {
+        else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
             if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 calendly.calendly.models.operations.GetUserBusyTimesErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetUserBusyTimesErrorResponse.class);
@@ -260,25 +208,11 @@ public class Availability {
                 res.getUserBusyTimes403ApplicationJSONObject = out;
             }
         }
-        else if (httpRes.statusCode() == 404) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetUserBusyTimesErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetUserBusyTimesErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
         else if (httpRes.statusCode() == 424) {
             if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 calendly.calendly.models.shared.ErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.shared.ErrorResponse.class);
                 res.errorResponse1 = out;
-            }
-        }
-        else if (httpRes.statusCode() == 500) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetUserBusyTimesErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetUserBusyTimesErrorResponse.class);
-                res.errorResponse = out;
             }
         }
 

@@ -4,12 +4,12 @@ import calendly.calendly.utils.HTTPClient;
 import calendly.calendly.utils.HTTPRequest;
 import calendly.calendly.utils.JSON;
 import calendly.calendly.utils.SerializedBody;
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.net.http.HttpResponse;
 import java.nio.charset.StandardCharsets;
 
 public class DataCompliance {
-	
 	
 	private HTTPClient _defaultClient;
 	private HTTPClient _securityClient;
@@ -45,7 +45,7 @@ public class DataCompliance {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = calendly.calendly.utils.Utils.serializeRequestBody(request);
+        SerializedBody serializedRequestBody = calendly.calendly.utils.Utils.serializeRequestBody(request, "request", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -61,10 +61,7 @@ public class DataCompliance {
         calendly.calendly.models.operations.PostDataComplianceDeletionEventsResponse res = new calendly.calendly.models.operations.PostDataComplianceDeletionEventsResponse() {{
             postDataComplianceDeletionEvents202ApplicationJSONObject = null;
             errorResponse = null;
-            errorResponse = null;
             errorResponse1 = null;
-            errorResponse = null;
-            errorResponse = null;
         }};
         res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
@@ -73,18 +70,11 @@ public class DataCompliance {
         if (httpRes.statusCode() == 202) {
             if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), java.util.Map.class);
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
                 res.postDataComplianceDeletionEvents202ApplicationJSONObject = out;
             }
         }
-        else if (httpRes.statusCode() == 400) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.PostDataComplianceDeletionEventsErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.PostDataComplianceDeletionEventsErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 401) {
+        else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
             if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 calendly.calendly.models.operations.PostDataComplianceDeletionEventsErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.PostDataComplianceDeletionEventsErrorResponse.class);
@@ -96,20 +86,6 @@ public class DataCompliance {
                 ObjectMapper mapper = JSON.getMapper();
                 calendly.calendly.models.shared.ErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.shared.ErrorResponse.class);
                 res.errorResponse1 = out;
-            }
-        }
-        else if (httpRes.statusCode() == 404) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.PostDataComplianceDeletionEventsErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.PostDataComplianceDeletionEventsErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 500) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.PostDataComplianceDeletionEventsErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.PostDataComplianceDeletionEventsErrorResponse.class);
-                res.errorResponse = out;
             }
         }
 
@@ -132,7 +108,7 @@ public class DataCompliance {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = calendly.calendly.utils.Utils.serializeRequestBody(request);
+        SerializedBody serializedRequestBody = calendly.calendly.utils.Utils.serializeRequestBody(request, "request", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -148,10 +124,7 @@ public class DataCompliance {
         calendly.calendly.models.operations.PostDataComplianceDeletionInviteesResponse res = new calendly.calendly.models.operations.PostDataComplianceDeletionInviteesResponse() {{
             postDataComplianceDeletionInvitees202ApplicationJSONObject = null;
             errorResponse = null;
-            errorResponse = null;
             errorResponse1 = null;
-            errorResponse = null;
-            errorResponse = null;
         }};
         res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
@@ -160,18 +133,11 @@ public class DataCompliance {
         if (httpRes.statusCode() == 202) {
             if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), java.util.Map.class);
+                java.util.Map<String, Object> out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), new TypeReference<java.util.Map<String, Object>>() {});
                 res.postDataComplianceDeletionInvitees202ApplicationJSONObject = out;
             }
         }
-        else if (httpRes.statusCode() == 400) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.PostDataComplianceDeletionInviteesErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.PostDataComplianceDeletionInviteesErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 401) {
+        else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
             if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 calendly.calendly.models.operations.PostDataComplianceDeletionInviteesErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.PostDataComplianceDeletionInviteesErrorResponse.class);
@@ -183,20 +149,6 @@ public class DataCompliance {
                 ObjectMapper mapper = JSON.getMapper();
                 calendly.calendly.models.shared.ErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.shared.ErrorResponse.class);
                 res.errorResponse1 = out;
-            }
-        }
-        else if (httpRes.statusCode() == 404) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.PostDataComplianceDeletionInviteesErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.PostDataComplianceDeletionInviteesErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 500) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.PostDataComplianceDeletionInviteesErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.PostDataComplianceDeletionInviteesErrorResponse.class);
-                res.errorResponse = out;
             }
         }
 

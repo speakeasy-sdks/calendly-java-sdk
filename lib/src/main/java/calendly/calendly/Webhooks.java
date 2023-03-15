@@ -11,9 +11,6 @@ import org.apache.http.NameValuePair;
 
 public class Webhooks {
 	
-	
-	
-	
 	private HTTPClient _defaultClient;
 	private HTTPClient _securityClient;
 	private String _serverUrl;
@@ -38,7 +35,7 @@ public class Webhooks {
     **/
     public calendly.calendly.models.operations.DeleteUsersUserUuidWebhooksWebhookUuidResponse deleteUsersUserUuidWebhooksWebhookUuid(calendly.calendly.models.operations.DeleteUsersUserUuidWebhooksWebhookUuidRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = calendly.calendly.utils.Utils.generateURL(baseUrl, "/webhook_subscriptions/{webhook_uuid}", request.pathParams);
+        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.DeleteUsersUserUuidWebhooksWebhookUuidPathParams.class, baseUrl, "/webhook_subscriptions/{webhook_uuid}", request.pathParams, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -53,9 +50,6 @@ public class Webhooks {
 
         calendly.calendly.models.operations.DeleteUsersUserUuidWebhooksWebhookUuidResponse res = new calendly.calendly.models.operations.DeleteUsersUserUuidWebhooksWebhookUuidResponse() {{
             errorResponse = null;
-            errorResponse = null;
-            errorResponse = null;
-            errorResponse = null;
         }};
         res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
@@ -63,28 +57,7 @@ public class Webhooks {
         
         if (httpRes.statusCode() == 204) {
         }
-        else if (httpRes.statusCode() == 401) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.DeleteUsersUserUuidWebhooksWebhookUuidErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.DeleteUsersUserUuidWebhooksWebhookUuidErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 403) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.DeleteUsersUserUuidWebhooksWebhookUuidErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.DeleteUsersUserUuidWebhooksWebhookUuidErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 404) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.DeleteUsersUserUuidWebhooksWebhookUuidErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.DeleteUsersUserUuidWebhooksWebhookUuidErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 500) {
+        else if (httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
             if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 calendly.calendly.models.operations.DeleteUsersUserUuidWebhooksWebhookUuidErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.DeleteUsersUserUuidWebhooksWebhookUuidErrorResponse.class);
@@ -103,7 +76,7 @@ public class Webhooks {
     **/
     public calendly.calendly.models.operations.GetUsersUserUuidWebhooksWebhookUuidResponse getUsersUserUuidWebhooksWebhookUuid(calendly.calendly.models.operations.GetUsersUserUuidWebhooksWebhookUuidRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = calendly.calendly.utils.Utils.generateURL(baseUrl, "/webhook_subscriptions/{webhook_uuid}", request.pathParams);
+        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetUsersUserUuidWebhooksWebhookUuidPathParams.class, baseUrl, "/webhook_subscriptions/{webhook_uuid}", request.pathParams, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -119,8 +92,6 @@ public class Webhooks {
         calendly.calendly.models.operations.GetUsersUserUuidWebhooksWebhookUuidResponse res = new calendly.calendly.models.operations.GetUsersUserUuidWebhooksWebhookUuidResponse() {{
             getUsersUserUuidWebhooksWebhookUuid200ApplicationJSONObject = null;
             errorResponse = null;
-            errorResponse = null;
-            errorResponse = null;
         }};
         res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
@@ -133,21 +104,7 @@ public class Webhooks {
                 res.getUsersUserUuidWebhooksWebhookUuid200ApplicationJSONObject = out;
             }
         }
-        else if (httpRes.statusCode() == 401) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetUsersUserUuidWebhooksWebhookUuidErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetUsersUserUuidWebhooksWebhookUuidErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 403) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetUsersUserUuidWebhooksWebhookUuidErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetUsersUserUuidWebhooksWebhookUuidErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 404) {
+        else if (httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404) {
             if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 calendly.calendly.models.operations.GetUsersUserUuidWebhooksWebhookUuidErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetUsersUserUuidWebhooksWebhookUuidErrorResponse.class);
@@ -172,7 +129,7 @@ public class Webhooks {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(request.queryParams);
+        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.GetWebhooksQueryParams.class, request.queryParams, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -188,9 +145,7 @@ public class Webhooks {
         calendly.calendly.models.operations.GetWebhooksResponse res = new calendly.calendly.models.operations.GetWebhooksResponse() {{
             getWebhooks200ApplicationJSONObject = null;
             errorResponse = null;
-            errorResponse = null;
             getWebhooks403ApplicationJSONObject = null;
-            errorResponse = null;
         }};
         res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
@@ -203,14 +158,7 @@ public class Webhooks {
                 res.getWebhooks200ApplicationJSONObject = out;
             }
         }
-        else if (httpRes.statusCode() == 400) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetWebhooksErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetWebhooksErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 401) {
+        else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404) {
             if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 calendly.calendly.models.operations.GetWebhooksErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetWebhooksErrorResponse.class);
@@ -222,13 +170,6 @@ public class Webhooks {
                 ObjectMapper mapper = JSON.getMapper();
                 calendly.calendly.models.operations.GetWebhooks403ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetWebhooks403ApplicationJSON.class);
                 res.getWebhooks403ApplicationJSONObject = out;
-            }
-        }
-        else if (httpRes.statusCode() == 404) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetWebhooksErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetWebhooksErrorResponse.class);
-                res.errorResponse = out;
             }
         }
 
@@ -257,7 +198,7 @@ public class Webhooks {
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = calendly.calendly.utils.Utils.serializeRequestBody(request);
+        SerializedBody serializedRequestBody = calendly.calendly.utils.Utils.serializeRequestBody(request, "request", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -273,10 +214,7 @@ public class Webhooks {
         calendly.calendly.models.operations.PostUsersUuidWebhooksResponse res = new calendly.calendly.models.operations.PostUsersUuidWebhooksResponse() {{
             postUsersUuidWebhooks201ApplicationJSONObject = null;
             errorResponse = null;
-            errorResponse = null;
             postUsersUuidWebhooks403ApplicationJSONObject = null;
-            errorResponse = null;
-            errorResponse = null;
         }};
         res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
@@ -289,14 +227,7 @@ public class Webhooks {
                 res.postUsersUuidWebhooks201ApplicationJSONObject = out;
             }
         }
-        else if (httpRes.statusCode() == 400) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.PostUsersUuidWebhooksErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.PostUsersUuidWebhooksErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 401) {
+        else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 409) {
             if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 calendly.calendly.models.operations.PostUsersUuidWebhooksErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.PostUsersUuidWebhooksErrorResponse.class);
@@ -308,20 +239,6 @@ public class Webhooks {
                 ObjectMapper mapper = JSON.getMapper();
                 calendly.calendly.models.operations.PostUsersUuidWebhooks403ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.PostUsersUuidWebhooks403ApplicationJSON.class);
                 res.postUsersUuidWebhooks403ApplicationJSONObject = out;
-            }
-        }
-        else if (httpRes.statusCode() == 404) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.PostUsersUuidWebhooksErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.PostUsersUuidWebhooksErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 409) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.PostUsersUuidWebhooksErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.PostUsersUuidWebhooksErrorResponse.class);
-                res.errorResponse = out;
             }
         }
 

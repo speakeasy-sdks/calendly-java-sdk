@@ -10,9 +10,6 @@ import org.apache.http.NameValuePair;
 
 public class RoutingForms {
 	
-	
-	
-	
 	private HTTPClient _defaultClient;
 	private HTTPClient _securityClient;
 	private String _serverUrl;
@@ -43,7 +40,7 @@ public class RoutingForms {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(request.queryParams);
+        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.GetRoutingFormSubmissionsQueryParams.class, request.queryParams, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -59,10 +56,6 @@ public class RoutingForms {
         calendly.calendly.models.operations.GetRoutingFormSubmissionsResponse res = new calendly.calendly.models.operations.GetRoutingFormSubmissionsResponse() {{
             getRoutingFormSubmissions200ApplicationJSONObject = null;
             errorResponse = null;
-            errorResponse = null;
-            errorResponse = null;
-            errorResponse = null;
-            errorResponse = null;
         }};
         res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
@@ -75,35 +68,7 @@ public class RoutingForms {
                 res.getRoutingFormSubmissions200ApplicationJSONObject = out;
             }
         }
-        else if (httpRes.statusCode() == 400) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetRoutingFormSubmissionsErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetRoutingFormSubmissionsErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 401) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetRoutingFormSubmissionsErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetRoutingFormSubmissionsErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 403) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetRoutingFormSubmissionsErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetRoutingFormSubmissionsErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 404) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetRoutingFormSubmissionsErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetRoutingFormSubmissionsErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 500) {
+        else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
             if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 calendly.calendly.models.operations.GetRoutingFormSubmissionsErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetRoutingFormSubmissionsErrorResponse.class);
@@ -122,7 +87,7 @@ public class RoutingForms {
     **/
     public calendly.calendly.models.operations.GetRoutingFormSubmissionsUuidResponse getRoutingFormSubmissionsUuid(calendly.calendly.models.operations.GetRoutingFormSubmissionsUuidRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = calendly.calendly.utils.Utils.generateURL(baseUrl, "/routing_form_submissions/{uuid}", request.pathParams);
+        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetRoutingFormSubmissionsUuidPathParams.class, baseUrl, "/routing_form_submissions/{uuid}", request.pathParams, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -138,10 +103,6 @@ public class RoutingForms {
         calendly.calendly.models.operations.GetRoutingFormSubmissionsUuidResponse res = new calendly.calendly.models.operations.GetRoutingFormSubmissionsUuidResponse() {{
             getRoutingFormSubmissionsUuid200ApplicationJSONObject = null;
             errorResponse = null;
-            errorResponse = null;
-            errorResponse = null;
-            errorResponse = null;
-            errorResponse = null;
         }};
         res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
@@ -154,35 +115,7 @@ public class RoutingForms {
                 res.getRoutingFormSubmissionsUuid200ApplicationJSONObject = out;
             }
         }
-        else if (httpRes.statusCode() == 400) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetRoutingFormSubmissionsUuidErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetRoutingFormSubmissionsUuidErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 401) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetRoutingFormSubmissionsUuidErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetRoutingFormSubmissionsUuidErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 403) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetRoutingFormSubmissionsUuidErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetRoutingFormSubmissionsUuidErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 404) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetRoutingFormSubmissionsUuidErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetRoutingFormSubmissionsUuidErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 500) {
+        else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
             if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 calendly.calendly.models.operations.GetRoutingFormSubmissionsUuidErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetRoutingFormSubmissionsUuidErrorResponse.class);
@@ -207,7 +140,7 @@ public class RoutingForms {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(request.queryParams);
+        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.GetRoutingFormsQueryParams.class, request.queryParams, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -223,10 +156,6 @@ public class RoutingForms {
         calendly.calendly.models.operations.GetRoutingFormsResponse res = new calendly.calendly.models.operations.GetRoutingFormsResponse() {{
             getRoutingForms200ApplicationJSONObject = null;
             errorResponse = null;
-            errorResponse = null;
-            errorResponse = null;
-            errorResponse = null;
-            errorResponse = null;
         }};
         res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
@@ -239,35 +168,7 @@ public class RoutingForms {
                 res.getRoutingForms200ApplicationJSONObject = out;
             }
         }
-        else if (httpRes.statusCode() == 400) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetRoutingFormsErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetRoutingFormsErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 401) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetRoutingFormsErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetRoutingFormsErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 403) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetRoutingFormsErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetRoutingFormsErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 404) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetRoutingFormsErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetRoutingFormsErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 500) {
+        else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
             if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 calendly.calendly.models.operations.GetRoutingFormsErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetRoutingFormsErrorResponse.class);
@@ -286,7 +187,7 @@ public class RoutingForms {
     **/
     public calendly.calendly.models.operations.GetRoutingFormsUuidResponse getRoutingFormsUuid(calendly.calendly.models.operations.GetRoutingFormsUuidRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = calendly.calendly.utils.Utils.generateURL(baseUrl, "/routing_forms/{uuid}", request.pathParams);
+        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetRoutingFormsUuidPathParams.class, baseUrl, "/routing_forms/{uuid}", request.pathParams, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -302,10 +203,6 @@ public class RoutingForms {
         calendly.calendly.models.operations.GetRoutingFormsUuidResponse res = new calendly.calendly.models.operations.GetRoutingFormsUuidResponse() {{
             getRoutingFormsUuid200ApplicationJSONObject = null;
             errorResponse = null;
-            errorResponse = null;
-            errorResponse = null;
-            errorResponse = null;
-            errorResponse = null;
         }};
         res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
@@ -318,35 +215,7 @@ public class RoutingForms {
                 res.getRoutingFormsUuid200ApplicationJSONObject = out;
             }
         }
-        else if (httpRes.statusCode() == 400) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetRoutingFormsUuidErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetRoutingFormsUuidErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 401) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetRoutingFormsUuidErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetRoutingFormsUuidErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 403) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetRoutingFormsUuidErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetRoutingFormsUuidErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 404) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetRoutingFormsUuidErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetRoutingFormsUuidErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 500) {
+        else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
             if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 calendly.calendly.models.operations.GetRoutingFormsUuidErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetRoutingFormsUuidErrorResponse.class);

@@ -12,17 +12,13 @@ import calendly.calendly.models.operations.ActivityLogResponse;
 public class Application {
     public static void main(String[] args) {
         try {
-            SDK.Builder builder = SDK.builder();
-
-            builder.setSecurity(
-                new Security() {{
+            SDK sdk = SDK.builder()
+                .setSecurity(new Security() {{
                     oauth2 = new SchemeOauth2() {{
                         authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
                     }};
-                }}
-            );
-
-            SDK sdk = builder.build();
+                }})
+                .build();
 
             ActivityLogRequest req = new ActivityLogRequest() {{
                 queryParams = new ActivityLogQueryParams() {{
@@ -37,8 +33,8 @@ public class Application {
                         add("nulla"),
                     }};
                     count = 423655;
-                    maxOccurredAt = "2022-07-26T10:33:08.337Z";
-                    minOccurredAt = "2022-07-18T06:56:16.275Z";
+                    maxOccurredAt = "2022-07-30T10:38:34.766Z";
+                    minOccurredAt = "2022-07-22T07:01:42.705Z";
                     namespace = new String[]{{
                         add("iusto"),
                         add("ullam"),
@@ -51,7 +47,7 @@ public class Application {
                         add("actor.uri:asc"),
                     }};
                 }};
-            }};
+            }};            
 
             ActivityLogResponse res = sdk.activityLog.activityLog(req);
 
