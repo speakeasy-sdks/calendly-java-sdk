@@ -33,8 +33,8 @@ public class Application {
                         add("nulla"),
                     }};
                     count = 423655;
-                    maxOccurredAt = "2022-07-30T10:38:34.766Z";
-                    minOccurredAt = "2022-07-22T07:01:42.705Z";
+                    maxOccurredAt = "2022-07-31T10:40:23.078Z";
+                    minOccurredAt = "2022-07-23T07:03:31.016Z";
                     namespace = new String[]{{
                         add("iusto"),
                         add("ullam"),
