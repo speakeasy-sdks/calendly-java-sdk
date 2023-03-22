@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'calendly.calendly:calendly:0.2.2'
+implementation 'calendly.calendly:calendly:0.3.0'
 ```
 <!-- End SDK Installation -->
 
@@ -46,8 +46,8 @@ public class Application {
                         add("https://api.calendly.com/users/EBHAAFHDCAEQTSEZ"),
                     }};
                     count = 857946;
-                    maxOccurredAt = "2022-09-03T03:48:58.853Z";
-                    minOccurredAt = "2022-05-15T19:04:04.251Z";
+                    maxOccurredAt = "2022-09-04T03:48:45.287Z";
+                    minOccurredAt = "2022-05-16T19:03:50.685Z";
                     namespace = new String[]{{
                         add("fuga"),
                         add("facilis"),

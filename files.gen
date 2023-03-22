@@ -260,6 +260,7 @@ lib/src/main/java/calendly/calendly/models/operations/PostInviteeNoShowErrorResp
 lib/src/main/java/calendly/calendly/models/operations/PostInviteeNoShowErrorResponse.java
 lib/src/main/java/calendly/calendly/models/operations/PostInviteeNoShow201ApplicationJSON.java
 lib/src/main/java/calendly/calendly/models/operations/PostInviteeNoShowResponse.java
+lib/src/main/java/calendly/calendly/models/operations/PostSchedulingLinksRequestBodyMaxEventCountEnum.java
 lib/src/main/java/calendly/calendly/models/operations/PostSchedulingLinksRequestBodyOwnerTypeEnum.java
 lib/src/main/java/calendly/calendly/models/operations/PostSchedulingLinksRequestBody.java
 lib/src/main/java/calendly/calendly/models/operations/PostSchedulingLinksRequest.java
