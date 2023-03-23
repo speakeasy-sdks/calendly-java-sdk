@@ -39,8 +39,8 @@ public class SDK {
 	private calendly.calendly.models.shared.Security _security;
 	private String _serverUrl;
 	private String _language = "java";
-	private String _sdkVersion = "0.3.0";
-	private String _genVersion = "2.12.10";
+	private String _sdkVersion = "0.3.1";
+	private String _genVersion = "2.13.1";
 	/**
 	 * The Builder class allows the configuration of a new instance of the SDK.
 	 */
