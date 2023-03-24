@@ -53,3 +53,9 @@ Based on:
 Based on:
 - OpenAPI Doc 2.0.0 https://prod.speakeasyapi.dev/v1/apis/calendly/version/2.0.0/schema/download
 - Speakeasy CLI 1.15.0 (2.13.1) https://github.com/speakeasy-api/speakeasy
+
+## 2023-03-24 00:59:19
+### Changes
+Based on:
+- OpenAPI Doc 2.0.0 https://prod.speakeasyapi.dev/v1/apis/calendly/version/2.0.0/schema/download
+- Speakeasy CLI 1.17.0 (2.15.0) https://github.com/speakeasy-api/speakeasy
