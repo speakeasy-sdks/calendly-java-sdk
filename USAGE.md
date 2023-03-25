@@ -33,8 +33,8 @@ public class Application {
                         add("https://api.calendly.com/users/EBHAAFHDCAEQTSEZ"),
                     }};
                     count = 857946;
-                    maxOccurredAt = "2022-09-05T03:48:50.287Z";
-                    minOccurredAt = "2022-05-17T19:03:55.685Z";
+                    maxOccurredAt = "2022-09-07T03:47:12.887Z";
+                    minOccurredAt = "2022-05-19T19:02:18.285Z";
                     namespace = new String[]{{
                         add("fuga"),
                         add("facilis"),
