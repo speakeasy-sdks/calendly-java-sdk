@@ -13,7 +13,8 @@ public class MicrosoftTeamsConference {
     /**
      * The conference metadata supplied by Microsoft Teams
      */
-    @JsonProperty("data")public MicrosoftTeamsConferenceData data;
+    @JsonProperty("data")
+    public MicrosoftTeamsConferenceData data;
     public MicrosoftTeamsConference withData(MicrosoftTeamsConferenceData data) {
         this.data = data;
         return this;
@@ -22,7 +23,8 @@ public class MicrosoftTeamsConference {
     /**
      * Microsoft Teams meeting url
      */
-    @JsonProperty("join_url")public String joinUrl;
+    @JsonProperty("join_url")
+    public String joinUrl;
     public MicrosoftTeamsConference withJoinUrl(String joinUrl) {
         this.joinUrl = joinUrl;
         return this;
@@ -31,7 +33,8 @@ public class MicrosoftTeamsConference {
     /**
      * Indicates the current status of the Microsoft Teams conference
      */
-    @JsonProperty("status")public MicrosoftTeamsConferenceStatusEnum status;
+    @JsonProperty("status")
+    public MicrosoftTeamsConferenceStatusEnum status;
     public MicrosoftTeamsConference withStatus(MicrosoftTeamsConferenceStatusEnum status) {
         this.status = status;
         return this;
@@ -40,7 +43,8 @@ public class MicrosoftTeamsConference {
     /**
      * The event location is a Zoom conference
      */
-    @JsonProperty("type")public MicrosoftTeamsConferenceTypeEnum type;
+    @JsonProperty("type")
+    public MicrosoftTeamsConferenceTypeEnum type;
     public MicrosoftTeamsConference withType(MicrosoftTeamsConferenceTypeEnum type) {
         this.type = type;
         return this;

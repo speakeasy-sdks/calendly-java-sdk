@@ -13,7 +13,8 @@ public class GetUsersUserUuidWebhooksWebhookUuid200ApplicationJSON {
     /**
      * Webhook Subscription Object
      */
-    @JsonProperty("resource")public calendly.calendly.models.shared.WebhookSubscription resource;
+    @JsonProperty("resource")
+    public calendly.calendly.models.shared.WebhookSubscription resource;
     public GetUsersUserUuidWebhooksWebhookUuid200ApplicationJSON withResource(calendly.calendly.models.shared.WebhookSubscription resource) {
         this.resource = resource;
         return this;

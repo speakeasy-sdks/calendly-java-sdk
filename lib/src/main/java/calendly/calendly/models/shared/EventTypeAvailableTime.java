@@ -18,16 +18,18 @@ public class EventTypeAvailableTime {
     /**
      * Total remaining invitees for this available time. For Group Event Type, more than one invitee can book in this available time. For all other Event Types, only one invitee can book in this available time.
      */
-    @JsonProperty("invitees_remaining")public Double inviteesRemaining;
+    @JsonProperty("invitees_remaining")
+    public Double inviteesRemaining;
     public EventTypeAvailableTime withInviteesRemaining(Double inviteesRemaining) {
         this.inviteesRemaining = inviteesRemaining;
         return this;
     }
     
     /**
-     * The URL of the user’s scheduling site where invitees book this event type
+     * The URL of the user\u2019s scheduling site where invitees book this event type
      */
-    @JsonProperty("scheduling_url")public String schedulingUrl;
+    @JsonProperty("scheduling_url")
+    public String schedulingUrl;
     public EventTypeAvailableTime withSchedulingUrl(String schedulingUrl) {
         this.schedulingUrl = schedulingUrl;
         return this;
@@ -38,7 +40,8 @@ public class EventTypeAvailableTime {
      */
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("start_time")public OffsetDateTime startTime;
+    @JsonProperty("start_time")
+    public OffsetDateTime startTime;
     public EventTypeAvailableTime withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -47,7 +50,8 @@ public class EventTypeAvailableTime {
     /**
      * Indicates that the open time slot is "available"
      */
-    @JsonProperty("status")public String status;
+    @JsonProperty("status")
+    public String status;
     public EventTypeAvailableTime withStatus(String status) {
         this.status = status;
         return this;

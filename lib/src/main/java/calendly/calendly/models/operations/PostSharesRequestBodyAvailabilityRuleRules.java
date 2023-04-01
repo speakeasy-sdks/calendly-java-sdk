@@ -17,21 +17,24 @@ public class PostSharesRequestBodyAvailabilityRuleRules {
      */
     @JsonInclude(Include.NON_ABSENT)
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
-    @JsonProperty("date")public LocalDate date;
+    @JsonProperty("date")
+    public LocalDate date;
     public PostSharesRequestBodyAvailabilityRuleRules withDate(LocalDate date) {
         this.date = date;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("intervals")public PostSharesRequestBodyAvailabilityRuleRulesIntervals[] intervals;
+    @JsonProperty("intervals")
+    public PostSharesRequestBodyAvailabilityRuleRulesIntervals[] intervals;
     public PostSharesRequestBodyAvailabilityRuleRules withIntervals(PostSharesRequestBodyAvailabilityRuleRulesIntervals[] intervals) {
         this.intervals = intervals;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("type")public PostSharesRequestBodyAvailabilityRuleRulesTypeEnum type;
+    @JsonProperty("type")
+    public PostSharesRequestBodyAvailabilityRuleRulesTypeEnum type;
     public PostSharesRequestBodyAvailabilityRuleRules withType(PostSharesRequestBodyAvailabilityRuleRulesTypeEnum type) {
         this.type = type;
         return this;
@@ -41,7 +44,8 @@ public class PostSharesRequestBodyAvailabilityRuleRules {
      * is required when `type` is 'wday'
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("wday")public PostSharesRequestBodyAvailabilityRuleRulesWdayEnum wday;
+    @JsonProperty("wday")
+    public PostSharesRequestBodyAvailabilityRuleRulesWdayEnum wday;
     public PostSharesRequestBodyAvailabilityRuleRules withWday(PostSharesRequestBodyAvailabilityRuleRulesWdayEnum wday) {
         this.wday = wday;
         return this;

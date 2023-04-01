@@ -13,7 +13,8 @@ public class SubmissionExternalUrlResult {
     /**
      * Indicates that the routing form submission resulted in a redirect to an external URL.
      */
-    @JsonProperty("type")public SubmissionExternalUrlResultTypeEnum type;
+    @JsonProperty("type")
+    public SubmissionExternalUrlResultTypeEnum type;
     public SubmissionExternalUrlResult withType(SubmissionExternalUrlResultTypeEnum type) {
         this.type = type;
         return this;
@@ -22,7 +23,8 @@ public class SubmissionExternalUrlResult {
     /**
      * The external URL the respondent were redirected to.
      */
-    @JsonProperty("value")public String value;
+    @JsonProperty("value")
+    public String value;
     public SubmissionExternalUrlResult withValue(String value) {
         this.value = value;
         return this;

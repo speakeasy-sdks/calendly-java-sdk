@@ -13,19 +13,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GetOrganizationMembershipsErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("details")public GetOrganizationMembershipsErrorResponseDetails[] details;
+    @JsonProperty("details")
+    public GetOrganizationMembershipsErrorResponseDetails[] details;
     public GetOrganizationMembershipsErrorResponse withDetails(GetOrganizationMembershipsErrorResponseDetails[] details) {
         this.details = details;
         return this;
     }
     
-    @JsonProperty("message")public String message;
+    @JsonProperty("message")
+    public String message;
     public GetOrganizationMembershipsErrorResponse withMessage(String message) {
         this.message = message;
         return this;
     }
     
-    @JsonProperty("title")public String title;
+    @JsonProperty("title")
+    public String title;
     public GetOrganizationMembershipsErrorResponse withTitle(String title) {
         this.title = title;
         return this;

@@ -13,13 +13,15 @@ public class Cancellation {
     /**
      * Name of the person whom canceled
      */
-    @JsonProperty("canceled_by")public String canceledBy;
+    @JsonProperty("canceled_by")
+    public String canceledBy;
     public Cancellation withCanceledBy(String canceledBy) {
         this.canceledBy = canceledBy;
         return this;
     }
     
-    @JsonProperty("canceler_type")public CancellationCancelerTypeEnum cancelerType;
+    @JsonProperty("canceler_type")
+    public CancellationCancelerTypeEnum cancelerType;
     public Cancellation withCancelerType(CancellationCancelerTypeEnum cancelerType) {
         this.cancelerType = cancelerType;
         return this;
@@ -28,7 +30,8 @@ public class Cancellation {
     /**
      * Reason that the cancellation occurred
      */
-    @JsonProperty("reason")public String reason;
+    @JsonProperty("reason")
+    public String reason;
     public Cancellation withReason(String reason) {
         this.reason = reason;
         return this;

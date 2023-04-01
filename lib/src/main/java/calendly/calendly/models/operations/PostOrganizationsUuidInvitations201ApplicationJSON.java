@@ -13,7 +13,8 @@ public class PostOrganizationsUuidInvitations201ApplicationJSON {
     /**
      * Organization Invitation object
      */
-    @JsonProperty("resource")public calendly.calendly.models.shared.OrganizationInvitation resource;
+    @JsonProperty("resource")
+    public calendly.calendly.models.shared.OrganizationInvitation resource;
     public PostOrganizationsUuidInvitations201ApplicationJSON withResource(calendly.calendly.models.shared.OrganizationInvitation resource) {
         this.resource = resource;
         return this;

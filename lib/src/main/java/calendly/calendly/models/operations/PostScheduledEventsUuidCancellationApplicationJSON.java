@@ -16,7 +16,8 @@ public class PostScheduledEventsUuidCancellationApplicationJSON {
      * Reason for cancellation
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("reason")public String reason;
+    @JsonProperty("reason")
+    public String reason;
     public PostScheduledEventsUuidCancellationApplicationJSON withReason(String reason) {
         this.reason = reason;
         return this;

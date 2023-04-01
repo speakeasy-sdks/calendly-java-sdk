@@ -10,7 +10,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PostInviteeNoShowRequestBody {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("invitee")public String invitee;
+    @JsonProperty("invitee")
+    public String invitee;
     public PostInviteeNoShowRequestBody withInvitee(String invitee) {
         this.invitee = invitee;
         return this;

@@ -13,7 +13,8 @@ public class GetUserAvailabilitySchedulesUuid200ApplicationJSON {
     /**
      * The availability schedule set by the user.
      */
-    @JsonProperty("resource")public calendly.calendly.models.shared.AvailabilitySchedule resource;
+    @JsonProperty("resource")
+    public calendly.calendly.models.shared.AvailabilitySchedule resource;
     public GetUserAvailabilitySchedulesUuid200ApplicationJSON withResource(calendly.calendly.models.shared.AvailabilitySchedule resource) {
         this.resource = resource;
         return this;

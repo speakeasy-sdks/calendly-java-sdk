@@ -45,7 +45,7 @@ public class RoutingForms {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.GetRoutingFormSubmissionsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.GetRoutingFormSubmissionsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -93,7 +93,7 @@ public class RoutingForms {
      */
     public calendly.calendly.models.operations.GetRoutingFormSubmissionsUuidResponse getRoutingFormSubmissionsUuid(calendly.calendly.models.operations.GetRoutingFormSubmissionsUuidRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetRoutingFormSubmissionsUuidPathParams.class, baseUrl, "/routing_form_submissions/{uuid}", request.pathParams, null);
+        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetRoutingFormSubmissionsUuidRequest.class, baseUrl, "/routing_form_submissions/{uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -147,7 +147,7 @@ public class RoutingForms {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.GetRoutingFormsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.GetRoutingFormsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -195,7 +195,7 @@ public class RoutingForms {
      */
     public calendly.calendly.models.operations.GetRoutingFormsUuidResponse getRoutingFormsUuid(calendly.calendly.models.operations.GetRoutingFormsUuidRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetRoutingFormsUuidPathParams.class, baseUrl, "/routing_forms/{uuid}", request.pathParams, null);
+        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetRoutingFormsUuidRequest.class, baseUrl, "/routing_forms/{uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

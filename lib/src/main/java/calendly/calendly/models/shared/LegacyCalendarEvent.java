@@ -13,7 +13,8 @@ public class LegacyCalendarEvent {
     /**
      * the id provided from the calendar provider for this calendar event.
      */
-    @JsonProperty("external_id")public String externalId;
+    @JsonProperty("external_id")
+    public String externalId;
     public LegacyCalendarEvent withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -22,7 +23,8 @@ public class LegacyCalendarEvent {
     /**
      * Indicates the calendar provider the event belongs to.
      */
-    @JsonProperty("kind")public LegacyCalendarEventKindEnum kind;
+    @JsonProperty("kind")
+    public LegacyCalendarEventKindEnum kind;
     public LegacyCalendarEvent withKind(LegacyCalendarEventKindEnum kind) {
         this.kind = kind;
         return this;

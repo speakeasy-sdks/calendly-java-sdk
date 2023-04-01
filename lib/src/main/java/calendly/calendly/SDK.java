@@ -8,7 +8,7 @@ import calendly.calendly.utils.HTTPClient;
 import calendly.calendly.utils.SpeakeasyHTTPClient;
 
 /**
- * Calendly’s API is [REST](http://en.wikipedia.org/wiki/Representational_State_Transfer)-based and has predictable resource-oriented URLs. It uses **JSON** for request and response bodies and standard HTTP methods, authentication, and response codes.<br>
+ * Calendly\u2019s API is [REST](http://en.wikipedia.org/wiki/Representational_State_Transfer)-based and has predictable resource-oriented URLs. It uses **JSON** for request and response bodies and standard HTTP methods, authentication, and response codes.&lt;br&gt;
  * 
  * ##### Authenticate with personal access tokens or OAuth 2.0
  * 
@@ -39,8 +39,8 @@ public class SDK {
 	private calendly.calendly.models.shared.Security _security;
 	private String _serverUrl;
 	private String _language = "java";
-	private String _sdkVersion = "0.4.2";
-	private String _genVersion = "2.16.5";
+	private String _sdkVersion = "0.4.3";
+	private String _genVersion = "2.16.7";
 	/**
 	 * The Builder class allows the configuration of a new instance of the SDK.
 	 */

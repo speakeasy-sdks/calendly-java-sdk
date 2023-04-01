@@ -13,13 +13,15 @@ public class GetScheduledEvents200ApplicationJSON {
     /**
      * The set of scheduled events matching the criteria
      */
-    @JsonProperty("collection")public calendly.calendly.models.shared.Event[] collection;
+    @JsonProperty("collection")
+    public calendly.calendly.models.shared.Event[] collection;
     public GetScheduledEvents200ApplicationJSON withCollection(calendly.calendly.models.shared.Event[] collection) {
         this.collection = collection;
         return this;
     }
     
-    @JsonProperty("pagination")public calendly.calendly.models.shared.Pagination pagination;
+    @JsonProperty("pagination")
+    public calendly.calendly.models.shared.Pagination pagination;
     public GetScheduledEvents200ApplicationJSON withPagination(calendly.calendly.models.shared.Pagination pagination) {
         this.pagination = pagination;
         return this;

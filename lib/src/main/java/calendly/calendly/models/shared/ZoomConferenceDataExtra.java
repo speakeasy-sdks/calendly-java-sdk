@@ -13,7 +13,8 @@ public class ZoomConferenceDataExtra {
      * Zoom International Dial-in Numbers URL
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("intl_numbers_url")public String intlNumbersUrl;
+    @JsonProperty("intl_numbers_url")
+    public String intlNumbersUrl;
     public ZoomConferenceDataExtra withIntlNumbersUrl(String intlNumbersUrl) {
         this.intlNumbersUrl = intlNumbersUrl;
         return this;

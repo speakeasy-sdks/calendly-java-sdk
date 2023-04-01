@@ -13,19 +13,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GetRoutingFormSubmissionsUuidErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("details")public GetRoutingFormSubmissionsUuidErrorResponseDetails[] details;
+    @JsonProperty("details")
+    public GetRoutingFormSubmissionsUuidErrorResponseDetails[] details;
     public GetRoutingFormSubmissionsUuidErrorResponse withDetails(GetRoutingFormSubmissionsUuidErrorResponseDetails[] details) {
         this.details = details;
         return this;
     }
     
-    @JsonProperty("message")public String message;
+    @JsonProperty("message")
+    public String message;
     public GetRoutingFormSubmissionsUuidErrorResponse withMessage(String message) {
         this.message = message;
         return this;
     }
     
-    @JsonProperty("title")public String title;
+    @JsonProperty("title")
+    public String title;
     public GetRoutingFormSubmissionsUuidErrorResponse withTitle(String title) {
         this.title = title;
         return this;

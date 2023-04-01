@@ -13,7 +13,8 @@ public class GetEventTypeAvailableTimes200ApplicationJSON {
     /**
      * The set of available times for the event type matching the criteria
      */
-    @JsonProperty("collection")public calendly.calendly.models.shared.EventTypeAvailableTime[] collection;
+    @JsonProperty("collection")
+    public calendly.calendly.models.shared.EventTypeAvailableTime[] collection;
     public GetEventTypeAvailableTimes200ApplicationJSON withCollection(calendly.calendly.models.shared.EventTypeAvailableTime[] collection) {
         this.collection = collection;
         return this;

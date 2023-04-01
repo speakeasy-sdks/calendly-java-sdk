@@ -20,7 +20,8 @@ public class ActivityLog200ApplicationJSON {
     /**
      * The set of activity log entries matching the criteria
      */
-    @JsonProperty("collection")public calendly.calendly.models.shared.Entry[] collection;
+    @JsonProperty("collection")
+    public calendly.calendly.models.shared.Entry[] collection;
     public ActivityLog200ApplicationJSON withCollection(calendly.calendly.models.shared.Entry[] collection) {
         this.collection = collection;
         return this;
@@ -29,7 +30,8 @@ public class ActivityLog200ApplicationJSON {
     /**
      * If there are more search results than the total_count field indicates, pagination will continue to return results past the total_count field value.
      */
-    @JsonProperty("exceeds_max_total_count")public Boolean exceedsMaxTotalCount;
+    @JsonProperty("exceeds_max_total_count")
+    public Boolean exceedsMaxTotalCount;
     public ActivityLog200ApplicationJSON withExceedsMaxTotalCount(Boolean exceedsMaxTotalCount) {
         this.exceedsMaxTotalCount = exceedsMaxTotalCount;
         return this;
@@ -41,13 +43,15 @@ public class ActivityLog200ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("last_event_time")public OffsetDateTime lastEventTime;
+    @JsonProperty("last_event_time")
+    public OffsetDateTime lastEventTime;
     public ActivityLog200ApplicationJSON withLastEventTime(OffsetDateTime lastEventTime) {
         this.lastEventTime = lastEventTime;
         return this;
     }
     
-    @JsonProperty("pagination")public calendly.calendly.models.shared.Pagination pagination;
+    @JsonProperty("pagination")
+    public calendly.calendly.models.shared.Pagination pagination;
     public ActivityLog200ApplicationJSON withPagination(calendly.calendly.models.shared.Pagination pagination) {
         this.pagination = pagination;
         return this;
@@ -56,7 +60,8 @@ public class ActivityLog200ApplicationJSON {
     /**
      * Total number of records based on search criteria
      */
-    @JsonProperty("total_count")public Long totalCount;
+    @JsonProperty("total_count")
+    public Long totalCount;
     public ActivityLog200ApplicationJSON withTotalCount(Long totalCount) {
         this.totalCount = totalCount;
         return this;

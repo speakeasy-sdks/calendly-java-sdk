@@ -4,12 +4,36 @@
 
 package calendly.calendly.models.operations;
 
-
+import calendly.calendly.utils.SpeakeasyMetadata;
 
 public class GetUserBusyTimesRequest {
-    public GetUserBusyTimesQueryParams queryParams;
-    public GetUserBusyTimesRequest withQueryParams(GetUserBusyTimesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * End time of the requested availability range
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")
+    public String endTime;
+    public GetUserBusyTimesRequest withEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    
+    /**
+     * Start time of the requested availability range
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_time")
+    public String startTime;
+    public GetUserBusyTimesRequest withStartTime(String startTime) {
+        this.startTime = startTime;
+        return this;
+    }
+    
+    /**
+     * The uri associated with the user
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user")
+    public String user;
+    public GetUserBusyTimesRequest withUser(String user) {
+        this.user = user;
         return this;
     }
     

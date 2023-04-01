@@ -18,11 +18,12 @@ import java.time.OffsetDateTime;
  */
 public class OrganizationInvitation {
     /**
-     * The moment the invitation was created (e.g. “2020-01-02T03:04:05.678123Z")
+     * The moment the invitation was created (e.g. \u201c2020-01-02T03:04:05.678123Z")
      */
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("created_at")public OffsetDateTime createdAt;
+    @JsonProperty("created_at")
+    public OffsetDateTime createdAt;
     public OrganizationInvitation withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -31,7 +32,8 @@ public class OrganizationInvitation {
     /**
      * The email address of the person who was invited to join the organization
      */
-    @JsonProperty("email")public String email;
+    @JsonProperty("email")
+    public String email;
     public OrganizationInvitation withEmail(String email) {
         this.email = email;
         return this;
@@ -42,7 +44,8 @@ public class OrganizationInvitation {
      */
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("last_sent_at")public OffsetDateTime lastSentAt;
+    @JsonProperty("last_sent_at")
+    public OffsetDateTime lastSentAt;
     public OrganizationInvitation withLastSentAt(OffsetDateTime lastSentAt) {
         this.lastSentAt = lastSentAt;
         return this;
@@ -51,7 +54,8 @@ public class OrganizationInvitation {
     /**
      * Canonical reference (unique identifier) for the organization
      */
-    @JsonProperty("organization")public String organization;
+    @JsonProperty("organization")
+    public String organization;
     public OrganizationInvitation withOrganization(String organization) {
         this.organization = organization;
         return this;
@@ -60,7 +64,8 @@ public class OrganizationInvitation {
     /**
      * The status of the invitation ("pending", "accepted", or "declined")
      */
-    @JsonProperty("status")public OrganizationInvitationStatusEnum status;
+    @JsonProperty("status")
+    public OrganizationInvitationStatusEnum status;
     public OrganizationInvitation withStatus(OrganizationInvitationStatusEnum status) {
         this.status = status;
         return this;
@@ -71,7 +76,8 @@ public class OrganizationInvitation {
      */
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("updated_at")public OffsetDateTime updatedAt;
+    @JsonProperty("updated_at")
+    public OffsetDateTime updatedAt;
     public OrganizationInvitation withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -80,7 +86,8 @@ public class OrganizationInvitation {
     /**
      * Canonical reference (unique identifier) for the organization invitation
      */
-    @JsonProperty("uri")public String uri;
+    @JsonProperty("uri")
+    public String uri;
     public OrganizationInvitation withUri(String uri) {
         this.uri = uri;
         return this;
@@ -90,7 +97,8 @@ public class OrganizationInvitation {
      * When the invitation is accepted, a reference to the user who accepted the invitation
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("user")public String user;
+    @JsonProperty("user")
+    public String user;
     public OrganizationInvitation withUser(String user) {
         this.user = user;
         return this;

@@ -10,7 +10,8 @@ public class Pagination {
     /**
      * The number of rows to return
      */
-    @JsonProperty("count")public Double count;
+    @JsonProperty("count")
+    public Double count;
     public Pagination withCount(Double count) {
         this.count = count;
         return this;
@@ -19,7 +20,8 @@ public class Pagination {
     /**
      * URI to return the next page of an ordered list ("null" indicates no additional results are available)
      */
-    @JsonProperty("next_page")public String nextPage;
+    @JsonProperty("next_page")
+    public String nextPage;
     public Pagination withNextPage(String nextPage) {
         this.nextPage = nextPage;
         return this;
@@ -28,7 +30,8 @@ public class Pagination {
     /**
      * Token to return the next page of an ordered list ("null" indicates no additional results are available)
      */
-    @JsonProperty("next_page_token")public String nextPageToken;
+    @JsonProperty("next_page_token")
+    public String nextPageToken;
     public Pagination withNextPageToken(String nextPageToken) {
         this.nextPageToken = nextPageToken;
         return this;
@@ -37,7 +40,8 @@ public class Pagination {
     /**
      * URI to return the previous page of an ordered list ("null" indicates no additional results are available)
      */
-    @JsonProperty("previous_page")public String previousPage;
+    @JsonProperty("previous_page")
+    public String previousPage;
     public Pagination withPreviousPage(String previousPage) {
         this.previousPage = previousPage;
         return this;
@@ -46,7 +50,8 @@ public class Pagination {
     /**
      * Token to return the previous page of an ordered list ("null" indicates no additional results are available)
      */
-    @JsonProperty("previous_page_token")public String previousPageToken;
+    @JsonProperty("previous_page_token")
+    public String previousPageToken;
     public Pagination withPreviousPageToken(String previousPageToken) {
         this.previousPageToken = previousPageToken;
         return this;

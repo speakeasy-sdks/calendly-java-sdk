@@ -13,7 +13,8 @@ public class WebExConference {
     /**
      * The conference metadata supplied by GoToMeeting
      */
-    @JsonProperty("data")public WebExConferenceData data;
+    @JsonProperty("data")
+    public WebExConferenceData data;
     public WebExConference withData(WebExConferenceData data) {
         this.data = data;
         return this;
@@ -22,7 +23,8 @@ public class WebExConference {
     /**
      * WebEx conference meeting url
      */
-    @JsonProperty("join_url")public String joinUrl;
+    @JsonProperty("join_url")
+    public String joinUrl;
     public WebExConference withJoinUrl(String joinUrl) {
         this.joinUrl = joinUrl;
         return this;
@@ -31,7 +33,8 @@ public class WebExConference {
     /**
      * Indicates the current status of the WebEx conference
      */
-    @JsonProperty("status")public WebExConferenceStatusEnum status;
+    @JsonProperty("status")
+    public WebExConferenceStatusEnum status;
     public WebExConference withStatus(WebExConferenceStatusEnum status) {
         this.status = status;
         return this;
@@ -40,7 +43,8 @@ public class WebExConference {
     /**
      * The event location is a WebEx conference
      */
-    @JsonProperty("type")public WebExConferenceTypeEnum type;
+    @JsonProperty("type")
+    public WebExConferenceTypeEnum type;
     public WebExConference withType(WebExConferenceTypeEnum type) {
         this.type = type;
         return this;

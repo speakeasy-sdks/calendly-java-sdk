@@ -40,7 +40,7 @@ public class Shares {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public calendly.calendly.models.operations.PostSharesResponse postShares(calendly.calendly.models.operations.PostSharesRequest request) throws Exception {
+    public calendly.calendly.models.operations.PostSharesResponse postShares(calendly.calendly.models.operations.PostSharesRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = calendly.calendly.utils.Utils.generateURL(baseUrl, "/shares");
         

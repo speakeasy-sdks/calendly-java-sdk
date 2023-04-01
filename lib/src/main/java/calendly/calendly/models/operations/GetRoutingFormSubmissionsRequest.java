@@ -4,12 +4,46 @@
 
 package calendly.calendly.models.operations;
 
-
+import calendly.calendly.utils.SpeakeasyMetadata;
 
 public class GetRoutingFormSubmissionsRequest {
-    public GetRoutingFormSubmissionsQueryParams queryParams;
-    public GetRoutingFormSubmissionsRequest withQueryParams(GetRoutingFormSubmissionsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of rows to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
+    public Double count;
+    public GetRoutingFormSubmissionsRequest withCount(Double count) {
+        this.count = count;
+        return this;
+    }
+    
+    /**
+     * View routing form submissions associated with the routing form's URI.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=form")
+    public String form;
+    public GetRoutingFormSubmissionsRequest withForm(String form) {
+        this.form = form;
+        return this;
+    }
+    
+    /**
+     * The token to pass to get the next or previous portion of the collection
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_token")
+    public String pageToken;
+    public GetRoutingFormSubmissionsRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Order results by the specified field and direction. Accepts comma-separated list of {field}:{direction} values. Supported fields are: created_at. Sort direction is specified as: asc, desc.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetRoutingFormSubmissionsRequest withSort(String sort) {
+        this.sort = sort;
         return this;
     }
     

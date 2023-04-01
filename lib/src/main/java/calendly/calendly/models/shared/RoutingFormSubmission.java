@@ -22,7 +22,8 @@ public class RoutingFormSubmission {
      */
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("created_at")public OffsetDateTime createdAt;
+    @JsonProperty("created_at")
+    public OffsetDateTime createdAt;
     public RoutingFormSubmission withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -31,7 +32,8 @@ public class RoutingFormSubmission {
     /**
      * All Routing Form Submission questions with answers.
      */
-    @JsonProperty("questions_and_answers")public SubmissionQuestionAndAnswer[] questionsAndAnswers;
+    @JsonProperty("questions_and_answers")
+    public SubmissionQuestionAndAnswer[] questionsAndAnswers;
     public RoutingFormSubmission withQuestionsAndAnswers(SubmissionQuestionAndAnswer[] questionsAndAnswers) {
         this.questionsAndAnswers = questionsAndAnswers;
         return this;
@@ -41,7 +43,8 @@ public class RoutingFormSubmission {
      * The polymorphic base type for a Routing Form Submission result.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("result")public Object result;
+    @JsonProperty("result")
+    public Object result;
     public RoutingFormSubmission withResult(Object result) {
         this.result = result;
         return this;
@@ -50,7 +53,8 @@ public class RoutingFormSubmission {
     /**
      * The URI of the routing form that's associated with the submission.
      */
-    @JsonProperty("routing_form")public String routingForm;
+    @JsonProperty("routing_form")
+    public String routingForm;
     public RoutingFormSubmission withRoutingForm(String routingForm) {
         this.routingForm = routingForm;
         return this;
@@ -59,7 +63,8 @@ public class RoutingFormSubmission {
     /**
      * The reference to the Invitee resource when routing form submission results in a scheduled meeting.
      */
-    @JsonProperty("submitter")public String submitter;
+    @JsonProperty("submitter")
+    public String submitter;
     public RoutingFormSubmission withSubmitter(String submitter) {
         this.submitter = submitter;
         return this;
@@ -68,7 +73,8 @@ public class RoutingFormSubmission {
     /**
      * Type of the respondent resource that submitted the form and scheduled a meeting.
      */
-    @JsonProperty("submitter_type")public RoutingFormSubmissionSubmitterTypeEnum submitterType;
+    @JsonProperty("submitter_type")
+    public RoutingFormSubmissionSubmitterTypeEnum submitterType;
     public RoutingFormSubmission withSubmitterType(RoutingFormSubmissionSubmitterTypeEnum submitterType) {
         this.submitterType = submitterType;
         return this;
@@ -77,7 +83,8 @@ public class RoutingFormSubmission {
     /**
      * The UTM and Salesforce tracking parameters associated with a Routing Form Submission.
      */
-    @JsonProperty("tracking")public SubmissionTracking tracking;
+    @JsonProperty("tracking")
+    public SubmissionTracking tracking;
     public RoutingFormSubmission withTracking(SubmissionTracking tracking) {
         this.tracking = tracking;
         return this;
@@ -88,7 +95,8 @@ public class RoutingFormSubmission {
      */
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("updated_at")public OffsetDateTime updatedAt;
+    @JsonProperty("updated_at")
+    public OffsetDateTime updatedAt;
     public RoutingFormSubmission withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -97,7 +105,8 @@ public class RoutingFormSubmission {
     /**
      * Canonical reference (unique identifier) for the routing form submission.
      */
-    @JsonProperty("uri")public String uri;
+    @JsonProperty("uri")
+    public String uri;
     public RoutingFormSubmission withUri(String uri) {
         this.uri = uri;
         return this;

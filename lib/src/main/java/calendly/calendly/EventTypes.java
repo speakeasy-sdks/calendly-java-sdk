@@ -39,7 +39,7 @@ public class EventTypes {
      */
     public calendly.calendly.models.operations.GetEventTypesUuidResponse getEventTypesUuid(calendly.calendly.models.operations.GetEventTypesUuidRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetEventTypesUuidPathParams.class, baseUrl, "/event_types/{uuid}", request.pathParams, null);
+        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetEventTypesUuidRequest.class, baseUrl, "/event_types/{uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -98,7 +98,7 @@ public class EventTypes {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.GetEventTypeAvailableTimesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.GetEventTypeAvailableTimesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -158,7 +158,7 @@ public class EventTypes {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.GetEventTypesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.GetEventTypesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

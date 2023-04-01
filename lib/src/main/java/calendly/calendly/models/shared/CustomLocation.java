@@ -13,7 +13,8 @@ public class CustomLocation {
     /**
      * The location description provided by the event host (publisher)
      */
-    @JsonProperty("location")public String location;
+    @JsonProperty("location")
+    public String location;
     public CustomLocation withLocation(String location) {
         this.location = location;
         return this;
@@ -22,7 +23,8 @@ public class CustomLocation {
     /**
      * The event location doesn't fall into a standard category defined by the event host (publisher)
      */
-    @JsonProperty("type")public CustomLocationTypeEnum type;
+    @JsonProperty("type")
+    public CustomLocationTypeEnum type;
     public CustomLocation withType(CustomLocationTypeEnum type) {
         this.type = type;
         return this;

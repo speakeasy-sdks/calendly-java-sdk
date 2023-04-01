@@ -11,9 +11,10 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class Question {
     /**
-     * The respondent’s option(s) for "select" or "radios" types of questions.
+     * The respondent\u2019s option(s) for "select" or "radios" types of questions.
      */
-    @JsonProperty("answer_choices")public String[] answerChoices;
+    @JsonProperty("answer_choices")
+    public String[] answerChoices;
     public Question withAnswerChoices(String[] answerChoices) {
         this.answerChoices = answerChoices;
         return this;
@@ -22,7 +23,8 @@ public class Question {
     /**
      * Question name (in human-readable format).
      */
-    @JsonProperty("name")public String name;
+    @JsonProperty("name")
+    public String name;
     public Question withName(String name) {
         this.name = name;
         return this;
@@ -32,7 +34,8 @@ public class Question {
      * true if an answer to the question is required for respondents to submit the routing form; false if not required.
      * 
      */
-    @JsonProperty("required")public Boolean required;
+    @JsonProperty("required")
+    public Boolean required;
     public Question withRequired(Boolean required) {
         this.required = required;
         return this;
@@ -41,7 +44,8 @@ public class Question {
     /**
      * Question type: name, text input, email, phone, textarea input, dropdown list or radio button list.
      */
-    @JsonProperty("type")public QuestionTypeEnum type;
+    @JsonProperty("type")
+    public QuestionTypeEnum type;
     public Question withType(QuestionTypeEnum type) {
         this.type = type;
         return this;
@@ -50,7 +54,8 @@ public class Question {
     /**
      * Unique identifier for the routing form question.
      */
-    @JsonProperty("uuid")public String uuid;
+    @JsonProperty("uuid")
+    public String uuid;
     public Question withUuid(String uuid) {
         this.uuid = uuid;
         return this;

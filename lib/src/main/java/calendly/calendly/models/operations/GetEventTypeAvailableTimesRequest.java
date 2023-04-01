@@ -4,12 +4,36 @@
 
 package calendly.calendly.models.operations;
 
-
+import calendly.calendly.utils.SpeakeasyMetadata;
 
 public class GetEventTypeAvailableTimesRequest {
-    public GetEventTypeAvailableTimesQueryParams queryParams;
-    public GetEventTypeAvailableTimesRequest withQueryParams(GetEventTypeAvailableTimesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * End time of the requested availability range.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=end_time")
+    public String endTime;
+    public GetEventTypeAvailableTimesRequest withEndTime(String endTime) {
+        this.endTime = endTime;
+        return this;
+    }
+    
+    /**
+     * The uri associated with the event type
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=event_type")
+    public String eventType;
+    public GetEventTypeAvailableTimesRequest withEventType(String eventType) {
+        this.eventType = eventType;
+        return this;
+    }
+    
+    /**
+     * Start time of the requested availability range.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=start_time")
+    public String startTime;
+    public GetEventTypeAvailableTimesRequest withStartTime(String startTime) {
+        this.startTime = startTime;
         return this;
     }
     

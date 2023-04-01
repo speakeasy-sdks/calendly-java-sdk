@@ -10,7 +10,8 @@ public class PostSchedulingLinksRequestBody {
     /**
      * The max number of events that can be scheduled using this scheduling link.
      */
-    @JsonProperty("max_event_count")public PostSchedulingLinksRequestBodyMaxEventCountEnum maxEventCount;
+    @JsonProperty("max_event_count")
+    public PostSchedulingLinksRequestBodyMaxEventCountEnum maxEventCount;
     public PostSchedulingLinksRequestBody withMaxEventCount(PostSchedulingLinksRequestBodyMaxEventCountEnum maxEventCount) {
         this.maxEventCount = maxEventCount;
         return this;
@@ -19,7 +20,8 @@ public class PostSchedulingLinksRequestBody {
     /**
      * A link to the resource that owns this Scheduling Link (currently, this is always an Event Type)
      */
-    @JsonProperty("owner")public String owner;
+    @JsonProperty("owner")
+    public String owner;
     public PostSchedulingLinksRequestBody withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -28,7 +30,8 @@ public class PostSchedulingLinksRequestBody {
     /**
      * Resource type (currently, this is always EventType)
      */
-    @JsonProperty("owner_type")public PostSchedulingLinksRequestBodyOwnerTypeEnum ownerType;
+    @JsonProperty("owner_type")
+    public PostSchedulingLinksRequestBodyOwnerTypeEnum ownerType;
     public PostSchedulingLinksRequestBody withOwnerType(PostSchedulingLinksRequestBodyOwnerTypeEnum ownerType) {
         this.ownerType = ownerType;
         return this;

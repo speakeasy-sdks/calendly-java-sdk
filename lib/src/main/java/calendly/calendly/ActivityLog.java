@@ -33,8 +33,8 @@ public class ActivityLog {
 
     /**
      * List activity log entries
-     * <!-- theme: info -->
-     *   > This endpoint requires an <strong>Enterprise</strong> subscription.
+     * &lt;!-- theme: info --&gt;
+     *   &gt; This endpoint requires an &lt;strong&gt;Enterprise&lt;/strong&gt; subscription.
      * 
      * Returns a list of activity log entries
      * @param request the request object containing all of the parameters for the API call
@@ -49,7 +49,7 @@ public class ActivityLog {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.ActivityLogQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.ActivityLogRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

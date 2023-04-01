@@ -85,7 +85,7 @@ public class Users {
      */
     public calendly.calendly.models.operations.GetUserResponse getUser(calendly.calendly.models.operations.GetUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetUserPathParams.class, baseUrl, "/users/{uuid}", request.pathParams, null);
+        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetUserRequest.class, baseUrl, "/users/{uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");

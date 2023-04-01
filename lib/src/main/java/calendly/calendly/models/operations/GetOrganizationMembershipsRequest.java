@@ -4,12 +4,56 @@
 
 package calendly.calendly.models.operations;
 
-
+import calendly.calendly.utils.SpeakeasyMetadata;
 
 public class GetOrganizationMembershipsRequest {
-    public GetOrganizationMembershipsQueryParams queryParams;
-    public GetOrganizationMembershipsRequest withQueryParams(GetOrganizationMembershipsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * The number of rows to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
+    public Double count;
+    public GetOrganizationMembershipsRequest withCount(Double count) {
+        this.count = count;
+        return this;
+    }
+    
+    /**
+     * Indicates if the results should be filtered by email address
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public GetOrganizationMembershipsRequest withEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    
+    /**
+     * Indicates if the results should be filtered by organization
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=organization")
+    public String organization;
+    public GetOrganizationMembershipsRequest withOrganization(String organization) {
+        this.organization = organization;
+        return this;
+    }
+    
+    /**
+     * The token to pass to get the next or previous portion of the collection
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_token")
+    public String pageToken;
+    public GetOrganizationMembershipsRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Indicates if the results should be filtered by user
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user")
+    public String user;
+    public GetOrganizationMembershipsRequest withUser(String user) {
+        this.user = user;
         return this;
     }
     

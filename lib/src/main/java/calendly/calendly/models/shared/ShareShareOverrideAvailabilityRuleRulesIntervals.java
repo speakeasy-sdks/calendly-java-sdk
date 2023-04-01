@@ -13,7 +13,8 @@ public class ShareShareOverrideAvailabilityRuleRulesIntervals {
      * Format: `"hh:mm"`
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("from")public String from;
+    @JsonProperty("from")
+    public String from;
     public ShareShareOverrideAvailabilityRuleRulesIntervals withFrom(String from) {
         this.from = from;
         return this;
@@ -23,7 +24,8 @@ public class ShareShareOverrideAvailabilityRuleRulesIntervals {
      * Format: `"hh:mm"`
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("to")public String to;
+    @JsonProperty("to")
+    public String to;
     public ShareShareOverrideAvailabilityRuleRulesIntervals withTo(String to) {
         this.to = to;
         return this;

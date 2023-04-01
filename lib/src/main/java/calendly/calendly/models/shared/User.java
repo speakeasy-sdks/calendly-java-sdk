@@ -18,7 +18,8 @@ public class User {
     /**
      * The URL of the user's avatar (image)
      */
-    @JsonProperty("avatar_url")public String avatarUrl;
+    @JsonProperty("avatar_url")
+    public String avatarUrl;
     public User withAvatarUrl(String avatarUrl) {
         this.avatarUrl = avatarUrl;
         return this;
@@ -29,7 +30,8 @@ public class User {
      */
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("created_at")public OffsetDateTime createdAt;
+    @JsonProperty("created_at")
+    public OffsetDateTime createdAt;
     public User withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,7 +40,8 @@ public class User {
     /**
      * A unique reference to the user's current organization
      */
-    @JsonProperty("current_organization")public String currentOrganization;
+    @JsonProperty("current_organization")
+    public String currentOrganization;
     public User withCurrentOrganization(String currentOrganization) {
         this.currentOrganization = currentOrganization;
         return this;
@@ -47,7 +50,8 @@ public class User {
     /**
      * The user's email address
      */
-    @JsonProperty("email")public String email;
+    @JsonProperty("email")
+    public String email;
     public User withEmail(String email) {
         this.email = email;
         return this;
@@ -56,7 +60,8 @@ public class User {
     /**
      * The user's name (human-readable format)
      */
-    @JsonProperty("name")public String name;
+    @JsonProperty("name")
+    public String name;
     public User withName(String name) {
         this.name = name;
         return this;
@@ -65,7 +70,8 @@ public class User {
     /**
      * The URL of the user's Calendly landing page (that lists all the user's event types)
      */
-    @JsonProperty("scheduling_url")public String schedulingUrl;
+    @JsonProperty("scheduling_url")
+    public String schedulingUrl;
     public User withSchedulingUrl(String schedulingUrl) {
         this.schedulingUrl = schedulingUrl;
         return this;
@@ -74,7 +80,8 @@ public class User {
     /**
      * The portion of URL for the user's scheduling page (where invitees book sessions), rendered in a human-readable format
      */
-    @JsonProperty("slug")public String slug;
+    @JsonProperty("slug")
+    public String slug;
     public User withSlug(String slug) {
         this.slug = slug;
         return this;
@@ -83,7 +90,8 @@ public class User {
     /**
      * The time zone to use when presenting time to the user
      */
-    @JsonProperty("timezone")public String timezone;
+    @JsonProperty("timezone")
+    public String timezone;
     public User withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
@@ -94,7 +102,8 @@ public class User {
      */
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("updated_at")public OffsetDateTime updatedAt;
+    @JsonProperty("updated_at")
+    public OffsetDateTime updatedAt;
     public User withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -103,7 +112,8 @@ public class User {
     /**
      * Canonical reference (unique identifier) for the user
      */
-    @JsonProperty("uri")public String uri;
+    @JsonProperty("uri")
+    public String uri;
     public User withUri(String uri) {
         this.uri = uri;
         return this;

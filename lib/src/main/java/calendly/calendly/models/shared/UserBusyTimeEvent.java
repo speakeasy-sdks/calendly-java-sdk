@@ -10,7 +10,8 @@ public class UserBusyTimeEvent {
     /**
      * The uri associated with the calendly scheduled event
      */
-    @JsonProperty("uri")public String uri;
+    @JsonProperty("uri")
+    public String uri;
     public UserBusyTimeEvent withUri(String uri) {
         this.uri = uri;
         return this;

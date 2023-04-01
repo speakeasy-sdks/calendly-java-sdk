@@ -20,7 +20,8 @@ public class InviteeReconfirmation {
      */
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("confirmed_at")public OffsetDateTime confirmedAt;
+    @JsonProperty("confirmed_at")
+    public OffsetDateTime confirmedAt;
     public InviteeReconfirmation withConfirmedAt(OffsetDateTime confirmedAt) {
         this.confirmedAt = confirmedAt;
         return this;
@@ -31,7 +32,8 @@ public class InviteeReconfirmation {
      */
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("created_at")public OffsetDateTime createdAt;
+    @JsonProperty("created_at")
+    public OffsetDateTime createdAt;
     public InviteeReconfirmation withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;

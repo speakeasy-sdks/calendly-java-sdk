@@ -20,7 +20,8 @@ public class RoutingForm {
      */
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("created_at")public OffsetDateTime createdAt;
+    @JsonProperty("created_at")
+    public OffsetDateTime createdAt;
     public RoutingForm withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -29,7 +30,8 @@ public class RoutingForm {
     /**
      * The routing form name (in human-readable format).
      */
-    @JsonProperty("name")public String name;
+    @JsonProperty("name")
+    public String name;
     public RoutingForm withName(String name) {
         this.name = name;
         return this;
@@ -38,7 +40,8 @@ public class RoutingForm {
     /**
      * The URI of the organization that's associated with the routing form.
      */
-    @JsonProperty("organization")public String organization;
+    @JsonProperty("organization")
+    public String organization;
     public RoutingForm withOrganization(String organization) {
         this.organization = organization;
         return this;
@@ -47,7 +50,8 @@ public class RoutingForm {
     /**
      * An ordered collection of Routing Form non-deleted questions.
      */
-    @JsonProperty("questions")public Question[] questions;
+    @JsonProperty("questions")
+    public Question[] questions;
     public RoutingForm withQuestions(Question[] questions) {
         this.questions = questions;
         return this;
@@ -56,7 +60,8 @@ public class RoutingForm {
     /**
      * Indicates if the form is in "draft" or "published" status.
      */
-    @JsonProperty("status")public RoutingFormStatusEnum status;
+    @JsonProperty("status")
+    public RoutingFormStatusEnum status;
     public RoutingForm withStatus(RoutingFormStatusEnum status) {
         this.status = status;
         return this;
@@ -67,7 +72,8 @@ public class RoutingForm {
      */
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("updated_at")public OffsetDateTime updatedAt;
+    @JsonProperty("updated_at")
+    public OffsetDateTime updatedAt;
     public RoutingForm withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -77,7 +83,8 @@ public class RoutingForm {
      * Canonical reference (unique identifier) for the routing form.
      * 
      */
-    @JsonProperty("uri")public String uri;
+    @JsonProperty("uri")
+    public String uri;
     public RoutingForm withUri(String uri) {
         this.uri = uri;
         return this;

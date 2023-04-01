@@ -13,7 +13,8 @@ public class Profile {
     /**
      * Human-readable name for the profile of the user that's associated with the event type
      */
-    @JsonProperty("name")public String name;
+    @JsonProperty("name")
+    public String name;
     public Profile withName(String name) {
         this.name = name;
         return this;
@@ -22,7 +23,8 @@ public class Profile {
     /**
      * The unique reference to the user associated with the profile
      */
-    @JsonProperty("owner")public String owner;
+    @JsonProperty("owner")
+    public String owner;
     public Profile withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -31,7 +33,8 @@ public class Profile {
     /**
      * Indicates if the profile belongs to a "user" (individual) or "team"
      */
-    @JsonProperty("type")public ProfileTypeEnum type;
+    @JsonProperty("type")
+    public ProfileTypeEnum type;
     public Profile withType(ProfileTypeEnum type) {
         this.type = type;
         return this;

@@ -4,18 +4,66 @@
 
 package calendly.calendly.models.operations;
 
-
+import calendly.calendly.utils.SpeakeasyMetadata;
 
 public class GetOrganizationsUuidInvitationsRequest {
-    public GetOrganizationsUuidInvitationsPathParams pathParams;
-    public GetOrganizationsUuidInvitationsRequest withPathParams(GetOrganizationsUuidInvitationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The number of rows to return
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=count")
+    public Double count;
+    public GetOrganizationsUuidInvitationsRequest withCount(Double count) {
+        this.count = count;
         return this;
     }
     
-    public GetOrganizationsUuidInvitationsQueryParams queryParams;
-    public GetOrganizationsUuidInvitationsRequest withQueryParams(GetOrganizationsUuidInvitationsQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * Indicates if the results should be filtered by email address
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=email")
+    public String email;
+    public GetOrganizationsUuidInvitationsRequest withEmail(String email) {
+        this.email = email;
+        return this;
+    }
+    
+    /**
+     * The token to pass to get the next or previous portion of the collection
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=page_token")
+    public String pageToken;
+    public GetOrganizationsUuidInvitationsRequest withPageToken(String pageToken) {
+        this.pageToken = pageToken;
+        return this;
+    }
+    
+    /**
+     * Order results by the field name and direction specified (ascending or descending). Returns multiple sets of results in a comma-separated list.
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=sort")
+    public String sort;
+    public GetOrganizationsUuidInvitationsRequest withSort(String sort) {
+        this.sort = sort;
+        return this;
+    }
+    
+    /**
+     * Indicates if the results should be filtered by status  ("pending", "accepted", or "declined")
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=status")
+    public GetOrganizationsUuidInvitationsStatusEnum status;
+    public GetOrganizationsUuidInvitationsRequest withStatus(GetOrganizationsUuidInvitationsStatusEnum status) {
+        this.status = status;
+        return this;
+    }
+    
+    /**
+     * The organization's unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uuid")
+    public String uuid;
+    public GetOrganizationsUuidInvitationsRequest withUuid(String uuid) {
+        this.uuid = uuid;
         return this;
     }
     

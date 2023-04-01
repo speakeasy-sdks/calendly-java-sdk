@@ -13,7 +13,8 @@ public class SubmissionCustomMessageResult {
     /**
      * Indicates if the routing form submission resulted in a custom "thank you" message.
      */
-    @JsonProperty("type")public SubmissionCustomMessageResultTypeEnum type;
+    @JsonProperty("type")
+    public SubmissionCustomMessageResultTypeEnum type;
     public SubmissionCustomMessageResult withType(SubmissionCustomMessageResultTypeEnum type) {
         this.type = type;
         return this;
@@ -22,7 +23,8 @@ public class SubmissionCustomMessageResult {
     /**
      * Contains an object with custom message headline and body.
      */
-    @JsonProperty("value")public SubmissionCustomMessageResultValue value;
+    @JsonProperty("value")
+    public SubmissionCustomMessageResultValue value;
     public SubmissionCustomMessageResult withValue(SubmissionCustomMessageResultValue value) {
         this.value = value;
         return this;

@@ -13,7 +13,8 @@ public class AvailabilitySchedule {
     /**
      * This is the default Availability Schedule in use.
      */
-    @JsonProperty("default")public Boolean default_;
+    @JsonProperty("default")
+    public Boolean default_;
     public AvailabilitySchedule withDefault(Boolean default_) {
         this.default_ = default_;
         return this;
@@ -22,7 +23,8 @@ public class AvailabilitySchedule {
     /**
      * The name of this Availability Schedule.
      */
-    @JsonProperty("name")public String name;
+    @JsonProperty("name")
+    public String name;
     public AvailabilitySchedule withName(String name) {
         this.name = name;
         return this;
@@ -31,7 +33,8 @@ public class AvailabilitySchedule {
     /**
      * The rules of this Availability Schedule.
      */
-    @JsonProperty("rules")public AvailabilityRule[] rules;
+    @JsonProperty("rules")
+    public AvailabilityRule[] rules;
     public AvailabilitySchedule withRules(AvailabilityRule[] rules) {
         this.rules = rules;
         return this;
@@ -40,7 +43,8 @@ public class AvailabilitySchedule {
     /**
      * The timezone for which this Availability Schedule is originated in.
      */
-    @JsonProperty("timezone")public String timezone;
+    @JsonProperty("timezone")
+    public String timezone;
     public AvailabilitySchedule withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
@@ -49,7 +53,8 @@ public class AvailabilitySchedule {
     /**
      * A URI reference to this Availability Schedule.
      */
-    @JsonProperty("uri")public String uri;
+    @JsonProperty("uri")
+    public String uri;
     public AvailabilitySchedule withUri(String uri) {
         this.uri = uri;
         return this;
@@ -58,7 +63,8 @@ public class AvailabilitySchedule {
     /**
      * A URI reference to a User.
      */
-    @JsonProperty("user")public String user;
+    @JsonProperty("user")
+    public String user;
     public AvailabilitySchedule withUser(String user) {
         this.user = user;
         return this;

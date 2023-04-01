@@ -13,7 +13,8 @@ public class GetUserBusyTimes200ApplicationJSON {
     /**
      * The set of internal and external scheduled calendar events matching the criteria
      */
-    @JsonProperty("collection")public calendly.calendly.models.shared.UserBusyTime[] collection;
+    @JsonProperty("collection")
+    public calendly.calendly.models.shared.UserBusyTime[] collection;
     public GetUserBusyTimes200ApplicationJSON withCollection(calendly.calendly.models.shared.UserBusyTime[] collection) {
         this.collection = collection;
         return this;

@@ -13,7 +13,8 @@ public class PostSharesRequestBodyAvailabilityRuleRulesIntervals {
      * Format: `"hh:mm"`
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("from")public String from;
+    @JsonProperty("from")
+    public String from;
     public PostSharesRequestBodyAvailabilityRuleRulesIntervals withFrom(String from) {
         this.from = from;
         return this;
@@ -23,7 +24,8 @@ public class PostSharesRequestBodyAvailabilityRuleRulesIntervals {
      * Format: `"hh:mm"`
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("to")public String to;
+    @JsonProperty("to")
+    public String to;
     public PostSharesRequestBodyAvailabilityRuleRulesIntervals withTo(String to) {
         this.to = to;
         return this;

@@ -13,7 +13,8 @@ public class GoogleConference {
     /**
      * Google conference meeting url
      */
-    @JsonProperty("join_url")public String joinUrl;
+    @JsonProperty("join_url")
+    public String joinUrl;
     public GoogleConference withJoinUrl(String joinUrl) {
         this.joinUrl = joinUrl;
         return this;
@@ -22,7 +23,8 @@ public class GoogleConference {
     /**
      * Indicates the current status of the Google conference
      */
-    @JsonProperty("status")public GoogleConferenceStatusEnum status;
+    @JsonProperty("status")
+    public GoogleConferenceStatusEnum status;
     public GoogleConference withStatus(GoogleConferenceStatusEnum status) {
         this.status = status;
         return this;
@@ -31,7 +33,8 @@ public class GoogleConference {
     /**
      * The event location is a Google Meet or Hangouts conference
      */
-    @JsonProperty("type")public GoogleConferenceTypeEnum type;
+    @JsonProperty("type")
+    public GoogleConferenceTypeEnum type;
     public GoogleConference withType(GoogleConferenceTypeEnum type) {
         this.type = type;
         return this;

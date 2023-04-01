@@ -13,7 +13,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class GotoMeetingConferenceData {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("conferenceCallInfo")public String conferenceCallInfo;
+    @JsonProperty("conferenceCallInfo")
+    public String conferenceCallInfo;
     public GotoMeetingConferenceData withConferenceCallInfo(String conferenceCallInfo) {
         this.conferenceCallInfo = conferenceCallInfo;
         return this;
@@ -23,7 +24,8 @@ public class GotoMeetingConferenceData {
      * Canonical reference (unique identifier) for the GoToMeeting conference
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("uniqueMeetingId")public Double uniqueMeetingId;
+    @JsonProperty("uniqueMeetingId")
+    public Double uniqueMeetingId;
     public GotoMeetingConferenceData withUniqueMeetingId(Double uniqueMeetingId) {
         this.uniqueMeetingId = uniqueMeetingId;
         return this;

@@ -7,18 +7,23 @@ package calendly.calendly.models.operations;
 import calendly.calendly.utils.SpeakeasyMetadata;
 
 public class PostScheduledEventsUuidCancellationRawRequest {
-    public PostScheduledEventsUuidCancellationPathParams pathParams;
-    public PostScheduledEventsUuidCancellationRawRequest withPathParams(PostScheduledEventsUuidCancellationPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * Optional cancellation reason.
+     */
+    @SpeakeasyMetadata("request:mediaType=application/xml")
+    public byte[] requestBody;
+    public PostScheduledEventsUuidCancellationRawRequest withRequestBody(byte[] requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
     /**
-     * Optional cancellation reason.
+     * The event's unique indentifier
      */
-    @SpeakeasyMetadata("request:mediaType=application/xml")public byte[] request;
-    public PostScheduledEventsUuidCancellationRawRequest withRequest(byte[] request) {
-        this.request = request;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uuid")
+    public String uuid;
+    public PostScheduledEventsUuidCancellationRawRequest withUuid(String uuid) {
+        this.uuid = uuid;
         return this;
     }
     

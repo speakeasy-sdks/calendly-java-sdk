@@ -10,7 +10,8 @@ public class EventInviteesCounter {
     /**
      * Total invitees for an event that have not canceled
      */
-    @JsonProperty("active")public Double active;
+    @JsonProperty("active")
+    public Double active;
     public EventInviteesCounter withActive(Double active) {
         this.active = active;
         return this;
@@ -19,7 +20,8 @@ public class EventInviteesCounter {
     /**
      * Maximum number of active invitees that can book the event
      */
-    @JsonProperty("limit")public Double limit;
+    @JsonProperty("limit")
+    public Double limit;
     public EventInviteesCounter withLimit(Double limit) {
         this.limit = limit;
         return this;
@@ -28,7 +30,8 @@ public class EventInviteesCounter {
     /**
      * Total invitees for an event, including invitees that have canceled
      */
-    @JsonProperty("total")public Double total;
+    @JsonProperty("total")
+    public Double total;
     public EventInviteesCounter withTotal(Double total) {
         this.total = total;
         return this;

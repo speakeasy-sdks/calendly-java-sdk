@@ -7,15 +7,20 @@ package calendly.calendly.models.operations;
 import calendly.calendly.utils.SpeakeasyMetadata;
 
 public class PostOrganizationsUuidInvitationsRequest {
-    public PostOrganizationsUuidInvitationsPathParams pathParams;
-    public PostOrganizationsUuidInvitationsRequest withPathParams(PostOrganizationsUuidInvitationsPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("request:mediaType=application/json")
+    public PostOrganizationsUuidInvitationsRequestBody requestBody;
+    public PostOrganizationsUuidInvitationsRequest withRequestBody(PostOrganizationsUuidInvitationsRequestBody requestBody) {
+        this.requestBody = requestBody;
         return this;
     }
     
-    @SpeakeasyMetadata("request:mediaType=application/json")public PostOrganizationsUuidInvitationsRequestBody request;
-    public PostOrganizationsUuidInvitationsRequest withRequest(PostOrganizationsUuidInvitationsRequestBody request) {
-        this.request = request;
+    /**
+     * The organization's unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uuid")
+    public String uuid;
+    public PostOrganizationsUuidInvitationsRequest withUuid(String uuid) {
+        this.uuid = uuid;
         return this;
     }
     

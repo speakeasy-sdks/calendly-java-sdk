@@ -17,7 +17,8 @@ import java.time.OffsetDateTime;
  * Entry - Object for a created activity log record
  */
 public class Entry {
-    @JsonProperty("action")public String action;
+    @JsonProperty("action")
+    public String action;
     public Entry withAction(String action) {
         this.action = action;
         return this;
@@ -28,8 +29,8 @@ public class Entry {
      * 
      * Specific actors:
      * 
-     * <details>
-     * <summary>Calendly System</summary>
+     * &lt;details&gt;
+     * &lt;summary&gt;Calendly System&lt;/summary&gt;
      * 
      * Used when an action is performed by the Calendly system and not triggered directly by a user interaction.
      * 
@@ -41,12 +42,12 @@ public class Entry {
      * }
      * ```
      * 
-     * </details>
+     * &lt;/details&gt;
      * 
-     * <br />
+     * &lt;br /&gt;
      * 
-     * <details>
-     * <summary>Calendly Support</summary>
+     * &lt;details&gt;
+     * &lt;summary&gt;Calendly Support&lt;/summary&gt;
      * Used when an action is performed by Calendly support.
      * 
      * Example:
@@ -60,29 +61,33 @@ public class Entry {
      *   "uri": "https://api.calendly.com/users/AAAAAAAAAAAAAAAA"
      * }
      * ```
-     * </details>
+     * &lt;/details&gt;
      * 
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("actor")public Actor actor;
+    @JsonProperty("actor")
+    public Actor actor;
     public Entry withActor(Actor actor) {
         this.actor = actor;
         return this;
     }
     
-    @JsonProperty("details")public java.util.Map<String, Object> details;
+    @JsonProperty("details")
+    public java.util.Map<String, Object> details;
     public Entry withDetails(java.util.Map<String, Object> details) {
         this.details = details;
         return this;
     }
     
-    @JsonProperty("fully_qualified_name")public String fullyQualifiedName;
+    @JsonProperty("fully_qualified_name")
+    public String fullyQualifiedName;
     public Entry withFullyQualifiedName(String fullyQualifiedName) {
         this.fullyQualifiedName = fullyQualifiedName;
         return this;
     }
     
-    @JsonProperty("namespace")public String namespace;
+    @JsonProperty("namespace")
+    public String namespace;
     public Entry withNamespace(String namespace) {
         this.namespace = namespace;
         return this;
@@ -93,19 +98,22 @@ public class Entry {
      */
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("occurred_at")public OffsetDateTime occurredAt;
+    @JsonProperty("occurred_at")
+    public OffsetDateTime occurredAt;
     public Entry withOccurredAt(OffsetDateTime occurredAt) {
         this.occurredAt = occurredAt;
         return this;
     }
     
-    @JsonProperty("organization")public String organization;
+    @JsonProperty("organization")
+    public String organization;
     public Entry withOrganization(String organization) {
         this.organization = organization;
         return this;
     }
     
-    @JsonProperty("uri")public String uri;
+    @JsonProperty("uri")
+    public String uri;
     public Entry withUri(String uri) {
         this.uri = uri;
         return this;

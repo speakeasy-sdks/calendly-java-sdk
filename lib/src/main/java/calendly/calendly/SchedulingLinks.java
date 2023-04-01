@@ -37,7 +37,7 @@ public class SchedulingLinks {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public calendly.calendly.models.operations.PostSchedulingLinksResponse postSchedulingLinks(calendly.calendly.models.operations.PostSchedulingLinksRequest request) throws Exception {
+    public calendly.calendly.models.operations.PostSchedulingLinksResponse postSchedulingLinks(calendly.calendly.models.operations.PostSchedulingLinksRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = calendly.calendly.utils.Utils.generateURL(baseUrl, "/scheduling_links");
         

@@ -39,14 +39,14 @@ public class Organizations {
      * 
      * * To remove users, the caller must have admin rights for the organization
      * 
-     * * An organization owner can’t be removed
+     * * An organization owner can\u2019t be removed
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
     public calendly.calendly.models.operations.DeleteOrganizationsUuidMembershipsResponse deleteOrganizationsUuidMemberships(calendly.calendly.models.operations.DeleteOrganizationsUuidMembershipsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.DeleteOrganizationsUuidMembershipsPathParams.class, baseUrl, "/organization_memberships/{uuid}", request.pathParams, null);
+        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.DeleteOrganizationsUuidMembershipsRequest.class, baseUrl, "/organization_memberships/{uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -108,7 +108,7 @@ public class Organizations {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.GetOrganizationMembershipsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.GetOrganizationMembershipsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -164,7 +164,7 @@ public class Organizations {
      */
     public calendly.calendly.models.operations.GetOrganizationsOrgUuidInvitationsUuidResponse getOrganizationsOrgUuidInvitationsUuid(calendly.calendly.models.operations.GetOrganizationsOrgUuidInvitationsUuidRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetOrganizationsOrgUuidInvitationsUuidPathParams.class, baseUrl, "/organizations/{org_uuid}/invitations/{uuid}", request.pathParams, null);
+        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetOrganizationsOrgUuidInvitationsUuidRequest.class, baseUrl, "/organizations/{org_uuid}/invitations/{uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -212,13 +212,13 @@ public class Organizations {
      */
     public calendly.calendly.models.operations.GetOrganizationsUuidInvitationsResponse getOrganizationsUuidInvitations(calendly.calendly.models.operations.GetOrganizationsUuidInvitationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetOrganizationsUuidInvitationsPathParams.class, baseUrl, "/organizations/{uuid}/invitations", request.pathParams, null);
+        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetOrganizationsUuidInvitationsRequest.class, baseUrl, "/organizations/{uuid}/invitations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.GetOrganizationsUuidInvitationsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.GetOrganizationsUuidInvitationsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -266,7 +266,7 @@ public class Organizations {
      */
     public calendly.calendly.models.operations.GetOrganizationsUuidMembershipsResponse getOrganizationsUuidMemberships(calendly.calendly.models.operations.GetOrganizationsUuidMembershipsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetOrganizationsUuidMembershipsPathParams.class, baseUrl, "/organization_memberships/{uuid}", request.pathParams, null);
+        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetOrganizationsUuidMembershipsRequest.class, baseUrl, "/organization_memberships/{uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -323,12 +323,12 @@ public class Organizations {
      */
     public calendly.calendly.models.operations.PostOrganizationsUuidInvitationsResponse postOrganizationsUuidInvitations(calendly.calendly.models.operations.PostOrganizationsUuidInvitationsRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.PostOrganizationsUuidInvitationsPathParams.class, baseUrl, "/organizations/{uuid}/invitations", request.pathParams, null);
+        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.PostOrganizationsUuidInvitationsRequest.class, baseUrl, "/organizations/{uuid}/invitations", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = calendly.calendly.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = calendly.calendly.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         if (serializedRequestBody == null) {
             throw new Exception("Request body is required");
         }
@@ -392,7 +392,7 @@ public class Organizations {
      */
     public calendly.calendly.models.operations.RevokeUsersOrganizationInvitationResponse revokeUsersOrganizationInvitation(calendly.calendly.models.operations.RevokeUsersOrganizationInvitationRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.RevokeUsersOrganizationInvitationPathParams.class, baseUrl, "/organizations/{org_uuid}/invitations/{uuid}", request.pathParams, null);
+        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.RevokeUsersOrganizationInvitationRequest.class, baseUrl, "/organizations/{org_uuid}/invitations/{uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");

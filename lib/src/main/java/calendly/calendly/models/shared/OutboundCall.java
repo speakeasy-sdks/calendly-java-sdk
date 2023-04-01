@@ -13,7 +13,8 @@ public class OutboundCall {
     /**
      * The phone number the event host (publisher) will use to call the invitee
      */
-    @JsonProperty("location")public String location;
+    @JsonProperty("location")
+    public String location;
     public OutboundCall withLocation(String location) {
         this.location = location;
         return this;
@@ -22,7 +23,8 @@ public class OutboundCall {
     /**
      * Indicates that the event host (publisher) will call the invitee
      */
-    @JsonProperty("type")public OutboundCallTypeEnum type;
+    @JsonProperty("type")
+    public OutboundCallTypeEnum type;
     public OutboundCall withType(OutboundCallTypeEnum type) {
         this.type = type;
         return this;

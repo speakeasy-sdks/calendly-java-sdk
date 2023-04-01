@@ -10,7 +10,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * GetOrganizationsUuidMemberships200ApplicationJSON - OK
  */
 public class GetOrganizationsUuidMemberships200ApplicationJSON {
-    @JsonProperty("resource")public calendly.calendly.models.shared.OrganizationMembership resource;
+    @JsonProperty("resource")
+    public calendly.calendly.models.shared.OrganizationMembership resource;
     public GetOrganizationsUuidMemberships200ApplicationJSON withResource(calendly.calendly.models.shared.OrganizationMembership resource) {
         this.resource = resource;
         return this;

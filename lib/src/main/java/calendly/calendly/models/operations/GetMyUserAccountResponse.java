@@ -7,6 +7,7 @@ package calendly.calendly.models.operations;
 import java.net.http.HttpResponse;
 
 public class GetMyUserAccountResponse {
+    
     public String contentType;
     public GetMyUserAccountResponse withContentType(String contentType) {
         this.contentType = contentType;
@@ -16,17 +17,20 @@ public class GetMyUserAccountResponse {
     /**
      * Cannot authenticate caller
      */
+    
     public GetMyUserAccountErrorResponse errorResponse;
     public GetMyUserAccountResponse withErrorResponse(GetMyUserAccountErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
     }
     
+    
     public Integer statusCode;
     public GetMyUserAccountResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public GetMyUserAccountResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
@@ -37,6 +41,7 @@ public class GetMyUserAccountResponse {
     /**
      * OK
      */
+    
     public GetMyUserAccount200ApplicationJSON getMyUserAccount200ApplicationJSONObject;
     public GetMyUserAccountResponse withGetMyUserAccount200ApplicationJSONObject(GetMyUserAccount200ApplicationJSON getMyUserAccount200ApplicationJSONObject) {
         this.getMyUserAccount200ApplicationJSONObject = getMyUserAccount200ApplicationJSONObject;

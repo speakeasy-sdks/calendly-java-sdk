@@ -13,7 +13,8 @@ public class InPersonMeeting {
     /**
      * The physical location specified by the event host (publisher)
      */
-    @JsonProperty("location")public String location;
+    @JsonProperty("location")
+    public String location;
     public InPersonMeeting withLocation(String location) {
         this.location = location;
         return this;
@@ -22,7 +23,8 @@ public class InPersonMeeting {
     /**
      * Indicates that the event will be an in-person meeting.
      */
-    @JsonProperty("type")public InPersonMeetingTypeEnum type;
+    @JsonProperty("type")
+    public InPersonMeetingTypeEnum type;
     public InPersonMeeting withType(InPersonMeetingTypeEnum type) {
         this.type = type;
         return this;

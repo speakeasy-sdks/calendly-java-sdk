@@ -10,13 +10,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  * GetRoutingFormSubmissions200ApplicationJSON - OK
  */
 public class GetRoutingFormSubmissions200ApplicationJSON {
-    @JsonProperty("collection")public calendly.calendly.models.shared.RoutingFormSubmission[] collection;
+    @JsonProperty("collection")
+    public calendly.calendly.models.shared.RoutingFormSubmission[] collection;
     public GetRoutingFormSubmissions200ApplicationJSON withCollection(calendly.calendly.models.shared.RoutingFormSubmission[] collection) {
         this.collection = collection;
         return this;
     }
     
-    @JsonProperty("pagination")public calendly.calendly.models.shared.Pagination pagination;
+    @JsonProperty("pagination")
+    public calendly.calendly.models.shared.Pagination pagination;
     public GetRoutingFormSubmissions200ApplicationJSON withPagination(calendly.calendly.models.shared.Pagination pagination) {
         this.pagination = pagination;
         return this;

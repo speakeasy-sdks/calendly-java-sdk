@@ -4,12 +4,16 @@
 
 package calendly.calendly.models.operations;
 
-
+import calendly.calendly.utils.SpeakeasyMetadata;
 
 public class GetUserAvailabilitySchedulesRequest {
-    public GetUserAvailabilitySchedulesQueryParams queryParams;
-    public GetUserAvailabilitySchedulesRequest withQueryParams(GetUserAvailabilitySchedulesQueryParams queryParams) {
-        this.queryParams = queryParams;
+    /**
+     * A URI reference to a user
+     */
+    @SpeakeasyMetadata("queryParam:style=form,explode=true,name=user")
+    public String user;
+    public GetUserAvailabilitySchedulesRequest withUser(String user) {
+        this.user = user;
         return this;
     }
     

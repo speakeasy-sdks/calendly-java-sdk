@@ -13,7 +13,8 @@ public class PostScheduledEventsUuidCancellationMultipart201ApplicationJSON {
     /**
      * Provides data pertaining to the cancellation of the Event
      */
-    @JsonProperty("resource")public calendly.calendly.models.shared.Cancellation resource;
+    @JsonProperty("resource")
+    public calendly.calendly.models.shared.Cancellation resource;
     public PostScheduledEventsUuidCancellationMultipart201ApplicationJSON withResource(calendly.calendly.models.shared.Cancellation resource) {
         this.resource = resource;
         return this;

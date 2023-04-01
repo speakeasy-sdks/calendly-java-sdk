@@ -13,7 +13,8 @@ public class GotoMeetingConference {
     /**
      * The conference metadata supplied by GoToMeeting
      */
-    @JsonProperty("data")public GotoMeetingConferenceData data;
+    @JsonProperty("data")
+    public GotoMeetingConferenceData data;
     public GotoMeetingConference withData(GotoMeetingConferenceData data) {
         this.data = data;
         return this;
@@ -22,7 +23,8 @@ public class GotoMeetingConference {
     /**
      * GoToMeeting conference meeting url
      */
-    @JsonProperty("join_url")public String joinUrl;
+    @JsonProperty("join_url")
+    public String joinUrl;
     public GotoMeetingConference withJoinUrl(String joinUrl) {
         this.joinUrl = joinUrl;
         return this;
@@ -31,7 +33,8 @@ public class GotoMeetingConference {
     /**
      * Indicates the current status of the GoToMeeting conference
      */
-    @JsonProperty("status")public GotoMeetingConferenceStatusEnum status;
+    @JsonProperty("status")
+    public GotoMeetingConferenceStatusEnum status;
     public GotoMeetingConference withStatus(GotoMeetingConferenceStatusEnum status) {
         this.status = status;
         return this;
@@ -40,7 +43,8 @@ public class GotoMeetingConference {
     /**
      * The event location is a GoToMeeting conference
      */
-    @JsonProperty("type")public GotoMeetingConferenceTypeEnum type;
+    @JsonProperty("type")
+    public GotoMeetingConferenceTypeEnum type;
     public GotoMeetingConference withType(GotoMeetingConferenceTypeEnum type) {
         this.type = type;
         return this;

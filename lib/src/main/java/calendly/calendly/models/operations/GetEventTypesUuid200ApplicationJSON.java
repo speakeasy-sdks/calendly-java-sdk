@@ -13,7 +13,8 @@ public class GetEventTypesUuid200ApplicationJSON {
     /**
      * A configuration for an Event
      */
-    @JsonProperty("resource")public calendly.calendly.models.shared.EventType resource;
+    @JsonProperty("resource")
+    public calendly.calendly.models.shared.EventType resource;
     public GetEventTypesUuid200ApplicationJSON withResource(calendly.calendly.models.shared.EventType resource) {
         this.resource = resource;
         return this;

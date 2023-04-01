@@ -33,8 +33,8 @@ public class DataCompliance {
 
     /**
      * Delete Scheduled Event Data
-     * <!-- theme: info -->
-     *   > This endpoint requires an <strong>Enterprise</strong> subscription.
+     * &lt;!-- theme: info --&gt;
+     *   &gt; This endpoint requires an &lt;strong&gt;Enterprise&lt;/strong&gt; subscription.
      * 
      * To submit a request to remove scheduled events data within a time range for your organization, use this endpoint. Requests for data deletion can take up to 7 days to complete.
      * 
@@ -43,7 +43,7 @@ public class DataCompliance {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public calendly.calendly.models.operations.PostDataComplianceDeletionEventsResponse postDataComplianceDeletionEvents(calendly.calendly.models.operations.PostDataComplianceDeletionEventsRequest request) throws Exception {
+    public calendly.calendly.models.operations.PostDataComplianceDeletionEventsResponse postDataComplianceDeletionEvents(calendly.calendly.models.operations.PostDataComplianceDeletionEventsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = calendly.calendly.utils.Utils.generateURL(baseUrl, "/data_compliance/deletion/events");
         
@@ -99,15 +99,15 @@ public class DataCompliance {
 
     /**
      * Delete Invitee Data
-     * <!-- theme: info -->
-     *   > This endpoint requires an <strong>Enterprise</strong> subscription.
+     * &lt;!-- theme: info --&gt;
+     *   &gt; This endpoint requires an &lt;strong&gt;Enterprise&lt;/strong&gt; subscription.
      * 
      * To submit a request to remove invitee data from all previously booked events in your organization, use this endpoint. Requests for data deletion can take up to 7 days to complete.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public calendly.calendly.models.operations.PostDataComplianceDeletionInviteesResponse postDataComplianceDeletionInvitees(calendly.calendly.models.operations.PostDataComplianceDeletionInviteesRequest request) throws Exception {
+    public calendly.calendly.models.operations.PostDataComplianceDeletionInviteesResponse postDataComplianceDeletionInvitees(calendly.calendly.models.operations.PostDataComplianceDeletionInviteesRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = calendly.calendly.utils.Utils.generateURL(baseUrl, "/data_compliance/deletion/invitees");
         

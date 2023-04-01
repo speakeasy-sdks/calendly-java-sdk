@@ -20,7 +20,8 @@ public class PostDataComplianceDeletionEventsRequestBody {
      */
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("end_time")public OffsetDateTime endTime;
+    @JsonProperty("end_time")
+    public OffsetDateTime endTime;
     public PostDataComplianceDeletionEventsRequestBody withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -31,7 +32,8 @@ public class PostDataComplianceDeletionEventsRequestBody {
      */
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("start_time")public OffsetDateTime startTime;
+    @JsonProperty("start_time")
+    public OffsetDateTime startTime;
     public PostDataComplianceDeletionEventsRequestBody withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;

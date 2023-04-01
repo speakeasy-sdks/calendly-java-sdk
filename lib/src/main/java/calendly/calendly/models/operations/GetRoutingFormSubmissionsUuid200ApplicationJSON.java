@@ -13,7 +13,8 @@ public class GetRoutingFormSubmissionsUuid200ApplicationJSON {
     /**
      * Information about a Routing Form Submission.
      */
-    @JsonProperty("resource")public calendly.calendly.models.shared.RoutingFormSubmission resource;
+    @JsonProperty("resource")
+    public calendly.calendly.models.shared.RoutingFormSubmission resource;
     public GetRoutingFormSubmissionsUuid200ApplicationJSON withResource(calendly.calendly.models.shared.RoutingFormSubmission resource) {
         this.resource = resource;
         return this;

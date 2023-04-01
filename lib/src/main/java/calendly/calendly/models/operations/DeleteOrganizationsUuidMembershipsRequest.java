@@ -4,12 +4,16 @@
 
 package calendly.calendly.models.operations;
 
-
+import calendly.calendly.utils.SpeakeasyMetadata;
 
 public class DeleteOrganizationsUuidMembershipsRequest {
-    public DeleteOrganizationsUuidMembershipsPathParams pathParams;
-    public DeleteOrganizationsUuidMembershipsRequest withPathParams(DeleteOrganizationsUuidMembershipsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The organization membership's unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uuid")
+    public String uuid;
+    public DeleteOrganizationsUuidMembershipsRequest withUuid(String uuid) {
+        this.uuid = uuid;
         return this;
     }
     

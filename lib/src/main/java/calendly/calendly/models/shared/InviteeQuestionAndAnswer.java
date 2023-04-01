@@ -13,7 +13,8 @@ public class InviteeQuestionAndAnswer {
     /**
      * The invitee's answer to the question
      */
-    @JsonProperty("answer")public String answer;
+    @JsonProperty("answer")
+    public String answer;
     public InviteeQuestionAndAnswer withAnswer(String answer) {
         this.answer = answer;
         return this;
@@ -22,7 +23,8 @@ public class InviteeQuestionAndAnswer {
     /**
      * The position of the question in relation to others on the booking form
      */
-    @JsonProperty("position")public Double position;
+    @JsonProperty("position")
+    public Double position;
     public InviteeQuestionAndAnswer withPosition(Double position) {
         this.position = position;
         return this;
@@ -31,7 +33,8 @@ public class InviteeQuestionAndAnswer {
     /**
      * A question on the invitee's booking form
      */
-    @JsonProperty("question")public String question;
+    @JsonProperty("question")
+    public String question;
     public InviteeQuestionAndAnswer withQuestion(String question) {
         this.question = question;
         return this;

@@ -10,7 +10,8 @@ public class EventEventMemberships {
     /**
      * Canonical reference (unique identifier) for the user
      */
-    @JsonProperty("user")public String user;
+    @JsonProperty("user")
+    public String user;
     public EventEventMemberships withUser(String user) {
         this.user = user;
         return this;

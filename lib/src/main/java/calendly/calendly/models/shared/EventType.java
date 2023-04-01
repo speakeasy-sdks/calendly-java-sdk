@@ -18,7 +18,8 @@ public class EventType {
     /**
      * Indicates if the event is active or not.
      */
-    @JsonProperty("active")public Boolean active;
+    @JsonProperty("active")
+    public Boolean active;
     public EventType withActive(Boolean active) {
         this.active = active;
         return this;
@@ -27,7 +28,8 @@ public class EventType {
     /**
      * Indicates if this event type is managed by an organization admin
      */
-    @JsonProperty("admin_managed")public Boolean adminManaged;
+    @JsonProperty("admin_managed")
+    public Boolean adminManaged;
     public EventType withAdminManaged(Boolean adminManaged) {
         this.adminManaged = adminManaged;
         return this;
@@ -36,7 +38,8 @@ public class EventType {
     /**
      * Indicates if the event type is for a poll or an instant booking
      */
-    @JsonProperty("booking_method")public EventTypeBookingMethodEnum bookingMethod;
+    @JsonProperty("booking_method")
+    public EventTypeBookingMethodEnum bookingMethod;
     public EventType withBookingMethod(EventTypeBookingMethodEnum bookingMethod) {
         this.bookingMethod = bookingMethod;
         return this;
@@ -45,7 +48,8 @@ public class EventType {
     /**
      * The hexadecimal color value of the event type's scheduling page
      */
-    @JsonProperty("color")public String color;
+    @JsonProperty("color")
+    public String color;
     public EventType withColor(String color) {
         this.color = color;
         return this;
@@ -56,13 +60,15 @@ public class EventType {
      */
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("created_at")public OffsetDateTime createdAt;
+    @JsonProperty("created_at")
+    public OffsetDateTime createdAt;
     public EventType withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
     
-    @JsonProperty("custom_questions")public EventTypeCustomQuestion[] customQuestions;
+    @JsonProperty("custom_questions")
+    public EventTypeCustomQuestion[] customQuestions;
     public EventType withCustomQuestions(EventTypeCustomQuestion[] customQuestions) {
         this.customQuestions = customQuestions;
         return this;
@@ -73,7 +79,8 @@ public class EventType {
      */
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("deleted_at")public OffsetDateTime deletedAt;
+    @JsonProperty("deleted_at")
+    public OffsetDateTime deletedAt;
     public EventType withDeletedAt(OffsetDateTime deletedAt) {
         this.deletedAt = deletedAt;
         return this;
@@ -82,7 +89,8 @@ public class EventType {
     /**
      * The event type's description (formatted with HTML)
      */
-    @JsonProperty("description_html")public String descriptionHtml;
+    @JsonProperty("description_html")
+    public String descriptionHtml;
     public EventType withDescriptionHtml(String descriptionHtml) {
         this.descriptionHtml = descriptionHtml;
         return this;
@@ -91,7 +99,8 @@ public class EventType {
     /**
      * The event type's description (in non formatted text)
      */
-    @JsonProperty("description_plain")public String descriptionPlain;
+    @JsonProperty("description_plain")
+    public String descriptionPlain;
     public EventType withDescriptionPlain(String descriptionPlain) {
         this.descriptionPlain = descriptionPlain;
         return this;
@@ -100,7 +109,8 @@ public class EventType {
     /**
      * The length of sessions booked with this event type
      */
-    @JsonProperty("duration")public Double duration;
+    @JsonProperty("duration")
+    public Double duration;
     public EventType withDuration(Double duration) {
         this.duration = duration;
         return this;
@@ -109,7 +119,8 @@ public class EventType {
     /**
      * Contents of a note that may be associated with the event type
      */
-    @JsonProperty("internal_note")public String internalNote;
+    @JsonProperty("internal_note")
+    public String internalNote;
     public EventType withInternalNote(String internalNote) {
         this.internalNote = internalNote;
         return this;
@@ -118,7 +129,8 @@ public class EventType {
     /**
      * Indicates if the event type is "solo" (belongs to an individual user) or "group"
      */
-    @JsonProperty("kind")public EventTypeKindEnum kind;
+    @JsonProperty("kind")
+    public EventTypeKindEnum kind;
     public EventType withKind(EventTypeKindEnum kind) {
         this.kind = kind;
         return this;
@@ -127,7 +139,8 @@ public class EventType {
     /**
      * A formatted description of the kind of event type.
      */
-    @JsonProperty("kind_description")public EventTypeKindDescriptionEnum kindDescription;
+    @JsonProperty("kind_description")
+    public EventTypeKindDescriptionEnum kindDescription;
     public EventType withKindDescription(EventTypeKindDescriptionEnum kindDescription) {
         this.kindDescription = kindDescription;
         return this;
@@ -136,16 +149,18 @@ public class EventType {
     /**
      * The event type name (in human-readable format)
      */
-    @JsonProperty("name")public String name;
+    @JsonProperty("name")
+    public String name;
     public EventType withName(String name) {
         this.name = name;
         return this;
     }
     
     /**
-     * Indicates if the event type is "round robin" (alternates between hosts) or "collective" (invitees pick a time when all participants are available) or "null" (the event type doesn’t consider the availability of a group participants)
+     * Indicates if the event type is "round robin" (alternates between hosts) or "collective" (invitees pick a time when all participants are available) or "null" (the event type doesn\u2019t consider the availability of a group participants)
      */
-    @JsonProperty("pooling_type")public EventTypePoolingTypeEnum poolingType;
+    @JsonProperty("pooling_type")
+    public EventTypePoolingTypeEnum poolingType;
     public EventType withPoolingType(EventTypePoolingTypeEnum poolingType) {
         this.poolingType = poolingType;
         return this;
@@ -154,16 +169,18 @@ public class EventType {
     /**
      * The publicly visible profile of a User or a Team that's associated with the Event Type (note: some Event Types don't have profiles)
      */
-    @JsonProperty("profile")public Profile profile;
+    @JsonProperty("profile")
+    public Profile profile;
     public EventType withProfile(Profile profile) {
         this.profile = profile;
         return this;
     }
     
     /**
-     * The URL of the user’s scheduling site where invitees book this event type
+     * The URL of the user\u2019s scheduling site where invitees book this event type
      */
-    @JsonProperty("scheduling_url")public String schedulingUrl;
+    @JsonProperty("scheduling_url")
+    public String schedulingUrl;
     public EventType withSchedulingUrl(String schedulingUrl) {
         this.schedulingUrl = schedulingUrl;
         return this;
@@ -172,7 +189,8 @@ public class EventType {
     /**
      * Indicates if the event type is hidden on the owner's main scheduling page
      */
-    @JsonProperty("secret")public Boolean secret;
+    @JsonProperty("secret")
+    public Boolean secret;
     public EventType withSecret(Boolean secret) {
         this.secret = secret;
         return this;
@@ -181,7 +199,8 @@ public class EventType {
     /**
      * The portion of the event type's URL that identifies a specific web page (in a human-readable format)
      */
-    @JsonProperty("slug")public String slug;
+    @JsonProperty("slug")
+    public String slug;
     public EventType withSlug(String slug) {
         this.slug = slug;
         return this;
@@ -190,7 +209,8 @@ public class EventType {
     /**
      * Indicates if the event type is "AdhocEventType" (ad hoc event) or "StandardEventType" (standard event type)
      */
-    @JsonProperty("type")public EventTypeTypeEnum type;
+    @JsonProperty("type")
+    public EventTypeTypeEnum type;
     public EventType withType(EventTypeTypeEnum type) {
         this.type = type;
         return this;
@@ -201,7 +221,8 @@ public class EventType {
      */
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("updated_at")public OffsetDateTime updatedAt;
+    @JsonProperty("updated_at")
+    public OffsetDateTime updatedAt;
     public EventType withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -210,7 +231,8 @@ public class EventType {
     /**
      * Canonical reference (unique identifier) for the event type
      */
-    @JsonProperty("uri")public String uri;
+    @JsonProperty("uri")
+    public String uri;
     public EventType withUri(String uri) {
         this.uri = uri;
         return this;

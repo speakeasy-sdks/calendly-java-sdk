@@ -13,7 +13,8 @@ public class InviteePayment {
     /**
      * The amount of the payment
      */
-    @JsonProperty("amount")public Float amount;
+    @JsonProperty("amount")
+    public Float amount;
     public InviteePayment withAmount(Float amount) {
         this.amount = amount;
         return this;
@@ -22,7 +23,8 @@ public class InviteePayment {
     /**
      * The currency format that the payment is in.
      */
-    @JsonProperty("currency")public InviteePaymentCurrencyEnum currency;
+    @JsonProperty("currency")
+    public InviteePaymentCurrencyEnum currency;
     public InviteePayment withCurrency(InviteePaymentCurrencyEnum currency) {
         this.currency = currency;
         return this;
@@ -31,7 +33,8 @@ public class InviteePayment {
     /**
      * Unique identifier for the payment
      */
-    @JsonProperty("external_id")public String externalId;
+    @JsonProperty("external_id")
+    public String externalId;
     public InviteePayment withExternalId(String externalId) {
         this.externalId = externalId;
         return this;
@@ -40,7 +43,8 @@ public class InviteePayment {
     /**
      * Payment provider
      */
-    @JsonProperty("provider")public InviteePaymentProviderEnum provider;
+    @JsonProperty("provider")
+    public InviteePaymentProviderEnum provider;
     public InviteePayment withProvider(InviteePaymentProviderEnum provider) {
         this.provider = provider;
         return this;
@@ -49,7 +53,8 @@ public class InviteePayment {
     /**
      * Indicates whether the payment was successfully processed
      */
-    @JsonProperty("successful")public Boolean successful;
+    @JsonProperty("successful")
+    public Boolean successful;
     public InviteePayment withSuccessful(Boolean successful) {
         this.successful = successful;
         return this;
@@ -58,7 +63,8 @@ public class InviteePayment {
     /**
      * Terms of the payment
      */
-    @JsonProperty("terms")public String terms;
+    @JsonProperty("terms")
+    public String terms;
     public InviteePayment withTerms(String terms) {
         this.terms = terms;
         return this;

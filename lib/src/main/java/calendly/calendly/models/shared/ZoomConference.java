@@ -13,7 +13,8 @@ public class ZoomConference {
     /**
      * The conference metadata supplied by Zoom
      */
-    @JsonProperty("data")public ZoomConferenceData data;
+    @JsonProperty("data")
+    public ZoomConferenceData data;
     public ZoomConference withData(ZoomConferenceData data) {
         this.data = data;
         return this;
@@ -22,7 +23,8 @@ public class ZoomConference {
     /**
      * Zoom meeting url
      */
-    @JsonProperty("join_url")public String joinUrl;
+    @JsonProperty("join_url")
+    public String joinUrl;
     public ZoomConference withJoinUrl(String joinUrl) {
         this.joinUrl = joinUrl;
         return this;
@@ -31,7 +33,8 @@ public class ZoomConference {
     /**
      * Indicates the current status of the Zoom conference
      */
-    @JsonProperty("status")public ZoomConferenceStatusEnum status;
+    @JsonProperty("status")
+    public ZoomConferenceStatusEnum status;
     public ZoomConference withStatus(ZoomConferenceStatusEnum status) {
         this.status = status;
         return this;
@@ -40,7 +43,8 @@ public class ZoomConference {
     /**
      * The event location is a Zoom conference
      */
-    @JsonProperty("type")public ZoomConferenceTypeEnum type;
+    @JsonProperty("type")
+    public ZoomConferenceTypeEnum type;
     public ZoomConference withType(ZoomConferenceTypeEnum type) {
         this.type = type;
         return this;

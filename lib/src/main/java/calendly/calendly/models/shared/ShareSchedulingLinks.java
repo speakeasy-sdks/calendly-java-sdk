@@ -12,7 +12,8 @@ public class ShareSchedulingLinks {
     /**
      * Scheduling link url
      */
-    @JsonProperty("booking_url")public String bookingUrl;
+    @JsonProperty("booking_url")
+    public String bookingUrl;
     public ShareSchedulingLinks withBookingUrl(String bookingUrl) {
         this.bookingUrl = bookingUrl;
         return this;
@@ -22,7 +23,8 @@ public class ShareSchedulingLinks {
      * A link to the resource that owns this Scheduling Link (currently, this is always an Event Type)
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("owner")public String owner;
+    @JsonProperty("owner")
+    public String owner;
     public ShareSchedulingLinks withOwner(String owner) {
         this.owner = owner;
         return this;
@@ -32,7 +34,8 @@ public class ShareSchedulingLinks {
      * Resource type (currently, this is always EventType)
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("owner_type")public ShareSchedulingLinksOwnerTypeEnum ownerType;
+    @JsonProperty("owner_type")
+    public ShareSchedulingLinksOwnerTypeEnum ownerType;
     public ShareSchedulingLinks withOwnerType(ShareSchedulingLinksOwnerTypeEnum ownerType) {
         this.ownerType = ownerType;
         return this;

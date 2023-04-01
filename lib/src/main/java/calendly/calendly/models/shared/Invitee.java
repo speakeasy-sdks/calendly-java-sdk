@@ -20,7 +20,8 @@ public class Invitee {
     /**
      * Link to cancelling the event for the invitee
      */
-    @JsonProperty("cancel_url")public String cancelUrl;
+    @JsonProperty("cancel_url")
+    public String cancelUrl;
     public Invitee withCancelUrl(String cancelUrl) {
         this.cancelUrl = cancelUrl;
         return this;
@@ -30,7 +31,8 @@ public class Invitee {
      * Provides data pertaining to the cancellation of the Event
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("cancellation")public Cancellation cancellation;
+    @JsonProperty("cancellation")
+    public Cancellation cancellation;
     public Invitee withCancellation(Cancellation cancellation) {
         this.cancellation = cancellation;
         return this;
@@ -41,16 +43,18 @@ public class Invitee {
      */
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("created_at")public OffsetDateTime createdAt;
+    @JsonProperty("created_at")
+    public OffsetDateTime createdAt;
     public Invitee withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
     }
     
     /**
-     * The invitee’s email address
+     * The invitee\u2019s email address
      */
-    @JsonProperty("email")public String email;
+    @JsonProperty("email")
+    public String email;
     public Invitee withEmail(String email) {
         this.email = email;
         return this;
@@ -59,7 +63,8 @@ public class Invitee {
     /**
      * A reference to the event
      */
-    @JsonProperty("event")public String event;
+    @JsonProperty("event")
+    public String event;
     public Invitee withEvent(String event) {
         this.event = event;
         return this;
@@ -68,7 +73,8 @@ public class Invitee {
     /**
      * The first name of the invitee who booked the event when the event type is configured to use separate fields for first name and last name. Null when event type is configured to use a single field for name.
      */
-    @JsonProperty("first_name")public String firstName;
+    @JsonProperty("first_name")
+    public String firstName;
     public Invitee withFirstName(String firstName) {
         this.firstName = firstName;
         return this;
@@ -77,16 +83,18 @@ public class Invitee {
     /**
      * The last name of the invitee who booked the event when the event type is configured to use separate fields for first name and last name. Null when event type is configured to use a single field for name.
      */
-    @JsonProperty("last_name")public String lastName;
+    @JsonProperty("last_name")
+    public String lastName;
     public Invitee withLastName(String lastName) {
         this.lastName = lastName;
         return this;
     }
     
     /**
-     * The invitee’s name (in human-readable format)
+     * The invitee\u2019s name (in human-readable format)
      */
-    @JsonProperty("name")public String name;
+    @JsonProperty("name")
+    public String name;
     public Invitee withName(String name) {
         this.name = name;
         return this;
@@ -95,7 +103,8 @@ public class Invitee {
     /**
      * Link to new invitee, after reschedule
      */
-    @JsonProperty("new_invitee")public String newInvitee;
+    @JsonProperty("new_invitee")
+    public String newInvitee;
     public Invitee withNewInvitee(String newInvitee) {
         this.newInvitee = newInvitee;
         return this;
@@ -104,7 +113,8 @@ public class Invitee {
     /**
      * Provides data pertaining to the associated no show for the Invitee
      */
-    @JsonProperty("no_show")public InviteeNoShow1 noShow;
+    @JsonProperty("no_show")
+    public InviteeNoShow1 noShow;
     public Invitee withNoShow(InviteeNoShow1 noShow) {
         this.noShow = noShow;
         return this;
@@ -113,7 +123,8 @@ public class Invitee {
     /**
      * Reference to old Invitee instance that got rescheduled
      */
-    @JsonProperty("old_invitee")public String oldInvitee;
+    @JsonProperty("old_invitee")
+    public String oldInvitee;
     public Invitee withOldInvitee(String oldInvitee) {
         this.oldInvitee = oldInvitee;
         return this;
@@ -122,7 +133,8 @@ public class Invitee {
     /**
      * Invitee payment
      */
-    @JsonProperty("payment")public InviteePayment payment;
+    @JsonProperty("payment")
+    public InviteePayment payment;
     public Invitee withPayment(InviteePayment payment) {
         this.payment = payment;
         return this;
@@ -131,7 +143,8 @@ public class Invitee {
     /**
      * A collection of the invitee's responses to questions on the event booking confirmation form
      */
-    @JsonProperty("questions_and_answers")public InviteeQuestionAndAnswer[] questionsAndAnswers;
+    @JsonProperty("questions_and_answers")
+    public InviteeQuestionAndAnswer[] questionsAndAnswers;
     public Invitee withQuestionsAndAnswers(InviteeQuestionAndAnswer[] questionsAndAnswers) {
         this.questionsAndAnswers = questionsAndAnswers;
         return this;
@@ -140,7 +153,8 @@ public class Invitee {
     /**
      * Assuming reconfirmation is enabled for the event type, when reconfirmation is requested this object is present with a `created_at` that reflects when the reconfirmation notification was sent. Once the invitee has reconfirmed the `confirmed_at` attribute will change from `null` to a timestamp that reflects when they took action.
      */
-    @JsonProperty("reconfirmation")public InviteeReconfirmation reconfirmation;
+    @JsonProperty("reconfirmation")
+    public InviteeReconfirmation reconfirmation;
     public Invitee withReconfirmation(InviteeReconfirmation reconfirmation) {
         this.reconfirmation = reconfirmation;
         return this;
@@ -149,7 +163,8 @@ public class Invitee {
     /**
      * Link to rescheduling the event for the invitee
      */
-    @JsonProperty("reschedule_url")public String rescheduleUrl;
+    @JsonProperty("reschedule_url")
+    public String rescheduleUrl;
     public Invitee withRescheduleUrl(String rescheduleUrl) {
         this.rescheduleUrl = rescheduleUrl;
         return this;
@@ -158,7 +173,8 @@ public class Invitee {
     /**
      * Indicates if this invitee has rescheduled. If `true`, a reference to the new Invitee instance is provided in the `new_invitee` field.
      */
-    @JsonProperty("rescheduled")public Boolean rescheduled;
+    @JsonProperty("rescheduled")
+    public Boolean rescheduled;
     public Invitee withRescheduled(Boolean rescheduled) {
         this.rescheduled = rescheduled;
         return this;
@@ -167,7 +183,8 @@ public class Invitee {
     /**
      * Reference to a routing form submission that redirected the invitee to a booking page.
      */
-    @JsonProperty("routing_form_submission")public String routingFormSubmission;
+    @JsonProperty("routing_form_submission")
+    public String routingFormSubmission;
     public Invitee withRoutingFormSubmission(String routingFormSubmission) {
         this.routingFormSubmission = routingFormSubmission;
         return this;
@@ -176,7 +193,8 @@ public class Invitee {
     /**
      * Indicates if the invitee is "active" or "canceled"
      */
-    @JsonProperty("status")public InviteeStatusEnum status;
+    @JsonProperty("status")
+    public InviteeStatusEnum status;
     public Invitee withStatus(InviteeStatusEnum status) {
         this.status = status;
         return this;
@@ -185,7 +203,8 @@ public class Invitee {
     /**
      * The phone number to use when sending text (SMS) reminders
      */
-    @JsonProperty("text_reminder_number")public String textReminderNumber;
+    @JsonProperty("text_reminder_number")
+    public String textReminderNumber;
     public Invitee withTextReminderNumber(String textReminderNumber) {
         this.textReminderNumber = textReminderNumber;
         return this;
@@ -194,7 +213,8 @@ public class Invitee {
     /**
      * Time zone to use when displaying time to the invitee
      */
-    @JsonProperty("timezone")public String timezone;
+    @JsonProperty("timezone")
+    public String timezone;
     public Invitee withTimezone(String timezone) {
         this.timezone = timezone;
         return this;
@@ -203,7 +223,8 @@ public class Invitee {
     /**
      * The UTM and Salesforce tracking parameters associated with an Invitee
      */
-    @JsonProperty("tracking")public InviteeTracking tracking;
+    @JsonProperty("tracking")
+    public InviteeTracking tracking;
     public Invitee withTracking(InviteeTracking tracking) {
         this.tracking = tracking;
         return this;
@@ -214,7 +235,8 @@ public class Invitee {
      */
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("updated_at")public OffsetDateTime updatedAt;
+    @JsonProperty("updated_at")
+    public OffsetDateTime updatedAt;
     public Invitee withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -223,7 +245,8 @@ public class Invitee {
     /**
      * Canonical reference (unique identifier) for the invitee
      */
-    @JsonProperty("uri")public String uri;
+    @JsonProperty("uri")
+    public String uri;
     public Invitee withUri(String uri) {
         this.uri = uri;
         return this;

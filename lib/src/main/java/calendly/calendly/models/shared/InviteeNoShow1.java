@@ -20,7 +20,8 @@ public class InviteeNoShow1 {
      */
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("created_at")public OffsetDateTime createdAt;
+    @JsonProperty("created_at")
+    public OffsetDateTime createdAt;
     public InviteeNoShow1 withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -29,7 +30,8 @@ public class InviteeNoShow1 {
     /**
      * Canonical reference (unique identifier) for the no show
      */
-    @JsonProperty("uri")public String uri;
+    @JsonProperty("uri")
+    public String uri;
     public InviteeNoShow1 withUri(String uri) {
         this.uri = uri;
         return this;

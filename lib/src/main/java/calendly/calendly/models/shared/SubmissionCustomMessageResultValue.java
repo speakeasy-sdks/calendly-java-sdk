@@ -13,7 +13,8 @@ public class SubmissionCustomMessageResultValue {
     /**
      * Body text displayed when answers don't match any routes.
      */
-    @JsonProperty("body")public String body;
+    @JsonProperty("body")
+    public String body;
     public SubmissionCustomMessageResultValue withBody(String body) {
         this.body = body;
         return this;
@@ -22,7 +23,8 @@ public class SubmissionCustomMessageResultValue {
     /**
      * Headline displayed when answers don't match any routes.
      */
-    @JsonProperty("headline")public String headline;
+    @JsonProperty("headline")
+    public String headline;
     public SubmissionCustomMessageResultValue withHeadline(String headline) {
         this.headline = headline;
         return this;

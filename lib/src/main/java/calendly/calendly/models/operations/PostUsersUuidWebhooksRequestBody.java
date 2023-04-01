@@ -12,7 +12,8 @@ public class PostUsersUuidWebhooksRequestBody {
     /**
      * List of user events to subscribe to.
      */
-    @JsonProperty("events")public PostUsersUuidWebhooksRequestBodyEventsEnum[] events;
+    @JsonProperty("events")
+    public PostUsersUuidWebhooksRequestBodyEventsEnum[] events;
     public PostUsersUuidWebhooksRequestBody withEvents(PostUsersUuidWebhooksRequestBodyEventsEnum[] events) {
         this.events = events;
         return this;
@@ -21,7 +22,8 @@ public class PostUsersUuidWebhooksRequestBody {
     /**
      * The unique reference to the organization that the webhook will be tied to.
      */
-    @JsonProperty("organization")public String organization;
+    @JsonProperty("organization")
+    public String organization;
     public PostUsersUuidWebhooksRequestBody withOrganization(String organization) {
         this.organization = organization;
         return this;
@@ -30,7 +32,8 @@ public class PostUsersUuidWebhooksRequestBody {
     /**
      * Indicates if the webhook subscription scope will be "organization" or "user"
      */
-    @JsonProperty("scope")public PostUsersUuidWebhooksRequestBodyScopeEnum scope;
+    @JsonProperty("scope")
+    public PostUsersUuidWebhooksRequestBodyScopeEnum scope;
     public PostUsersUuidWebhooksRequestBody withScope(PostUsersUuidWebhooksRequestBodyScopeEnum scope) {
         this.scope = scope;
         return this;
@@ -40,7 +43,8 @@ public class PostUsersUuidWebhooksRequestBody {
      * Optional secret key shared between your application and Calendly. See https://developer.calendly.com/api-docs/ZG9jOjM2MzE2MDM4-webhook-signatures for additional information.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("signing_key")public String signingKey;
+    @JsonProperty("signing_key")
+    public String signingKey;
     public PostUsersUuidWebhooksRequestBody withSigningKey(String signingKey) {
         this.signingKey = signingKey;
         return this;
@@ -49,7 +53,8 @@ public class PostUsersUuidWebhooksRequestBody {
     /**
      * The URL where you want to receive POST requests for events you are subscribed to.
      */
-    @JsonProperty("url")public String url;
+    @JsonProperty("url")
+    public String url;
     public PostUsersUuidWebhooksRequestBody withUrl(String url) {
         this.url = url;
         return this;
@@ -59,7 +64,8 @@ public class PostUsersUuidWebhooksRequestBody {
      * The unique reference to the user that the webhook will be tied to.
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("user")public String user;
+    @JsonProperty("user")
+    public String user;
     public PostUsersUuidWebhooksRequestBody withUser(String user) {
         this.user = user;
         return this;

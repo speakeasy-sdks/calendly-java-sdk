@@ -17,7 +17,8 @@ public class OrganizationMembership {
      */
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("created_at")public OffsetDateTime createdAt;
+    @JsonProperty("created_at")
+    public OffsetDateTime createdAt;
     public OrganizationMembership withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -26,7 +27,8 @@ public class OrganizationMembership {
     /**
      * A unique reference to the organization
      */
-    @JsonProperty("organization")public String organization;
+    @JsonProperty("organization")
+    public String organization;
     public OrganizationMembership withOrganization(String organization) {
         this.organization = organization;
         return this;
@@ -35,7 +37,8 @@ public class OrganizationMembership {
     /**
      * The user's role in the organization
      */
-    @JsonProperty("role")public OrganizationMembershipRoleEnum role;
+    @JsonProperty("role")
+    public OrganizationMembershipRoleEnum role;
     public OrganizationMembership withRole(OrganizationMembershipRoleEnum role) {
         this.role = role;
         return this;
@@ -46,7 +49,8 @@ public class OrganizationMembership {
      */
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("updated_at")public OffsetDateTime updatedAt;
+    @JsonProperty("updated_at")
+    public OffsetDateTime updatedAt;
     public OrganizationMembership withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -55,7 +59,8 @@ public class OrganizationMembership {
     /**
      * Canonical reference (unique identifier) for the membership
      */
-    @JsonProperty("uri")public String uri;
+    @JsonProperty("uri")
+    public String uri;
     public OrganizationMembership withUri(String uri) {
         this.uri = uri;
         return this;
@@ -64,7 +69,8 @@ public class OrganizationMembership {
     /**
      * Information about the user.
      */
-    @JsonProperty("user")public OrganizationMembershipUser user;
+    @JsonProperty("user")
+    public OrganizationMembershipUser user;
     public OrganizationMembership withUser(OrganizationMembershipUser user) {
         this.user = user;
         return this;

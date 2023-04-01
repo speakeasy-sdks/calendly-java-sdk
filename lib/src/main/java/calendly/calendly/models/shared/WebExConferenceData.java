@@ -13,19 +13,22 @@ public class WebExConferenceData {
     /**
      * Canonical reference (unique identifier) for the WebEx conference
      */
-    @JsonProperty("id")public String id;
+    @JsonProperty("id")
+    public String id;
     public WebExConferenceData withId(String id) {
         this.id = id;
         return this;
     }
     
-    @JsonProperty("password")public String password;
+    @JsonProperty("password")
+    public String password;
     public WebExConferenceData withPassword(String password) {
         this.password = password;
         return this;
     }
     
-    @JsonProperty("telephony")public WebExConferenceDataTelephony telephony;
+    @JsonProperty("telephony")
+    public WebExConferenceDataTelephony telephony;
     public WebExConferenceData withTelephony(WebExConferenceDataTelephony telephony) {
         this.telephony = telephony;
         return this;

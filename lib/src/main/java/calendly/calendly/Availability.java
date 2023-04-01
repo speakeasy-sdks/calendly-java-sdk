@@ -45,7 +45,7 @@ public class Availability {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.GetUserAvailabilitySchedulesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.GetUserAvailabilitySchedulesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -101,7 +101,7 @@ public class Availability {
      */
     public calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuidResponse getUserAvailabilitySchedulesUuid(calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuidRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuidPathParams.class, baseUrl, "/user_availability_schedules/{uuid}", request.pathParams, null);
+        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuidRequest.class, baseUrl, "/user_availability_schedules/{uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -171,7 +171,7 @@ public class Availability {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.GetUserBusyTimesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.GetUserBusyTimesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);

@@ -18,7 +18,8 @@ public class WebhookSubscription {
     /**
      * The callback URL to use when the event is triggered
      */
-    @JsonProperty("callback_url")public String callbackUrl;
+    @JsonProperty("callback_url")
+    public String callbackUrl;
     public WebhookSubscription withCallbackUrl(String callbackUrl) {
         this.callbackUrl = callbackUrl;
         return this;
@@ -29,7 +30,8 @@ public class WebhookSubscription {
      */
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("created_at")public OffsetDateTime createdAt;
+    @JsonProperty("created_at")
+    public OffsetDateTime createdAt;
     public WebhookSubscription withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -38,7 +40,8 @@ public class WebhookSubscription {
     /**
      * The URI of the user who created the webhook subscription
      */
-    @JsonProperty("creator")public String creator;
+    @JsonProperty("creator")
+    public String creator;
     public WebhookSubscription withCreator(String creator) {
         this.creator = creator;
         return this;
@@ -47,7 +50,8 @@ public class WebhookSubscription {
     /**
      * A list of events to which the webhook is subscribed
      */
-    @JsonProperty("events")public WebhookSubscriptionEventsEnum[] events;
+    @JsonProperty("events")
+    public WebhookSubscriptionEventsEnum[] events;
     public WebhookSubscription withEvents(WebhookSubscriptionEventsEnum[] events) {
         this.events = events;
         return this;
@@ -56,7 +60,8 @@ public class WebhookSubscription {
     /**
      * The URI of the organization that's associated with the webhook subscription
      */
-    @JsonProperty("organization")public String organization;
+    @JsonProperty("organization")
+    public String organization;
     public WebhookSubscription withOrganization(String organization) {
         this.organization = organization;
         return this;
@@ -67,7 +72,8 @@ public class WebhookSubscription {
      */
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("retry_started_at")public OffsetDateTime retryStartedAt;
+    @JsonProperty("retry_started_at")
+    public OffsetDateTime retryStartedAt;
     public WebhookSubscription withRetryStartedAt(OffsetDateTime retryStartedAt) {
         this.retryStartedAt = retryStartedAt;
         return this;
@@ -76,7 +82,8 @@ public class WebhookSubscription {
     /**
      * The scope of the webhook subscription
      */
-    @JsonProperty("scope")public WebhookSubscriptionScopeEnum scope;
+    @JsonProperty("scope")
+    public WebhookSubscriptionScopeEnum scope;
     public WebhookSubscription withScope(WebhookSubscriptionScopeEnum scope) {
         this.scope = scope;
         return this;
@@ -85,7 +92,8 @@ public class WebhookSubscription {
     /**
      * Indicates if the webhook subscription is "active" or "disabled"
      */
-    @JsonProperty("state")public WebhookSubscriptionStateEnum state;
+    @JsonProperty("state")
+    public WebhookSubscriptionStateEnum state;
     public WebhookSubscription withState(WebhookSubscriptionStateEnum state) {
         this.state = state;
         return this;
@@ -96,7 +104,8 @@ public class WebhookSubscription {
      */
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("updated_at")public OffsetDateTime updatedAt;
+    @JsonProperty("updated_at")
+    public OffsetDateTime updatedAt;
     public WebhookSubscription withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -105,7 +114,8 @@ public class WebhookSubscription {
     /**
      * Canonical reference (unique identifier) for the webhook
      */
-    @JsonProperty("uri")public String uri;
+    @JsonProperty("uri")
+    public String uri;
     public WebhookSubscription withUri(String uri) {
         this.uri = uri;
         return this;
@@ -114,7 +124,8 @@ public class WebhookSubscription {
     /**
      * The URI of the user that's associated with the webhook subscription
      */
-    @JsonProperty("user")public String user;
+    @JsonProperty("user")
+    public String user;
     public WebhookSubscription withUser(String user) {
         this.user = user;
         return this;

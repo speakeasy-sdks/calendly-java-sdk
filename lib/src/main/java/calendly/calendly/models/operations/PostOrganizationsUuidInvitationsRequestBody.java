@@ -10,7 +10,8 @@ public class PostOrganizationsUuidInvitationsRequestBody {
     /**
      * The email of the user being invited
      */
-    @JsonProperty("email")public String email;
+    @JsonProperty("email")
+    public String email;
     public PostOrganizationsUuidInvitationsRequestBody withEmail(String email) {
         this.email = email;
         return this;

@@ -13,7 +13,8 @@ public class ActorOrganization {
      * The actors' role in the organization
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("role")public String role;
+    @JsonProperty("role")
+    public String role;
     public ActorOrganization withRole(String role) {
         this.role = role;
         return this;
@@ -23,7 +24,8 @@ public class ActorOrganization {
      * Canonical reference (unique identifier) for the organization
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("uri")public String uri;
+    @JsonProperty("uri")
+    public String uri;
     public ActorOrganization withUri(String uri) {
         this.uri = uri;
         return this;

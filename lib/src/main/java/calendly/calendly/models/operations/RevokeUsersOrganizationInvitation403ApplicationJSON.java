@@ -13,14 +13,16 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class RevokeUsersOrganizationInvitation403ApplicationJSON {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("message")public RevokeUsersOrganizationInvitation403ApplicationJSONMessageEnum message;
+    @JsonProperty("message")
+    public RevokeUsersOrganizationInvitation403ApplicationJSONMessageEnum message;
     public RevokeUsersOrganizationInvitation403ApplicationJSON withMessage(RevokeUsersOrganizationInvitation403ApplicationJSONMessageEnum message) {
         this.message = message;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("title")public RevokeUsersOrganizationInvitation403ApplicationJSONTitleEnum title;
+    @JsonProperty("title")
+    public RevokeUsersOrganizationInvitation403ApplicationJSONTitleEnum title;
     public RevokeUsersOrganizationInvitation403ApplicationJSON withTitle(RevokeUsersOrganizationInvitation403ApplicationJSONTitleEnum title) {
         this.title = title;
         return this;

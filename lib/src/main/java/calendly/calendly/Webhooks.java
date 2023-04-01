@@ -40,7 +40,7 @@ public class Webhooks {
      */
     public calendly.calendly.models.operations.DeleteUsersUserUuidWebhooksWebhookUuidResponse deleteUsersUserUuidWebhooksWebhookUuid(calendly.calendly.models.operations.DeleteUsersUserUuidWebhooksWebhookUuidRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.DeleteUsersUserUuidWebhooksWebhookUuidPathParams.class, baseUrl, "/webhook_subscriptions/{webhook_uuid}", request.pathParams, null);
+        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.DeleteUsersUserUuidWebhooksWebhookUuidRequest.class, baseUrl, "/webhook_subscriptions/{webhook_uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -82,7 +82,7 @@ public class Webhooks {
      */
     public calendly.calendly.models.operations.GetUsersUserUuidWebhooksWebhookUuidResponse getUsersUserUuidWebhooksWebhookUuid(calendly.calendly.models.operations.GetUsersUserUuidWebhooksWebhookUuidRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetUsersUserUuidWebhooksWebhookUuidPathParams.class, baseUrl, "/webhook_subscriptions/{webhook_uuid}", request.pathParams, null);
+        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetUsersUserUuidWebhooksWebhookUuidRequest.class, baseUrl, "/webhook_subscriptions/{webhook_uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -136,7 +136,7 @@ public class Webhooks {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.GetWebhooksQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.GetWebhooksRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -192,14 +192,14 @@ public class Webhooks {
      * 
      * | Event | Allowed Subscription Scopes |
      * | ----- | --------------------------- |
-     * | <pre>invitee.created</pre> | `organization` `user` |
-     * | <pre>invitee.canceled</pre> | `organization` `user` |
-     * | <pre>routing_form_submission.created</pre> | `organization` <br /> <small>Create separate Webhook Subscriptions for events with different subscription scopes.</small> |
+     * | &lt;pre&gt;invitee.created&lt;/pre&gt; | `organization` `user` |
+     * | &lt;pre&gt;invitee.canceled&lt;/pre&gt; | `organization` `user` |
+     * | &lt;pre&gt;routing_form_submission.created&lt;/pre&gt; | `organization` &lt;br /&gt; &lt;small&gt;Create separate Webhook Subscriptions for events with different subscription scopes.&lt;/small&gt; |
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public calendly.calendly.models.operations.PostUsersUuidWebhooksResponse postUsersUuidWebhooks(calendly.calendly.models.operations.PostUsersUuidWebhooksRequest request) throws Exception {
+    public calendly.calendly.models.operations.PostUsersUuidWebhooksResponse postUsersUuidWebhooks(calendly.calendly.models.operations.PostUsersUuidWebhooksRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = calendly.calendly.utils.Utils.generateURL(baseUrl, "/webhook_subscriptions");
         

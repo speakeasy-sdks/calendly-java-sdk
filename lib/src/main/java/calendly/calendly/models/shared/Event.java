@@ -20,7 +20,8 @@ public class Event {
     /**
      * Information about the calendar event from the calendar provider.
      */
-    @JsonProperty("calendar_event")public LegacyCalendarEvent calendarEvent;
+    @JsonProperty("calendar_event")
+    public LegacyCalendarEvent calendarEvent;
     public Event withCalendarEvent(LegacyCalendarEvent calendarEvent) {
         this.calendarEvent = calendarEvent;
         return this;
@@ -30,7 +31,8 @@ public class Event {
      * Provides data pertaining to the cancellation of the Event
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("cancellation")public Cancellation cancellation;
+    @JsonProperty("cancellation")
+    public Cancellation cancellation;
     public Event withCancellation(Cancellation cancellation) {
         this.cancellation = cancellation;
         return this;
@@ -41,7 +43,8 @@ public class Event {
      */
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("created_at")public OffsetDateTime createdAt;
+    @JsonProperty("created_at")
+    public OffsetDateTime createdAt;
     public Event withCreatedAt(OffsetDateTime createdAt) {
         this.createdAt = createdAt;
         return this;
@@ -52,7 +55,8 @@ public class Event {
      */
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("end_time")public OffsetDateTime endTime;
+    @JsonProperty("end_time")
+    public OffsetDateTime endTime;
     public Event withEndTime(OffsetDateTime endTime) {
         this.endTime = endTime;
         return this;
@@ -61,7 +65,8 @@ public class Event {
     /**
      * Additional people added to an event by an invitee
      */
-    @JsonProperty("event_guests")public Guest[] eventGuests;
+    @JsonProperty("event_guests")
+    public Guest[] eventGuests;
     public Event withEventGuests(Guest[] eventGuests) {
         this.eventGuests = eventGuests;
         return this;
@@ -70,7 +75,8 @@ public class Event {
     /**
      * Event membership list
      */
-    @JsonProperty("event_memberships")public EventEventMemberships[] eventMemberships;
+    @JsonProperty("event_memberships")
+    public EventEventMemberships[] eventMemberships;
     public Event withEventMemberships(EventEventMemberships[] eventMemberships) {
         this.eventMemberships = eventMemberships;
         return this;
@@ -79,13 +85,15 @@ public class Event {
     /**
      * The event type associated with this event
      */
-    @JsonProperty("event_type")public String eventType;
+    @JsonProperty("event_type")
+    public String eventType;
     public Event withEventType(String eventType) {
         this.eventType = eventType;
         return this;
     }
     
-    @JsonProperty("invitees_counter")public EventInviteesCounter inviteesCounter;
+    @JsonProperty("invitees_counter")
+    public EventInviteesCounter inviteesCounter;
     public Event withInviteesCounter(EventInviteesCounter inviteesCounter) {
         this.inviteesCounter = inviteesCounter;
         return this;
@@ -94,7 +102,8 @@ public class Event {
     /**
      * The polymorphic base type for an event location that Calendly supports
      */
-    @JsonProperty("location")public Object location;
+    @JsonProperty("location")
+    public Object location;
     public Event withLocation(Object location) {
         this.location = location;
         return this;
@@ -103,7 +112,8 @@ public class Event {
     /**
      * The event name
      */
-    @JsonProperty("name")public String name;
+    @JsonProperty("name")
+    public String name;
     public Event withName(String name) {
         this.name = name;
         return this;
@@ -114,7 +124,8 @@ public class Event {
      */
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("start_time")public OffsetDateTime startTime;
+    @JsonProperty("start_time")
+    public OffsetDateTime startTime;
     public Event withStartTime(OffsetDateTime startTime) {
         this.startTime = startTime;
         return this;
@@ -123,7 +134,8 @@ public class Event {
     /**
      * Indicates if the event is "active" or "canceled"
      */
-    @JsonProperty("status")public EventStatusEnum status;
+    @JsonProperty("status")
+    public EventStatusEnum status;
     public Event withStatus(EventStatusEnum status) {
         this.status = status;
         return this;
@@ -134,7 +146,8 @@ public class Event {
      */
     @JsonSerialize(using = DateTimeSerializer.class)
     @JsonDeserialize(using = DateTimeDeserializer.class)
-    @JsonProperty("updated_at")public OffsetDateTime updatedAt;
+    @JsonProperty("updated_at")
+    public OffsetDateTime updatedAt;
     public Event withUpdatedAt(OffsetDateTime updatedAt) {
         this.updatedAt = updatedAt;
         return this;
@@ -143,7 +156,8 @@ public class Event {
     /**
      * Canonical reference (unique identifier) for the resource
      */
-    @JsonProperty("uri")public String uri;
+    @JsonProperty("uri")
+    public String uri;
     public Event withUri(String uri) {
         this.uri = uri;
         return this;

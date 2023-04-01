@@ -7,6 +7,7 @@ package calendly.calendly.models.operations;
 import java.net.http.HttpResponse;
 
 public class GetEventTypeAvailableTimesResponse {
+    
     public String contentType;
     public GetEventTypeAvailableTimesResponse withContentType(String contentType) {
         this.contentType = contentType;
@@ -16,17 +17,20 @@ public class GetEventTypeAvailableTimesResponse {
     /**
      * Request is not valid
      */
+    
     public GetEventTypeAvailableTimesErrorResponse errorResponse;
     public GetEventTypeAvailableTimesResponse withErrorResponse(GetEventTypeAvailableTimesErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
         return this;
     }
     
+    
     public Integer statusCode;
     public GetEventTypeAvailableTimesResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public GetEventTypeAvailableTimesResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
@@ -37,6 +41,7 @@ public class GetEventTypeAvailableTimesResponse {
     /**
      * OK
      */
+    
     public GetEventTypeAvailableTimes200ApplicationJSON getEventTypeAvailableTimes200ApplicationJSONObject;
     public GetEventTypeAvailableTimesResponse withGetEventTypeAvailableTimes200ApplicationJSONObject(GetEventTypeAvailableTimes200ApplicationJSON getEventTypeAvailableTimes200ApplicationJSONObject) {
         this.getEventTypeAvailableTimes200ApplicationJSONObject = getEventTypeAvailableTimes200ApplicationJSONObject;

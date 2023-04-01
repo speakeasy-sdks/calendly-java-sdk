@@ -13,7 +13,8 @@ public class GetUser200ApplicationJSON {
     /**
      * Information about the user.
      */
-    @JsonProperty("resource")public calendly.calendly.models.shared.User resource;
+    @JsonProperty("resource")
+    public calendly.calendly.models.shared.User resource;
     public GetUser200ApplicationJSON withResource(calendly.calendly.models.shared.User resource) {
         this.resource = resource;
         return this;

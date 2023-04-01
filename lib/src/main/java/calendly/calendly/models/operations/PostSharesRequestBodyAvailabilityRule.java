@@ -13,7 +13,8 @@ public class PostSharesRequestBodyAvailabilityRule {
      * are required when an availability rule is provided
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("rules")public PostSharesRequestBodyAvailabilityRuleRules[] rules;
+    @JsonProperty("rules")
+    public PostSharesRequestBodyAvailabilityRuleRules[] rules;
     public PostSharesRequestBodyAvailabilityRule withRules(PostSharesRequestBodyAvailabilityRuleRules[] rules) {
         this.rules = rules;
         return this;
@@ -23,7 +24,8 @@ public class PostSharesRequestBodyAvailabilityRule {
      * is required when an availability rule is provided
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("timezone")public String timezone;
+    @JsonProperty("timezone")
+    public String timezone;
     public PostSharesRequestBodyAvailabilityRule withTimezone(String timezone) {
         this.timezone = timezone;
         return this;

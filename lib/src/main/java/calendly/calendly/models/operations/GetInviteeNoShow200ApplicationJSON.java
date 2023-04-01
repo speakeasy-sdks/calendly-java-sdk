@@ -13,7 +13,8 @@ public class GetInviteeNoShow200ApplicationJSON {
     /**
      * Information about an invitees no show.
      */
-    @JsonProperty("resource")public calendly.calendly.models.shared.InviteeNoShow resource;
+    @JsonProperty("resource")
+    public calendly.calendly.models.shared.InviteeNoShow resource;
     public GetInviteeNoShow200ApplicationJSON withResource(calendly.calendly.models.shared.InviteeNoShow resource) {
         this.resource = resource;
         return this;

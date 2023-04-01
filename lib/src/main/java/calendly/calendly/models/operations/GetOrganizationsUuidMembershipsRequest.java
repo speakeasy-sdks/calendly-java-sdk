@@ -4,12 +4,16 @@
 
 package calendly.calendly.models.operations;
 
-
+import calendly.calendly.utils.SpeakeasyMetadata;
 
 public class GetOrganizationsUuidMembershipsRequest {
-    public GetOrganizationsUuidMembershipsPathParams pathParams;
-    public GetOrganizationsUuidMembershipsRequest withPathParams(GetOrganizationsUuidMembershipsPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The organization membership's unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uuid")
+    public String uuid;
+    public GetOrganizationsUuidMembershipsRequest withUuid(String uuid) {
+        this.uuid = uuid;
         return this;
     }
     

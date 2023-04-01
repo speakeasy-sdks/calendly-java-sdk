@@ -4,12 +4,26 @@
 
 package calendly.calendly.models.operations;
 
-
+import calendly.calendly.utils.SpeakeasyMetadata;
 
 public class GetScheduledEventsEventUuidInviteesInviteeUuidRequest {
-    public GetScheduledEventsEventUuidInviteesInviteeUuidPathParams pathParams;
-    public GetScheduledEventsEventUuidInviteesInviteeUuidRequest withPathParams(GetScheduledEventsEventUuidInviteesInviteeUuidPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * The event's unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=event_uuid")
+    public String eventUuid;
+    public GetScheduledEventsEventUuidInviteesInviteeUuidRequest withEventUuid(String eventUuid) {
+        this.eventUuid = eventUuid;
+        return this;
+    }
+    
+    /**
+     * The invitee's unique identifier
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=invitee_uuid")
+    public String inviteeUuid;
+    public GetScheduledEventsEventUuidInviteesInviteeUuidRequest withInviteeUuid(String inviteeUuid) {
+        this.inviteeUuid = inviteeUuid;
         return this;
     }
     

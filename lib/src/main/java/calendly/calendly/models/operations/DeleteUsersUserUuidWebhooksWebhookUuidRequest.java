@@ -4,12 +4,13 @@
 
 package calendly.calendly.models.operations;
 
-
+import calendly.calendly.utils.SpeakeasyMetadata;
 
 public class DeleteUsersUserUuidWebhooksWebhookUuidRequest {
-    public DeleteUsersUserUuidWebhooksWebhookUuidPathParams pathParams;
-    public DeleteUsersUserUuidWebhooksWebhookUuidRequest withPathParams(DeleteUsersUserUuidWebhooksWebhookUuidPathParams pathParams) {
-        this.pathParams = pathParams;
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=webhook_uuid")
+    public String webhookUuid;
+    public DeleteUsersUserUuidWebhooksWebhookUuidRequest withWebhookUuid(String webhookUuid) {
+        this.webhookUuid = webhookUuid;
         return this;
     }
     

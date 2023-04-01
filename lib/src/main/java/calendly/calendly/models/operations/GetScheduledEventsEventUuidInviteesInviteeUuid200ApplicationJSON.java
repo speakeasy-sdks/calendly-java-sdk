@@ -13,7 +13,8 @@ public class GetScheduledEventsEventUuidInviteesInviteeUuid200ApplicationJSON {
     /**
      * An individual who has been invited to meet with a Calendly member
      */
-    @JsonProperty("resource")public calendly.calendly.models.shared.Invitee resource;
+    @JsonProperty("resource")
+    public calendly.calendly.models.shared.Invitee resource;
     public GetScheduledEventsEventUuidInviteesInviteeUuid200ApplicationJSON withResource(calendly.calendly.models.shared.Invitee resource) {
         this.resource = resource;
         return this;

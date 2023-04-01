@@ -13,13 +13,15 @@ public class GetInvitees200ApplicationJSON {
     /**
      * The set of event invitees matching the criteria
      */
-    @JsonProperty("collection")public calendly.calendly.models.shared.Invitee[] collection;
+    @JsonProperty("collection")
+    public calendly.calendly.models.shared.Invitee[] collection;
     public GetInvitees200ApplicationJSON withCollection(calendly.calendly.models.shared.Invitee[] collection) {
         this.collection = collection;
         return this;
     }
     
-    @JsonProperty("pagination")public calendly.calendly.models.shared.Pagination pagination;
+    @JsonProperty("pagination")
+    public calendly.calendly.models.shared.Pagination pagination;
     public GetInvitees200ApplicationJSON withPagination(calendly.calendly.models.shared.Pagination pagination) {
         this.pagination = pagination;
         return this;

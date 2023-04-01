@@ -7,7 +7,7 @@ package calendly.calendly.models.shared;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 /**
- * EventTypePoolingTypeEnum - Indicates if the event type is "round robin" (alternates between hosts) or "collective" (invitees pick a time when all participants are available) or "null" (the event type doesn’t consider the availability of a group participants)
+ * EventTypePoolingTypeEnum - Indicates if the event type is "round robin" (alternates between hosts) or "collective" (invitees pick a time when all participants are available) or "null" (the event type doesn\u2019t consider the availability of a group participants)
  */
 public enum EventTypePoolingTypeEnum {
     ROUND_ROBIN("round_robin"),

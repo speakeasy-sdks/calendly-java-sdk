@@ -16,7 +16,8 @@ public class ActorGroup {
      * Name of the user group
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("name")public String name;
+    @JsonProperty("name")
+    public String name;
     public ActorGroup withName(String name) {
         this.name = name;
         return this;
@@ -26,7 +27,8 @@ public class ActorGroup {
      * The actor's role in the user group
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("role")public String role;
+    @JsonProperty("role")
+    public String role;
     public ActorGroup withRole(String role) {
         this.role = role;
         return this;
@@ -36,7 +38,8 @@ public class ActorGroup {
      * Canonical reference (unique identifier) for the user group
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("uri")public String uri;
+    @JsonProperty("uri")
+    public String uri;
     public ActorGroup withUri(String uri) {
         this.uri = uri;
         return this;

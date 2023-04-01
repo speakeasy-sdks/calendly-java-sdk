@@ -13,7 +13,8 @@ public class InviteeTracking {
     /**
      * The Salesforce record unique identifier
      */
-    @JsonProperty("salesforce_uuid")public String salesforceUuid;
+    @JsonProperty("salesforce_uuid")
+    public String salesforceUuid;
     public InviteeTracking withSalesforceUuid(String salesforceUuid) {
         this.salesforceUuid = salesforceUuid;
         return this;
@@ -22,7 +23,8 @@ public class InviteeTracking {
     /**
      * The UTM parameter used to track a campaign
      */
-    @JsonProperty("utm_campaign")public String utmCampaign;
+    @JsonProperty("utm_campaign")
+    public String utmCampaign;
     public InviteeTracking withUtmCampaign(String utmCampaign) {
         this.utmCampaign = utmCampaign;
         return this;
@@ -31,7 +33,8 @@ public class InviteeTracking {
     /**
      * UTM content tracking parameter
      */
-    @JsonProperty("utm_content")public String utmContent;
+    @JsonProperty("utm_content")
+    public String utmContent;
     public InviteeTracking withUtmContent(String utmContent) {
         this.utmContent = utmContent;
         return this;
@@ -40,7 +43,8 @@ public class InviteeTracking {
     /**
      * The UTM parameter that identifies the type of input (e.g. Cost Per Click (CPC), social media, affiliate or QR code)
      */
-    @JsonProperty("utm_medium")public String utmMedium;
+    @JsonProperty("utm_medium")
+    public String utmMedium;
     public InviteeTracking withUtmMedium(String utmMedium) {
         this.utmMedium = utmMedium;
         return this;
@@ -49,7 +53,8 @@ public class InviteeTracking {
     /**
      * The UTM parameter that identifies the source (platform where the traffic originates)
      */
-    @JsonProperty("utm_source")public String utmSource;
+    @JsonProperty("utm_source")
+    public String utmSource;
     public InviteeTracking withUtmSource(String utmSource) {
         this.utmSource = utmSource;
         return this;
@@ -58,7 +63,8 @@ public class InviteeTracking {
     /**
      * The UTM parameter used to track keywords
      */
-    @JsonProperty("utm_term")public String utmTerm;
+    @JsonProperty("utm_term")
+    public String utmTerm;
     public InviteeTracking withUtmTerm(String utmTerm) {
         this.utmTerm = utmTerm;
         return this;

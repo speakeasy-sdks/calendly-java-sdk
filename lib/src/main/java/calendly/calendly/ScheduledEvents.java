@@ -40,7 +40,7 @@ public class ScheduledEvents {
      */
     public calendly.calendly.models.operations.DeleteInviteeNoShowResponse deleteInviteeNoShow(calendly.calendly.models.operations.DeleteInviteeNoShowRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.DeleteInviteeNoShowPathParams.class, baseUrl, "/invitee_no_shows/{uuid}", request.pathParams, null);
+        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.DeleteInviteeNoShowRequest.class, baseUrl, "/invitee_no_shows/{uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("DELETE");
@@ -82,7 +82,7 @@ public class ScheduledEvents {
      */
     public calendly.calendly.models.operations.GetScheduledEventsEventUuidInviteesInviteeUuidResponse getScheduledEventsEventUuidInviteesInviteeUuid(calendly.calendly.models.operations.GetScheduledEventsEventUuidInviteesInviteeUuidRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetScheduledEventsEventUuidInviteesInviteeUuidPathParams.class, baseUrl, "/scheduled_events/{event_uuid}/invitees/{invitee_uuid}", request.pathParams, null);
+        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetScheduledEventsEventUuidInviteesInviteeUuidRequest.class, baseUrl, "/scheduled_events/{event_uuid}/invitees/{invitee_uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -138,7 +138,7 @@ public class ScheduledEvents {
      */
     public calendly.calendly.models.operations.GetScheduledEventsUuidResponse getScheduledEventsUuid(calendly.calendly.models.operations.GetScheduledEventsUuidRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetScheduledEventsUuidPathParams.class, baseUrl, "/scheduled_events/{uuid}", request.pathParams, null);
+        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetScheduledEventsUuidRequest.class, baseUrl, "/scheduled_events/{uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -194,7 +194,7 @@ public class ScheduledEvents {
      */
     public calendly.calendly.models.operations.GetInviteeNoShowResponse getInviteeNoShow(calendly.calendly.models.operations.GetInviteeNoShowRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetInviteeNoShowPathParams.class, baseUrl, "/invitee_no_shows/{uuid}", request.pathParams, null);
+        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetInviteeNoShowRequest.class, baseUrl, "/invitee_no_shows/{uuid}", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
@@ -242,13 +242,13 @@ public class ScheduledEvents {
      */
     public calendly.calendly.models.operations.GetInviteesResponse getInvitees(calendly.calendly.models.operations.GetInviteesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetInviteesPathParams.class, baseUrl, "/scheduled_events/{uuid}/invitees", request.pathParams, null);
+        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetInviteesRequest.class, baseUrl, "/scheduled_events/{uuid}/invitees", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.GetInviteesQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.GetInviteesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -318,7 +318,7 @@ public class ScheduledEvents {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.GetScheduledEventsQueryParams.class, request.queryParams, null);
+        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.GetScheduledEventsRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -374,12 +374,12 @@ public class ScheduledEvents {
      */
     public calendly.calendly.models.operations.PostScheduledEventsUuidCancellationJsonResponse postScheduledEventsUuidCancellationJson(calendly.calendly.models.operations.PostScheduledEventsUuidCancellationJsonRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.PostScheduledEventsUuidCancellationPathParams.class, baseUrl, "/scheduled_events/{uuid}/cancellation", request.pathParams, null);
+        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.PostScheduledEventsUuidCancellationJsonRequest.class, baseUrl, "/scheduled_events/{uuid}/cancellation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = calendly.calendly.utils.Utils.serializeRequestBody(request, "request", "json");
+        SerializedBody serializedRequestBody = calendly.calendly.utils.Utils.serializeRequestBody(request, "requestBody", "json");
         req.setBody(serializedRequestBody);
         
         
@@ -432,12 +432,12 @@ public class ScheduledEvents {
      */
     public calendly.calendly.models.operations.PostScheduledEventsUuidCancellationMultipartResponse postScheduledEventsUuidCancellationMultipart(calendly.calendly.models.operations.PostScheduledEventsUuidCancellationMultipartRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.PostScheduledEventsUuidCancellationPathParams.class, baseUrl, "/scheduled_events/{uuid}/cancellation", request.pathParams, null);
+        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.PostScheduledEventsUuidCancellationMultipartRequest.class, baseUrl, "/scheduled_events/{uuid}/cancellation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = calendly.calendly.utils.Utils.serializeRequestBody(request, "request", "multipart");
+        SerializedBody serializedRequestBody = calendly.calendly.utils.Utils.serializeRequestBody(request, "requestBody", "multipart");
         req.setBody(serializedRequestBody);
         
         
@@ -490,12 +490,12 @@ public class ScheduledEvents {
      */
     public calendly.calendly.models.operations.PostScheduledEventsUuidCancellationRawResponse postScheduledEventsUuidCancellationRaw(calendly.calendly.models.operations.PostScheduledEventsUuidCancellationRawRequest request) throws Exception {
         String baseUrl = this._serverUrl;
-        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.PostScheduledEventsUuidCancellationPathParams.class, baseUrl, "/scheduled_events/{uuid}/cancellation", request.pathParams, null);
+        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.PostScheduledEventsUuidCancellationRawRequest.class, baseUrl, "/scheduled_events/{uuid}/cancellation", request, null);
         
         HTTPRequest req = new HTTPRequest();
         req.setMethod("POST");
         req.setURL(url);
-        SerializedBody serializedRequestBody = calendly.calendly.utils.Utils.serializeRequestBody(request, "request", "raw");
+        SerializedBody serializedRequestBody = calendly.calendly.utils.Utils.serializeRequestBody(request, "requestBody", "raw");
         req.setBody(serializedRequestBody);
         
         
@@ -546,7 +546,7 @@ public class ScheduledEvents {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public calendly.calendly.models.operations.PostInviteeNoShowResponse postInviteeNoShow(calendly.calendly.models.operations.PostInviteeNoShowRequest request) throws Exception {
+    public calendly.calendly.models.operations.PostInviteeNoShowResponse postInviteeNoShow(calendly.calendly.models.operations.PostInviteeNoShowRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = calendly.calendly.utils.Utils.generateURL(baseUrl, "/invitee_no_shows");
         

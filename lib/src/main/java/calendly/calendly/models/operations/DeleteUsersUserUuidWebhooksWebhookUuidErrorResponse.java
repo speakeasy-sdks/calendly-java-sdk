@@ -13,19 +13,22 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class DeleteUsersUserUuidWebhooksWebhookUuidErrorResponse {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("details")public DeleteUsersUserUuidWebhooksWebhookUuidErrorResponseDetails[] details;
+    @JsonProperty("details")
+    public DeleteUsersUserUuidWebhooksWebhookUuidErrorResponseDetails[] details;
     public DeleteUsersUserUuidWebhooksWebhookUuidErrorResponse withDetails(DeleteUsersUserUuidWebhooksWebhookUuidErrorResponseDetails[] details) {
         this.details = details;
         return this;
     }
     
-    @JsonProperty("message")public String message;
+    @JsonProperty("message")
+    public String message;
     public DeleteUsersUserUuidWebhooksWebhookUuidErrorResponse withMessage(String message) {
         this.message = message;
         return this;
     }
     
-    @JsonProperty("title")public String title;
+    @JsonProperty("title")
+    public String title;
     public DeleteUsersUserUuidWebhooksWebhookUuidErrorResponse withTitle(String title) {
         this.title = title;
         return this;

@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'calendly.calendly:calendly:0.4.2'
+implementation 'calendly.calendly:calendly:0.4.3'
 ```
 <!-- End SDK Installation -->
 
@@ -18,7 +18,6 @@ package hello.world;
 import calendly.calendly.SDK;
 import calendly.calendly.models.shared.Security;
 import calendly.calendly.models.operations.ActivityLogSortEnum;
-import calendly.calendly.models.operations.ActivityLogQueryParams;
 import calendly.calendly.models.operations.ActivityLogRequest;
 import calendly.calendly.models.operations.ActivityLogResponse;
 
@@ -27,40 +26,39 @@ public class Application {
         try {
             SDK sdk = SDK.builder()
                 .setSecurity(new Security() {{
-                    oauth2 = new SchemeOauth2() {{
-                        authorization = "Bearer YOUR_ACCESS_TOKEN_HERE";
-                    }};
+                    oauth2 = "Bearer YOUR_ACCESS_TOKEN_HERE";
                 }})
                 .build();
 
             ActivityLogRequest req = new ActivityLogRequest() {{
-                queryParams = new ActivityLogQueryParams() {{
-                    action = new String[]{{
-                        add("deserunt"),
-                        add("porro"),
-                        add("nulla"),
-                    }};
-                    actor = new String[]{{
-                        add("https://api.calendly.com/users/EBHAAFHDCAEQTSEZ"),
-                        add("https://api.calendly.com/users/EBHAAFHDCAEQTSEZ"),
-                        add("https://api.calendly.com/users/EBHAAFHDCAEQTSEZ"),
-                    }};
-                    count = 857946;
-                    maxOccurredAt = "2022-09-11T03:56:07.072Z";
-                    minOccurredAt = "2022-05-23T19:11:12.470Z";
-                    namespace = new String[]{{
-                        add("fuga"),
-                        add("facilis"),
-                    }};
-                    organization = "https://api.calendly.com/organizations/EBHAAFHDCAEQTSEZ";
-                    pageToken = "eum";
-                    searchTerm = "iusto";
-                    sort = new calendly.calendly.models.operations.ActivityLogSortEnum[]{{
-                        add("occurred_at:asc"),
-                        add("action:asc"),
-                    }};
+                action = new String[]{{
+                    add("provident"),
+                    add("distinctio"),
+                    add("quibusdam"),
                 }};
-            }};            
+                actor = new String[]{{
+                    add("https://api.calendly.com/users/EBHAAFHDCAEQTSEZ"),
+                    add("https://api.calendly.com/users/EBHAAFHDCAEQTSEZ"),
+                    add("https://api.calendly.com/users/EBHAAFHDCAEQTSEZ"),
+                }};
+                count = 857946;
+                maxOccurredAt = "2021-04-22T12:08:58.275Z";
+                minOccurredAt = "2022-05-18T09:34:54.894Z";
+                namespace = new String[]{{
+                    add("suscipit"),
+                    add("iure"),
+                    add("magnam"),
+                }};
+                organization = "https://api.calendly.com/organizations/EBHAAFHDCAEQTSEZ";
+                pageToken = "debitis";
+                searchTerm = "ipsa";
+                sort = new calendly.calendly.models.operations.ActivityLogSortEnum[]{{
+                    add("actor.display_name:asc"),
+                    add("actor.display_name:desc"),
+                    add("actor.uri:asc"),
+                    add("namespace:desc"),
+                }};
+            }}            
 
             ActivityLogResponse res = sdk.activityLog.activityLog(req);
 
@@ -74,7 +72,7 @@ public class Application {
 <!-- End SDK Example Usage -->
 
 <!-- Start SDK Available Operations -->
-## SDK Available Operations
+## Available Resources and Operations
 
 
 ### activityLog

@@ -13,7 +13,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
  */
 public class ZoomConferenceData {
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("extra")public ZoomConferenceDataExtra extra;
+    @JsonProperty("extra")
+    public ZoomConferenceDataExtra extra;
     public ZoomConferenceData withExtra(ZoomConferenceDataExtra extra) {
         this.extra = extra;
         return this;
@@ -23,7 +24,8 @@ public class ZoomConferenceData {
      * The conference ID provided by Zoom
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("id")public String id;
+    @JsonProperty("id")
+    public String id;
     public ZoomConferenceData withId(String id) {
         this.id = id;
         return this;
@@ -33,14 +35,16 @@ public class ZoomConferenceData {
      * Zoom meeting password
      */
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("password")public String password;
+    @JsonProperty("password")
+    public String password;
     public ZoomConferenceData withPassword(String password) {
         this.password = password;
         return this;
     }
     
     @JsonInclude(Include.NON_ABSENT)
-    @JsonProperty("settings")public ZoomConferenceDataSettings settings;
+    @JsonProperty("settings")
+    public ZoomConferenceDataSettings settings;
     public ZoomConferenceData withSettings(ZoomConferenceDataSettings settings) {
         this.settings = settings;
         return this;

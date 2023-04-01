@@ -7,6 +7,7 @@ package calendly.calendly.models.operations;
 import java.net.http.HttpResponse;
 
 public class GetOrganizationsUuidMembershipsResponse {
+    
     public String contentType;
     public GetOrganizationsUuidMembershipsResponse withContentType(String contentType) {
         this.contentType = contentType;
@@ -16,6 +17,7 @@ public class GetOrganizationsUuidMembershipsResponse {
     /**
      * Request is not valid
      */
+    
     public GetOrganizationsUuidMembershipsErrorResponse errorResponse;
     public GetOrganizationsUuidMembershipsResponse withErrorResponse(GetOrganizationsUuidMembershipsErrorResponse errorResponse) {
         this.errorResponse = errorResponse;
@@ -25,17 +27,20 @@ public class GetOrganizationsUuidMembershipsResponse {
     /**
      * Caller not authorized to perform this action
      */
+    
     public calendly.calendly.models.shared.ErrorResponse errorResponse1;
     public GetOrganizationsUuidMembershipsResponse withErrorResponse1(calendly.calendly.models.shared.ErrorResponse errorResponse1) {
         this.errorResponse1 = errorResponse1;
         return this;
     }
     
+    
     public Integer statusCode;
     public GetOrganizationsUuidMembershipsResponse withStatusCode(Integer statusCode) {
         this.statusCode = statusCode;
         return this;
     }
+    
     
     public HttpResponse<byte[]> rawResponse;
     public GetOrganizationsUuidMembershipsResponse withRawResponse(HttpResponse<byte[]> rawResponse) {
@@ -46,6 +51,7 @@ public class GetOrganizationsUuidMembershipsResponse {
     /**
      * OK
      */
+    
     public GetOrganizationsUuidMemberships200ApplicationJSON getOrganizationsUuidMemberships200ApplicationJSONObject;
     public GetOrganizationsUuidMembershipsResponse withGetOrganizationsUuidMemberships200ApplicationJSONObject(GetOrganizationsUuidMemberships200ApplicationJSON getOrganizationsUuidMemberships200ApplicationJSONObject) {
         this.getOrganizationsUuidMemberships200ApplicationJSONObject = getOrganizationsUuidMemberships200ApplicationJSONObject;

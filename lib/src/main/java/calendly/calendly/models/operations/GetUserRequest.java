@@ -4,12 +4,16 @@
 
 package calendly.calendly.models.operations;
 
-
+import calendly.calendly.utils.SpeakeasyMetadata;
 
 public class GetUserRequest {
-    public GetUserPathParams pathParams;
-    public GetUserRequest withPathParams(GetUserPathParams pathParams) {
-        this.pathParams = pathParams;
+    /**
+     * User unique identifier, or the constant "me" to reference the caller
+     */
+    @SpeakeasyMetadata("pathParam:style=simple,explode=false,name=uuid")
+    public String uuid;
+    public GetUserRequest withUuid(String uuid) {
+        this.uuid = uuid;
         return this;
     }
     
