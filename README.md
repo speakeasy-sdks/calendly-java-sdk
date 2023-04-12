@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'calendly.calendly:calendly:0.4.3'
+implementation 'calendly.calendly:calendly:0.5.0'
 ```
 <!-- End SDK Installation -->
 
@@ -17,9 +17,9 @@ package hello.world;
 
 import calendly.calendly.SDK;
 import calendly.calendly.models.shared.Security;
-import calendly.calendly.models.operations.ActivityLogSortEnum;
-import calendly.calendly.models.operations.ActivityLogRequest;
-import calendly.calendly.models.operations.ActivityLogResponse;
+import calendly.calendly.models.operations.ListScheduledEventsStatusEnum;
+import calendly.calendly.models.operations.ListScheduledEventsRequest;
+import calendly.calendly.models.operations.ListScheduledEventsResponse;
 
 public class Application {
     public static void main(String[] args) {
@@ -30,39 +30,21 @@ public class Application {
                 }})
                 .build();
 
-            ActivityLogRequest req = new ActivityLogRequest() {{
-                action = new String[]{{
-                    add("provident"),
-                    add("distinctio"),
-                    add("quibusdam"),
-                }};
-                actor = new String[]{{
-                    add("https://api.calendly.com/users/EBHAAFHDCAEQTSEZ"),
-                    add("https://api.calendly.com/users/EBHAAFHDCAEQTSEZ"),
-                    add("https://api.calendly.com/users/EBHAAFHDCAEQTSEZ"),
-                }};
-                count = 857946;
-                maxOccurredAt = "2021-04-22T12:08:58.275Z";
-                minOccurredAt = "2022-05-18T09:34:54.894Z";
-                namespace = new String[]{{
-                    add("suscipit"),
-                    add("iure"),
-                    add("magnam"),
-                }};
+            ListScheduledEventsRequest req = new ListScheduledEventsRequest() {{
+                count = 5488.14;
+                inviteeEmail = "alice@example.com";
+                maxStartTime = "provident";
+                minStartTime = "distinctio";
                 organization = "https://api.calendly.com/organizations/EBHAAFHDCAEQTSEZ";
-                pageToken = "debitis";
-                searchTerm = "ipsa";
-                sort = new calendly.calendly.models.operations.ActivityLogSortEnum[]{{
-                    add("actor.display_name:asc"),
-                    add("actor.display_name:desc"),
-                    add("actor.uri:asc"),
-                    add("namespace:desc"),
-                }};
+                pageToken = "quibusdam";
+                sort = "unde";
+                status = "canceled";
+                user = "https://api.calendly.com/users/EBHAAFHDCAEQTSEZ";
             }}            
 
-            ActivityLogResponse res = sdk.activityLog.activityLog(req);
+            ListScheduledEventsResponse res = sdk.scheduledEvents.list(req);
 
-            if (res.activityLog200ApplicationJSONObject.isPresent()) {
+            if (res.listScheduledEvents200ApplicationJSONObject.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {
@@ -77,74 +59,74 @@ public class Application {
 
 ### activityLog
 
-* `activityLog` - List activity log entries
+* `list` - List activity log entries
 
 ### availability
 
-* `getUserAvailabilitySchedules` - List User Availability Schedules
-* `getUserAvailabilitySchedulesUuid` - Get User Availability Schedule
-* `getUserBusyTimes` - List User Busy Times
+* `get` - Get User Availability Schedule
+* `getAvailability` - List User Availability Schedules
+* `getBusyTimes` - List User Busy Times
 
 ### dataCompliance
 
-* `postDataComplianceDeletionEvents` - Delete Scheduled Event Data
-* `postDataComplianceDeletionInvitees` - Delete Invitee Data
+* `createDeletionEvent` - Delete Scheduled Event Data
+* `deleteInviteeData` - Delete Invitee Data
 
 ### eventTypes
 
-* `getEventTypesUuid` - Get Event Type
-* `getEventTypeAvailableTimes` - List Event Type Available Times
-* `getEventTypes` - List User's Event Types
+* `get` - Get Event Type
+* `getAvailableTimes` - List Event Type Available Times
+* `list` - List User's Event Types
 
 ### organizations
 
-* `deleteOrganizationsUuidMemberships` - Remove User from Organization
-* `getOrganizationMemberships` - List Organization Memberships
-* `getOrganizationsOrgUuidInvitationsUuid` - Get Organization Invitation
-* `getOrganizationsUuidInvitations` - List Organization Invitations
-* `getOrganizationsUuidMemberships` - Get Organization Membership
-* `postOrganizationsUuidInvitations` - Invite User to Organization
-* `revokeUsersOrganizationInvitation` - Revoke User's Organization Invitation
+* `deleteMemberships` - Remove User from Organization
+* `getInvitations` - Get Organization Invitation
+* `inviteUser` - Invite User to Organization
+* `listInvitations` - List Organization Invitations
+* `listMemberships` - List Organization Memberships
+* `revokeInvite` - Revoke User's Organization Invitation
 
 ### routingForms
 
-* `getRoutingFormSubmissions` - List Routing Form Submissions
-* `getRoutingFormSubmissionsUuid` - Get Routing Form Submission
-* `getRoutingForms` - List Routing Forms
-* `getRoutingFormsUuid` - Get Routing Form
+* `getSubmissions` - List Routing Form Submissions
+* `getSubmissionsByUuid` - Get Routing Form Submission
+* `getByUuid` - Get Routing Form
+* `list` - List Routing Forms
 
 ### scheduledEvents
 
-* `deleteInviteeNoShow` - Delete Invitee No Show
-* `getScheduledEventsEventUuidInviteesInviteeUuid` - Get Event Invitee
-* `getScheduledEventsUuid` - Get Event
-* `getInviteeNoShow` - Get Invitee No Show
+* `cancel` - Cancel Event
+* `cancel` - Cancel Event
+* `cancel` - Cancel Event
+* `createNoShow` - Create Invitee No Show
+* `getEventByUuid` - Get Event
 * `getInvitees` - List Event Invitees
-* `getScheduledEvents` - List Events
-* `postScheduledEventsUuidCancellationJson` - Cancel Event
-* `postScheduledEventsUuidCancellationMultipart` - Cancel Event
-* `postScheduledEventsUuidCancellationRaw` - Cancel Event
-* `postInviteeNoShow` - Create Invitee No Show
+* `getInviteesByUuid` - Get Event Invitee
+* `getNoShow` - Get Invitee No Show
+* `list` - List Events
+* `unmarkNoShow` - Delete Invitee No Show
 
 ### schedulingLinks
 
-* `postSchedulingLinks` - Create Single-Use Scheduling Link
+* `create` - Create Single-Use Scheduling Link
 
 ### shares
 
-* `postShares` - Create Share
+* `create` - Create Share
 
 ### users
 
-* `getMyUserAccount` - Get current user
-* `getUser` - Get user
+* `get` - Get user
+* `getMemberships` - Get Organization Membership
+* `me` - Get current user
 
 ### webhooks
 
-* `deleteUsersUserUuidWebhooksWebhookUuid` - Delete Webhook Subscription
-* `getUsersUserUuidWebhooksWebhookUuid` - Get Webhook Subscription
-* `getWebhooks` - List Webhook Subscriptions
-* `postUsersUuidWebhooks` - Create Webhook Subscription
+* `create` - Create Webhook Subscription
+* `delete` - Delete Webhook Subscription
+* `get` - Get Webhook Subscription
+* `list` - List Webhook Subscriptions
 <!-- End SDK Available Operations -->
 
 ### SDK Generated by [Speakeasy](https://docs.speakeasyapi.dev/docs/using-speakeasy/client-sdks)

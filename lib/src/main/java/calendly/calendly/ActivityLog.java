@@ -41,7 +41,7 @@ public class ActivityLog {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public calendly.calendly.models.operations.ActivityLogResponse activityLog(calendly.calendly.models.operations.ActivityLogRequest request) throws Exception {
+    public calendly.calendly.models.operations.ListActivityLogResponse list(calendly.calendly.models.operations.ListActivityLogRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = calendly.calendly.utils.Utils.generateURL(baseUrl, "/activity_log_entries");
         
@@ -49,7 +49,7 @@ public class ActivityLog {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.ActivityLogRequest.class, request, null);
+        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.ListActivityLogRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -62,10 +62,10 @@ public class ActivityLog {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        calendly.calendly.models.operations.ActivityLogResponse res = new calendly.calendly.models.operations.ActivityLogResponse() {{
-            activityLog200ApplicationJSONObject = null;
+        calendly.calendly.models.operations.ListActivityLogResponse res = new calendly.calendly.models.operations.ListActivityLogResponse() {{
+            listActivityLog200ApplicationJSONObject = null;
             errorResponse = null;
-            activityLog403ApplicationJSONObject = null;
+            listActivityLog403ApplicationJSONObject = null;
         }};
         res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
@@ -74,22 +74,22 @@ public class ActivityLog {
         if (httpRes.statusCode() == 200) {
             if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.ActivityLog200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.ActivityLog200ApplicationJSON.class);
-                res.activityLog200ApplicationJSONObject = out;
+                calendly.calendly.models.operations.ListActivityLog200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.ListActivityLog200ApplicationJSON.class);
+                res.listActivityLog200ApplicationJSONObject = out;
             }
         }
         else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
             if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.ActivityLogErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.ActivityLogErrorResponse.class);
+                calendly.calendly.models.operations.ListActivityLogErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.ListActivityLogErrorResponse.class);
                 res.errorResponse = out;
             }
         }
         else if (httpRes.statusCode() == 403) {
             if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.ActivityLog403ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.ActivityLog403ApplicationJSON.class);
-                res.activityLog403ApplicationJSONObject = out;
+                calendly.calendly.models.operations.ListActivityLog403ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.ListActivityLog403ApplicationJSON.class);
+                res.listActivityLog403ApplicationJSONObject = out;
             }
         }
 

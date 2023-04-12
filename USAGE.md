@@ -4,9 +4,9 @@ package hello.world;
 
 import calendly.calendly.SDK;
 import calendly.calendly.models.shared.Security;
-import calendly.calendly.models.operations.ActivityLogSortEnum;
-import calendly.calendly.models.operations.ActivityLogRequest;
-import calendly.calendly.models.operations.ActivityLogResponse;
+import calendly.calendly.models.operations.ListScheduledEventsStatusEnum;
+import calendly.calendly.models.operations.ListScheduledEventsRequest;
+import calendly.calendly.models.operations.ListScheduledEventsResponse;
 
 public class Application {
     public static void main(String[] args) {
@@ -17,39 +17,21 @@ public class Application {
                 }})
                 .build();
 
-            ActivityLogRequest req = new ActivityLogRequest() {{
-                action = new String[]{{
-                    add("provident"),
-                    add("distinctio"),
-                    add("quibusdam"),
-                }};
-                actor = new String[]{{
-                    add("https://api.calendly.com/users/EBHAAFHDCAEQTSEZ"),
-                    add("https://api.calendly.com/users/EBHAAFHDCAEQTSEZ"),
-                    add("https://api.calendly.com/users/EBHAAFHDCAEQTSEZ"),
-                }};
-                count = 857946;
-                maxOccurredAt = "2021-04-22T12:08:58.275Z";
-                minOccurredAt = "2022-05-18T09:34:54.894Z";
-                namespace = new String[]{{
-                    add("suscipit"),
-                    add("iure"),
-                    add("magnam"),
-                }};
+            ListScheduledEventsRequest req = new ListScheduledEventsRequest() {{
+                count = 5488.14;
+                inviteeEmail = "alice@example.com";
+                maxStartTime = "provident";
+                minStartTime = "distinctio";
                 organization = "https://api.calendly.com/organizations/EBHAAFHDCAEQTSEZ";
-                pageToken = "debitis";
-                searchTerm = "ipsa";
-                sort = new calendly.calendly.models.operations.ActivityLogSortEnum[]{{
-                    add("actor.display_name:asc"),
-                    add("actor.display_name:desc"),
-                    add("actor.uri:asc"),
-                    add("namespace:desc"),
-                }};
+                pageToken = "quibusdam";
+                sort = "unde";
+                status = "canceled";
+                user = "https://api.calendly.com/users/EBHAAFHDCAEQTSEZ";
             }}            
 
-            ActivityLogResponse res = sdk.activityLog.activityLog(req);
+            ListScheduledEventsResponse res = sdk.scheduledEvents.list(req);
 
-            if (res.activityLog200ApplicationJSONObject.isPresent()) {
+            if (res.listScheduledEvents200ApplicationJSONObject.isPresent()) {
                 // handle response
             }
         } catch (Exception e) {

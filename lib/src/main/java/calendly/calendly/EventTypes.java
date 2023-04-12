@@ -37,7 +37,7 @@ public class EventTypes {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public calendly.calendly.models.operations.GetEventTypesUuidResponse getEventTypesUuid(calendly.calendly.models.operations.GetEventTypesUuidRequest request) throws Exception {
+    public calendly.calendly.models.operations.GetEventTypesUuidResponse get(calendly.calendly.models.operations.GetEventTypesUuidRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetEventTypesUuidRequest.class, baseUrl, "/event_types/{uuid}", request, null);
         
@@ -90,7 +90,7 @@ public class EventTypes {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public calendly.calendly.models.operations.GetEventTypeAvailableTimesResponse getEventTypeAvailableTimes(calendly.calendly.models.operations.GetEventTypeAvailableTimesRequest request) throws Exception {
+    public calendly.calendly.models.operations.GetEventTypeAvailableTimesResponse getAvailableTimes(calendly.calendly.models.operations.GetEventTypeAvailableTimesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = calendly.calendly.utils.Utils.generateURL(baseUrl, "/event_type_available_times");
         
@@ -150,7 +150,7 @@ public class EventTypes {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public calendly.calendly.models.operations.GetEventTypesResponse getEventTypes(calendly.calendly.models.operations.GetEventTypesRequest request) throws Exception {
+    public calendly.calendly.models.operations.ListEventTypesResponse list(calendly.calendly.models.operations.ListEventTypesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = calendly.calendly.utils.Utils.generateURL(baseUrl, "/event_types");
         
@@ -158,7 +158,7 @@ public class EventTypes {
         req.setMethod("GET");
         req.setURL(url);
         
-        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.GetEventTypesRequest.class, request, null);
+        java.util.List<NameValuePair> queryParams = calendly.calendly.utils.Utils.getQueryParams(calendly.calendly.models.operations.ListEventTypesRequest.class, request, null);
         if (queryParams != null) {
             for (NameValuePair queryParam : queryParams) {
                 req.addQueryParam(queryParam);
@@ -171,10 +171,10 @@ public class EventTypes {
 
         String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
 
-        calendly.calendly.models.operations.GetEventTypesResponse res = new calendly.calendly.models.operations.GetEventTypesResponse() {{
-            getEventTypes200ApplicationJSONObject = null;
+        calendly.calendly.models.operations.ListEventTypesResponse res = new calendly.calendly.models.operations.ListEventTypesResponse() {{
+            listEventTypes200ApplicationJSONObject = null;
             errorResponse = null;
-            getEventTypes403ApplicationJSONObject = null;
+            listEventTypes403ApplicationJSONObject = null;
         }};
         res.statusCode = httpRes.statusCode();
         res.contentType = contentType;
@@ -183,22 +183,22 @@ public class EventTypes {
         if (httpRes.statusCode() == 200) {
             if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetEventTypes200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetEventTypes200ApplicationJSON.class);
-                res.getEventTypes200ApplicationJSONObject = out;
+                calendly.calendly.models.operations.ListEventTypes200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.ListEventTypes200ApplicationJSON.class);
+                res.listEventTypes200ApplicationJSONObject = out;
             }
         }
         else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
             if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetEventTypesErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetEventTypesErrorResponse.class);
+                calendly.calendly.models.operations.ListEventTypesErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.ListEventTypesErrorResponse.class);
                 res.errorResponse = out;
             }
         }
         else if (httpRes.statusCode() == 403) {
             if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetEventTypes403ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetEventTypes403ApplicationJSON.class);
-                res.getEventTypes403ApplicationJSONObject = out;
+                calendly.calendly.models.operations.ListEventTypes403ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.ListEventTypes403ApplicationJSON.class);
+                res.listEventTypes403ApplicationJSONObject = out;
             }
         }
 

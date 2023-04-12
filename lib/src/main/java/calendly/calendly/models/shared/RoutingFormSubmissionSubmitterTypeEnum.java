@@ -10,7 +10,8 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * RoutingFormSubmissionSubmitterTypeEnum - Type of the respondent resource that submitted the form and scheduled a meeting.
  */
 public enum RoutingFormSubmissionSubmitterTypeEnum {
-    INVITEE("Invitee");
+    INVITEE("Invitee"),
+    NULL_("null");
 
     @JsonValue
     public final String value;

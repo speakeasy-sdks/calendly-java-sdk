@@ -11,7 +11,8 @@ import com.fasterxml.jackson.annotation.JsonValue;
  */
 public enum EventTypePoolingTypeEnum {
     ROUND_ROBIN("round_robin"),
-    COLLECTIVE("collective");
+    COLLECTIVE("collective"),
+    NULL_("null");
 
     @JsonValue
     public final String value;

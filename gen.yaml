@@ -1,16 +1,16 @@
 configVersion: 1.0.0
 management:
-  docChecksum: 9457b2d28efb1d92b01f37d3839413db
+  docChecksum: a8dcbff8c1026e1d3606ca743efd2b12
   docVersion: 2.0.0
-  speakeasyVersion: 1.19.3
-  generationVersion: 2.16.7
+  speakeasyVersion: 1.19.7
+  generationVersion: 2.17.9
 generation:
   telemetryEnabled: false
   sdkClassName: SDK
-  sdkFlattening: true
+  sdkFlattening: false
   singleTagPerOp: false
 java:
-  version: 0.4.3
+  version: 0.5.0
   artifactID: calendly
   groupID: calendly
   projectName: calendly

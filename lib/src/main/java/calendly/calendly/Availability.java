@@ -31,13 +31,71 @@ public class Availability {
 	}
 
     /**
+     * Get User Availability Schedule
+     * This will return the availability schedule of the given UUID.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuidResponse get(calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuidRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuidRequest.class, baseUrl, "/user_availability_schedules/{uuid}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuidResponse res = new calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuidResponse() {{
+            getUserAvailabilitySchedulesUuid200ApplicationJSONObject = null;
+            errorResponse = null;
+            getUserAvailabilitySchedulesUuid403ApplicationJSONObject = null;
+        }};
+        res.statusCode = httpRes.statusCode();
+        res.contentType = contentType;
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuid200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuid200ApplicationJSON.class);
+                res.getUserAvailabilitySchedulesUuid200ApplicationJSONObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404) {
+            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuidErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuidErrorResponse.class);
+                res.errorResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 403) {
+            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuid403ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuid403ApplicationJSON.class);
+                res.getUserAvailabilitySchedulesUuid403ApplicationJSONObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 500) {
+        }
+
+        return res;
+    }
+
+    /**
      * List User Availability Schedules
      * Returns the availability schedules of the given user.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public calendly.calendly.models.operations.GetUserAvailabilitySchedulesResponse getUserAvailabilitySchedules(calendly.calendly.models.operations.GetUserAvailabilitySchedulesRequest request) throws Exception {
+    public calendly.calendly.models.operations.GetUserAvailabilitySchedulesResponse getAvailability(calendly.calendly.models.operations.GetUserAvailabilitySchedulesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = calendly.calendly.utils.Utils.generateURL(baseUrl, "/user_availability_schedules");
         
@@ -93,64 +151,6 @@ public class Availability {
     }
 
     /**
-     * Get User Availability Schedule
-     * This will return the availability schedule of the given UUID.
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuidResponse getUserAvailabilitySchedulesUuid(calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuidRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuidRequest.class, baseUrl, "/user_availability_schedules/{uuid}", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuidResponse res = new calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuidResponse() {{
-            getUserAvailabilitySchedulesUuid200ApplicationJSONObject = null;
-            errorResponse = null;
-            getUserAvailabilitySchedulesUuid403ApplicationJSONObject = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuid200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuid200ApplicationJSON.class);
-                res.getUserAvailabilitySchedulesUuid200ApplicationJSONObject = out;
-            }
-        }
-        else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuidErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuidErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 403) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuid403ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetUserAvailabilitySchedulesUuid403ApplicationJSON.class);
-                res.getUserAvailabilitySchedulesUuid403ApplicationJSONObject = out;
-            }
-        }
-        else if (httpRes.statusCode() == 500) {
-        }
-
-        return res;
-    }
-
-    /**
      * List User Busy Times
      * Returns an ascending list of user internal and external scheduled events within a specified date range.
      * 
@@ -163,7 +163,7 @@ public class Availability {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public calendly.calendly.models.operations.GetUserBusyTimesResponse getUserBusyTimes(calendly.calendly.models.operations.GetUserBusyTimesRequest request) throws Exception {
+    public calendly.calendly.models.operations.GetUserBusyTimesResponse getBusyTimes(calendly.calendly.models.operations.GetUserBusyTimesRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = calendly.calendly.utils.Utils.generateURL(baseUrl, "/user_busy_times");
         

@@ -43,7 +43,7 @@ public class DataCompliance {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public calendly.calendly.models.operations.PostDataComplianceDeletionEventsResponse postDataComplianceDeletionEvents(calendly.calendly.models.operations.PostDataComplianceDeletionEventsRequestBody request) throws Exception {
+    public calendly.calendly.models.operations.PostDataComplianceDeletionEventsResponse createDeletionEvent(calendly.calendly.models.operations.PostDataComplianceDeletionEventsRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = calendly.calendly.utils.Utils.generateURL(baseUrl, "/data_compliance/deletion/events");
         
@@ -107,7 +107,7 @@ public class DataCompliance {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public calendly.calendly.models.operations.PostDataComplianceDeletionInviteesResponse postDataComplianceDeletionInvitees(calendly.calendly.models.operations.PostDataComplianceDeletionInviteesRequestBody request) throws Exception {
+    public calendly.calendly.models.operations.PostDataComplianceDeletionInviteesResponse deleteInviteeData(calendly.calendly.models.operations.PostDataComplianceDeletionInviteesRequestBody request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = calendly.calendly.utils.Utils.generateURL(baseUrl, "/data_compliance/deletion/invitees");
         

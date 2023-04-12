@@ -30,60 +30,13 @@ public class Users {
 	}
 
     /**
-     * Get current user
-     * Returns basic information about your user account.
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public calendly.calendly.models.operations.GetMyUserAccountResponse getMyUserAccount() throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = calendly.calendly.utils.Utils.generateURL(baseUrl, "/users/me");
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("GET");
-        req.setURL(url);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        calendly.calendly.models.operations.GetMyUserAccountResponse res = new calendly.calendly.models.operations.GetMyUserAccountResponse() {{
-            getMyUserAccount200ApplicationJSONObject = null;
-            errorResponse = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 200) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetMyUserAccount200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetMyUserAccount200ApplicationJSON.class);
-                res.getMyUserAccount200ApplicationJSONObject = out;
-            }
-        }
-        else if (httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.GetMyUserAccountErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetMyUserAccountErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
      * Get user
      * Returns information about a specified User.
      * @param request the request object containing all of the parameters for the API call
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
-    public calendly.calendly.models.operations.GetUserResponse getUser(calendly.calendly.models.operations.GetUserRequest request) throws Exception {
+    public calendly.calendly.models.operations.GetUserResponse get(calendly.calendly.models.operations.GetUserRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetUserRequest.class, baseUrl, "/users/{uuid}", request, null);
         
@@ -117,6 +70,109 @@ public class Users {
             if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
                 ObjectMapper mapper = JSON.getMapper();
                 calendly.calendly.models.operations.GetUserErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetUserErrorResponse.class);
+                res.errorResponse = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Get Organization Membership
+     * Returns information about a user's Organization Membership
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public calendly.calendly.models.operations.GetOrganizationsUuidMembershipsResponse getMemberships(calendly.calendly.models.operations.GetOrganizationsUuidMembershipsRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.GetOrganizationsUuidMembershipsRequest.class, baseUrl, "/organization_memberships/{uuid}", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        calendly.calendly.models.operations.GetOrganizationsUuidMembershipsResponse res = new calendly.calendly.models.operations.GetOrganizationsUuidMembershipsResponse() {{
+            getOrganizationsUuidMemberships200ApplicationJSONObject = null;
+            errorResponse = null;
+            errorResponse1 = null;
+        }};
+        res.statusCode = httpRes.statusCode();
+        res.contentType = contentType;
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                calendly.calendly.models.operations.GetOrganizationsUuidMemberships200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetOrganizationsUuidMemberships200ApplicationJSON.class);
+                res.getOrganizationsUuidMemberships200ApplicationJSONObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
+            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                calendly.calendly.models.operations.GetOrganizationsUuidMembershipsErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.GetOrganizationsUuidMembershipsErrorResponse.class);
+                res.errorResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 403) {
+            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                calendly.calendly.models.shared.ErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.shared.ErrorResponse.class);
+                res.errorResponse1 = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Get current user
+     * Returns basic information about your user account.
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
+    public calendly.calendly.models.operations.MeResponse me() throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = calendly.calendly.utils.Utils.generateURL(baseUrl, "/users/me");
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("GET");
+        req.setURL(url);
+        
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        calendly.calendly.models.operations.MeResponse res = new calendly.calendly.models.operations.MeResponse() {{
+            me200ApplicationJSONObject = null;
+            errorResponse = null;
+        }};
+        res.statusCode = httpRes.statusCode();
+        res.contentType = contentType;
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 200) {
+            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                calendly.calendly.models.operations.Me200ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.Me200ApplicationJSON.class);
+                res.me200ApplicationJSONObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 401 || httpRes.statusCode() == 403 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
+            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                calendly.calendly.models.operations.MeErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.MeErrorResponse.class);
                 res.errorResponse = out;
             }
         }
