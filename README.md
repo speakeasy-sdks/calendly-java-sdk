@@ -6,7 +6,7 @@
 ### Gradle
 
 ```groovy
-implementation 'calendly.calendly:calendly:0.5.0'
+implementation 'calendly.calendly:calendly:0.6.0'
 ```
 <!-- End SDK Installation -->
 
