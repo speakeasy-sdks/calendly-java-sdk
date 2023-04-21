@@ -38,6 +38,64 @@ public class ScheduledEvents {
      * @return the response from the API call
      * @throws Exception if the API call fails
      */
+    public calendly.calendly.models.operations.PostScheduledEventsUuidCancellationJsonResponse cancel(calendly.calendly.models.operations.PostScheduledEventsUuidCancellationJsonRequest request) throws Exception {
+        String baseUrl = this._serverUrl;
+        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.PostScheduledEventsUuidCancellationJsonRequest.class, baseUrl, "/scheduled_events/{uuid}/cancellation", request, null);
+        
+        HTTPRequest req = new HTTPRequest();
+        req.setMethod("POST");
+        req.setURL(url);
+        SerializedBody serializedRequestBody = calendly.calendly.utils.Utils.serializeRequestBody(request, "requestBody", "json");
+        req.setBody(serializedRequestBody);
+        
+        
+        HTTPClient client = this._securityClient;
+        
+        HttpResponse<byte[]> httpRes = client.send(req);
+
+        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
+
+        calendly.calendly.models.operations.PostScheduledEventsUuidCancellationJsonResponse res = new calendly.calendly.models.operations.PostScheduledEventsUuidCancellationJsonResponse() {{
+            postScheduledEventsUuidCancellationJSON201ApplicationJSONObject = null;
+            errorResponse = null;
+            postScheduledEventsUuidCancellationJSON403ApplicationJSONObject = null;
+        }};
+        res.statusCode = httpRes.statusCode();
+        res.contentType = contentType;
+        res.rawResponse = httpRes;
+        
+        if (httpRes.statusCode() == 201) {
+            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                calendly.calendly.models.operations.PostScheduledEventsUuidCancellationJSON201ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.PostScheduledEventsUuidCancellationJSON201ApplicationJSON.class);
+                res.postScheduledEventsUuidCancellationJSON201ApplicationJSONObject = out;
+            }
+        }
+        else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
+            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                calendly.calendly.models.operations.PostScheduledEventsUuidCancellationJsonErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.PostScheduledEventsUuidCancellationJsonErrorResponse.class);
+                res.errorResponse = out;
+            }
+        }
+        else if (httpRes.statusCode() == 403) {
+            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
+                ObjectMapper mapper = JSON.getMapper();
+                calendly.calendly.models.operations.PostScheduledEventsUuidCancellationJSON403ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.PostScheduledEventsUuidCancellationJSON403ApplicationJSON.class);
+                res.postScheduledEventsUuidCancellationJSON403ApplicationJSONObject = out;
+            }
+        }
+
+        return res;
+    }
+
+    /**
+     * Cancel Event
+     * Cancels specified event.
+     * @param request the request object containing all of the parameters for the API call
+     * @return the response from the API call
+     * @throws Exception if the API call fails
+     */
     public calendly.calendly.models.operations.PostScheduledEventsUuidCancellationMultipartResponse cancel(calendly.calendly.models.operations.PostScheduledEventsUuidCancellationMultipartRequest request) throws Exception {
         String baseUrl = this._serverUrl;
         String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.PostScheduledEventsUuidCancellationMultipartRequest.class, baseUrl, "/scheduled_events/{uuid}/cancellation", request, null);
@@ -141,64 +199,6 @@ public class ScheduledEvents {
                 ObjectMapper mapper = JSON.getMapper();
                 calendly.calendly.models.operations.PostScheduledEventsUuidCancellationRaw403ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.PostScheduledEventsUuidCancellationRaw403ApplicationJSON.class);
                 res.postScheduledEventsUuidCancellationRaw403ApplicationJSONObject = out;
-            }
-        }
-
-        return res;
-    }
-
-    /**
-     * Cancel Event
-     * Cancels specified event.
-     * @param request the request object containing all of the parameters for the API call
-     * @return the response from the API call
-     * @throws Exception if the API call fails
-     */
-    public calendly.calendly.models.operations.PostScheduledEventsUuidCancellationJsonResponse cancel(calendly.calendly.models.operations.PostScheduledEventsUuidCancellationJsonRequest request) throws Exception {
-        String baseUrl = this._serverUrl;
-        String url = calendly.calendly.utils.Utils.generateURL(calendly.calendly.models.operations.PostScheduledEventsUuidCancellationJsonRequest.class, baseUrl, "/scheduled_events/{uuid}/cancellation", request, null);
-        
-        HTTPRequest req = new HTTPRequest();
-        req.setMethod("POST");
-        req.setURL(url);
-        SerializedBody serializedRequestBody = calendly.calendly.utils.Utils.serializeRequestBody(request, "requestBody", "json");
-        req.setBody(serializedRequestBody);
-        
-        
-        HTTPClient client = this._securityClient;
-        
-        HttpResponse<byte[]> httpRes = client.send(req);
-
-        String contentType = httpRes.headers().firstValue("Content-Type").orElse("application/octet-stream");
-
-        calendly.calendly.models.operations.PostScheduledEventsUuidCancellationJsonResponse res = new calendly.calendly.models.operations.PostScheduledEventsUuidCancellationJsonResponse() {{
-            postScheduledEventsUuidCancellationJSON201ApplicationJSONObject = null;
-            errorResponse = null;
-            postScheduledEventsUuidCancellationJSON403ApplicationJSONObject = null;
-        }};
-        res.statusCode = httpRes.statusCode();
-        res.contentType = contentType;
-        res.rawResponse = httpRes;
-        
-        if (httpRes.statusCode() == 201) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.PostScheduledEventsUuidCancellationJSON201ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.PostScheduledEventsUuidCancellationJSON201ApplicationJSON.class);
-                res.postScheduledEventsUuidCancellationJSON201ApplicationJSONObject = out;
-            }
-        }
-        else if (httpRes.statusCode() == 400 || httpRes.statusCode() == 401 || httpRes.statusCode() == 404 || httpRes.statusCode() == 500) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.PostScheduledEventsUuidCancellationJsonErrorResponse out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.PostScheduledEventsUuidCancellationJsonErrorResponse.class);
-                res.errorResponse = out;
-            }
-        }
-        else if (httpRes.statusCode() == 403) {
-            if (calendly.calendly.utils.Utils.matchContentType(contentType, "application/json")) {
-                ObjectMapper mapper = JSON.getMapper();
-                calendly.calendly.models.operations.PostScheduledEventsUuidCancellationJSON403ApplicationJSON out = mapper.readValue(new String(httpRes.body(), StandardCharsets.UTF_8), calendly.calendly.models.operations.PostScheduledEventsUuidCancellationJSON403ApplicationJSON.class);
-                res.postScheduledEventsUuidCancellationJSON403ApplicationJSONObject = out;
             }
         }
 
